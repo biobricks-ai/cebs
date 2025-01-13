@@ -1,2 +1,19 @@
 schema: '2.0'
-stages: {}
+stages:
+  fetch:
+    cmd: python3 stages/fetch_data.py
+    deps:
+    - path: stages/fetch_data.py
+      hash: md5
+      md5: 1473f98e9f887130801fdd9cfb32cc43
+      size: 11465
+    outs:
+    - path: brick/cebs_DDT_datasets.parquet
+      hash: md5
+      md5: dedab7f8b9da68cb1ced4362923f2e06
+      size: 19085
+    - path: brick/datasets/
+      hash: md5
+      md5: e9b382f499c3d969df08c7e6bc529a0b.dir
+      size: 2937309
+      nfiles: 47
