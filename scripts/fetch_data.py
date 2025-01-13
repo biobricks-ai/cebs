@@ -1,10 +1,15 @@
 '''
-Scrape the table at the following site: https://cebs-ext.niehs.nih.gov/datasets/
+# This is fetching using the `datatables.js` server-side at 
+# ........ https://datatables.net/
+# ........ https://datatables.net/manual/server-side
 
-As of 01-08-2025, this contains 47 datasets. 
-The outer dataframe will contain the name, group, description, and link, of each of these 47 datasets.
+# This script scrapes the table of datasets
+# ........ at the following site: https://cebs-ext.niehs.nih.gov/datasets/
+# ........ As of 01-08-2025, this contains 47 datasets. 
+# The outer dataframe will contain the name, group, description, and link, of each of # these 47 datasets.
 
-This outer dataframe is then looped through to retrieve each individual dataset.
+# This outer dataframe is then looped through to retrieve each individual dataset, 
+# which are all stored in ____
 '''
 
 
@@ -230,8 +235,8 @@ if __name__ == '__main__':
 
     # ... Saving initial table.
     output_dir = "output/"
-    output_path = os.path.join(output_dir, f'cebs_datasets.csv')
-    df.to_csv("cebs_datasets.csv", index=False)
+    output_path = os.path.join(output_dir, f'cebs_DDT_datasets.csv')
+    df.to_csv(output_path, index=False)
     print(f"Initial table scraped and saved to '{output_path}.csv'")
 
 
