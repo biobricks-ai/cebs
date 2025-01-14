@@ -18,7 +18,7 @@ import os
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-
+from pathlib import Path
 
 # Initial table
 def get_html_table(url, get_name_links=False):
@@ -234,10 +234,14 @@ if __name__ == '__main__':
     df['slug'] = df['Link'].apply(get_slug)
 
     # ... Saving initial table.
-    output_dir = "output/"
-    output_path = os.path.join(output_dir, f'cebs_DDT_datasets.csv')
-    df.to_csv(output_path, index=False)
-    print(f"Initial table scraped and saved to '{output_path}.csv'")
+
+    output_dir = Path("brick/") # Create directory
+    output_dir.mkdir(parents=True, exist_ok=True)
+    output_path = output_dir / f'cebs_DDT_datasets.parquet'
+    
+    # df.to_csv(output_path, index=False)
+    df.to_parquet(output_path)
+    print(f"Initial table scraped and saved to '{output_path}'")
 
 
     # *********************************************************************
@@ -248,6 +252,10 @@ if __name__ == '__main__':
     _token = "Yk9ru1CcmxkmgOhbtYh2yXxQ3ZA0W8b67Gsv2wRT"  # Payload parameters - CSRF token (cross-site request forgery)
 
     
+    # Saving dataset to ouptut
+    output_dir = Path("brick/datasets/") # Create directory
+    output_dir.mkdir(parents=True, exist_ok=True)
+
     d_cebs_data = {}
     for index, row in df.iterrows():
         # Get parameters to pass into API
@@ -271,12 +279,12 @@ if __name__ == '__main__':
             draw=1
         )
         
+        print(df_data.head(), df_data.columns)
+        
         d_cebs_data[slug] = df_data
 
-        # Saving dataset to ouptut
-        output_dir = "output/"
-        output_path = os.path.join(output_dir, f'{slug}.csv')
-        df_data.to_csv(output_path, index=False)
+        output_path = output_dir / f'{slug}.parquet'
+        df_data.to_parquet(output_path)
         print(f'Dataframe saved to {output_path}' , '\n')
     
     
