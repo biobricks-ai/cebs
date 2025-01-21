@@ -10,10 +10,10 @@ stages:
     outs:
     - path: brick/cebs_DDT_datasets.parquet
       hash: md5
-      md5: dedab7f8b9da68cb1ced4362923f2e06
+      md5: 95ddc5abe30bbeb98beee72735496041
       size: 19085
     - path: brick/datasets/
       hash: md5
-      md5: e9b382f499c3d969df08c7e6bc529a0b.dir
+      md5: a1cc2e442717c2461c6cff58cd25a8a6.dir
       size: 2937309
       nfiles: 47
