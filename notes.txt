@@ -1,0 +1,79 @@
+
+# create and attach to screen
+screen - S fetch_data
+
+
+# detach from screen
+ctrl + a + d
+
+
+# list screens
+screen -ls
+
+
+# reattach to screen
+screen -r fetch_data 
+
+
+# to switch between sessions
+
+
+# kill session
+screen -X -S <session name> quit
+
+
+# initilaize records_total to 1 and re-assign in loop
+# while start < records_total:
+# if (len(all_data) >= records_total) or (len(batch_data)==0) or (draw >= 1_000_000):
+#     print('# records fetched: ', len(all_data) )
+#     break
+# keys = list(data.keys())
+
+
+
+
+sys.getsizeof(variable) # gets memory size of variable
+
+
+# Breakpoint to investigate what's happening when it exist_ok
+breakpoint() 
+backoff on exception in webscrape: 
+    https://stackoverflow.com/questions/56532528/how-do-i-insert-backoff-script-into-my-web-scrape
+    - this will
+run it and load incomplete into scripts to check what's going on / isolate
+
+
+
+
+
+python -u stages/fetch_data.py > log.txt 2>&1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
