@@ -9,7 +9,7 @@
 # The outer dataframe will contain the name, group, description, and link, of each of # these 47 datasets.
 
 # This outer dataframe is then looped through to retrieve each individual dataset, 
-# which are all stored in ____
+# which are all stored in brick/datasets and backed up using dvc to an amazon s3 bucket.
 '''
 
 
@@ -19,6 +19,9 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 from pathlib import Path
+from tqdm import tqdm
+from pathlib import Path
+import backoff
 
 # Initial table
 def get_html_table(url, get_name_links=False):
@@ -135,11 +138,25 @@ def get_columnList(url):
         print(f"Failed to fetch the webpage. Status code: {response.status_code}")
     return
 
+
+
+# Function with backoff to deal with mis-behaving slugs. Called during pagination.
+@backoff.on_exception(backoff.expo, requests.exceptions.RequestException, max_tries=50)
+def fetch_api_data(api_url, payload, headers):
+    """ Fetch a single batch from API. """
+    response = requests.post(api_url, data=payload, headers=headers, timeout=15)
+    
+    if response.status_code == 200:
+        return response
+    
+    print(f"Failed API call. Status code: {response.status_code}")
+    return None
+
+
 # ... Gets dataset given individual dataset's slug identifier
 def get_html_table_api(
     api_url, 
     slug, 
-    draw=1,
     columnList=[],
     _token="",
 ):
@@ -177,56 +194,93 @@ def get_html_table_api(
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
         "X-Requested-With": "XMLHttpRequest",
     }
-    
-    # Payload for the POST request (this should match the request payload from the network tab)
-    payload = {
-        "draw": draw,                        # Increment with each request if needed
-        "start": 0,                          # Starting index (pagination)
-        "length": 1000,                      # Number of rows to fetch (adjust as needed)
-        "search[value]": "",                 # Global search query (empty for no search)
-        "search[regex]": "false",            # Regex for global search (false)
-        "slug": slug,                        # Dataset identifier
-        "_token": _token,                    # CSRF token
-        "searchFilters": f"_token={_token}",
-        "columnList[]": columnList,          # Columns to fetch
-        "previewMode": "false",              # Preview mode
-    }
-    
-    # Send the POST request
-    response = requests.post(api_url, data=payload, headers=headers)
-    
-    # Check the response
-    if response.status_code == 200:
-        # Parse the JSON response
-        data = response.json()
-    
-        keys = list(data.keys())
-        print('Data keys: ', keys)
-        
-        # Extract the table data (adjust keys based on the JSON structure)
-        d_data = data.get("data", [])
-        
-        N_total = data.get("recordsTotal", [])
-        N_filtered = data.get("recordsFiltered", [])
-        print('recordsTotal / recordsFiltered: ', N_total, ' / ', N_filtered)
-        
-        # Create a pandas DataFrame
-        df = pd.DataFrame(d_data)
-        
-        return df
-    
-    else:
-        print(f"Failed to fetch data. Status code: {response.status_code}")
+    # ******************************** Initialize parameters *************************** 
+    draw = 1
+    all_data = []
 
-    return
+    start = 0
+    batch_size = 1_000
+
+    # ************************ First get N_iterations to loop through ******************* 
+    payload = {
+            "draw": draw,                        # Increment with each request if needed
+            "start": start,                      # Starting index (pagination)
+            "length": batch_size,                # Number of rows to fetch (adjust as needed)
+            "search[value]": "",                 # Global search query (empty for no search)
+            "search[regex]": "false",            # Regex for global search (false)
+            "slug": slug,                        # Dataset identifier
+            "_token": _token,                    # CSRF token
+            "searchFilters": f"_token={_token}",
+            "columnList[]": columnList,          # Columns to fetch
+            "previewMode": "false",              # Preview mode
+        }
+
+    response = requests.post(api_url, data=payload, headers=headers)
+    if response.status_code == 200:
+        data = response.json()
+        records_total = data.get("recordsTotal", 0)
+
+        N_iterations = int(records_total / batch_size) + 1
+        print('# records total: ', records_total)
+    else: 
+        print("Failed to fetch data. Status code: {response.status_code}")
+        # breakpoint()  # This will invoke `ipdb`
+
+    # ****************************** Now start iterating ********************************
+    # for i in tqdm(range(N_iterations), 
+    #     ascii=True, dynamic_ncols=True, file=sys.stdout, disable=None, ncols=80
+    # ): 
+    for i in range(N_iterations):
+
+        # Payload for the POST request (this should match the request payload from the network tab)
+        payload = {
+            "draw": draw,                        # Increment with each request if needed
+            "start": start,                      # Starting index (pagination)
+            "length": batch_size,                # Number of rows to fetch (adjust as needed)
+            "search[value]": "",                 # Global search query (empty for no search)
+            "search[regex]": "false",            # Regex for global search (false)
+            "slug": slug,                        # Dataset identifier
+            "_token": _token,                    # CSRF token
+            "searchFilters": f"_token={_token}",
+            "columnList[]": columnList,          # Columns to fetch
+            "previewMode": "false",              # Preview mode
+        }
+        
+        # response = requests.post(api_url, data=payload, headers=headers)
+        response = fetch_api_data(api_url, payload, headers)
+        
+        if response.status_code == 200:
+            data = response.json()
+            batch_data = data.get("data", [])
+            all_data.extend(batch_data)
+            start += batch_size
+            
+        else:
+            print(f"Failed to fetch data. Status code: {response.status_code}")
+            # breakpoint()  # This will invoke `ipdb`
+            break
+    
+    # ****************************** Return dataframe ********************************
+    df = pd.DataFrame(all_data)
+    N_fetched = len(df)
+    print('# records fetched: ', N_fetched)
+
+    status = 'Failed'
+    if len(df) < records_total:
+        status = f'Incomplete ({N_fetched}/{records_total})'
+    if len(df) == records_total: 
+        status = 'Complete'
+        
+    return df, status
+
+
 
 
 if __name__ == '__main__':
-
+ 
     # *********************************************************************
     # Fetch initial table on site (indexes all datasets and their links)
     # *********************************************************************
-    
     url = "https://cebs-ext.niehs.nih.gov/datasets/"
     df = get_html_table(url, get_name_links=True)
 
@@ -241,7 +295,9 @@ if __name__ == '__main__':
     
     # df.to_csv(output_path, index=False)
     df.to_parquet(output_path)
-    print(f"Initial table scraped and saved to '{output_path}'")
+    print(f"Initial table scraped and saved to '{output_path}'", '\n')
+    print(f"There are {len(df)} datasets to retrieve.", '\n')
+
 
 
     # *********************************************************************
@@ -251,41 +307,67 @@ if __name__ == '__main__':
     api_url = "https://cebs-ext.niehs.nih.gov/datasets/api/dataset/data/fetch"
     _token = "Yk9ru1CcmxkmgOhbtYh2yXxQ3ZA0W8b67Gsv2wRT"  # Payload parameters - CSRF token (cross-site request forgery)
 
-    
-    # Saving dataset to ouptut
-    output_dir = Path("brick/datasets/") # Create directory
+    # Create output directory
+    output_dir = Path("brick/datasets/")
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    d_cebs_data = {}
+    # Create file to track status of API requests 
+    file_status_queries = 'status_queries.txt'
+    open(file_status_queries, "w").close()
+
+
+    slugs_requested = [
+        'clin-chem-iad-2024',
+        'hematol-iad-2024',
+        'organ-weight-iad-2024'
+    ]
+
     for index, row in df.iterrows():
-        # Get parameters to pass into API
-        name = row['Name']
-        group = row['Group']
-        desc = row['Description']
-        link = row['Link']
-        slug = row['slug']  # Dataset identifier for API
-        
-        columnList = get_columnList(link)
-        
-        print('Slug: ', slug)
-        print('Column list: ', columnList)
+        try: 
+            # Get parameters to pass into API
+            name = row['Name']
+            group = row['Group']
+            desc = row['Description']
+            link = row['Link']
+            slug = row['slug']  # Dataset identifier for API
+            
+            columnList = get_columnList(link)
+            
+            print(f'Index: {index}.')
+            print('Slug: ', slug)
+            print('Columns: ', columnList)
 
-        # Fetching dataset
-        df_data = get_html_table_api(
-            api_url, 
-            slug, 
-            columnList=columnList,
-            _token=_token,
-            draw=1
-        )
-        
-        print(df_data.head(), df_data.columns)
-        
-        d_cebs_data[slug] = df_data
+            # Fetching dataset
+            df_data, status = get_html_table_api(
+                api_url, 
+                slug, 
+                columnList=columnList,
+                _token=_token
+            )
 
-        output_path = output_dir / f'{slug}.parquet'
-        df_data.to_parquet(output_path)
-        print(f'Dataframe saved to {output_path}' , '\n')
+            # Save data
+            output_path = output_dir / f'{slug}.parquet'
+            df_data.to_parquet(output_path)
+            print(f'Dataframe saved to {output_path}' , '\n')
+
+            #  Write slug and status to file
+            with open(file_status_queries, 'a') as f:
+                f.write(f"{status} - {slug} \n")
+
+        except: 
+            status = 'Failed to retrieve.'
+            slug = row['slug']
+            print(f'Dataset with identifier {slug} was not successfully retrieved.\n\n')
+            print("********************************************************************")
+
+            # Write to failed queries file
+            with open(file_status_queries, 'a') as f:
+                f.write(f"{status} - {slug}\n")
+
+
+
+
+
     
     
-    
+# write problematic slugs to a separate file
