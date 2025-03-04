@@ -1,0 +1,16 @@
+name: cebs_fetch
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pandas
+  - numpy
+  - requests
+  - beautifulsoup4
+  - lxml
+  - pip
+  - tqdm
+  - backoff
+  - pip: 
+      - pyarrow
