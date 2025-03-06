@@ -22,6 +22,9 @@ from pathlib import Path
 from tqdm import tqdm
 from pathlib import Path
 import backoff
+import time
+from queue import Queue
+
 
 # Initial table
 def get_html_table(url, get_name_links=False):
@@ -273,8 +276,21 @@ def get_html_table_api(
     return df, status
 
 
+def save_data(ouptut_dir, slug, status, file_status_queries):
+    # Save data
+    output_path = output_dir / f'{slug}.parquet'
+    df_data.to_parquet(output_path)
+    print(f'Dataframe saved to {output_path}' , '\n')
+
+    #  Write slug and status to file
+    with open(file_status_queries, 'a') as f:
+        f.write(f"{status} - {slug} \n")
+
+    return
 
 
+
+    
 if __name__ == '__main__':
  
     # *********************************************************************
@@ -314,7 +330,6 @@ if __name__ == '__main__':
     file_status_queries = 'status_queries.txt'
     open(file_status_queries, "w").close()
 
-
     slugs_requested = [
         'clin-chem-iad-2024',
         'hematol-iad-2024',
@@ -322,14 +337,15 @@ if __name__ == '__main__':
     ]
 
     for index, row in df.iterrows():
+        name = row['Name']
+        group = row['Group']
+        desc = row['Description']
+        link = row['Link']
+        slug = row['slug']  # Dataset identifier for API
+            
         try: 
             # Get parameters to pass into API
-            name = row['Name']
-            group = row['Group']
-            desc = row['Description']
-            link = row['Link']
-            slug = row['slug']  # Dataset identifier for API
-            
+        
             columnList = get_columnList(link)
             
             print(f'Index: {index}.')
@@ -354,18 +370,65 @@ if __name__ == '__main__':
                 f.write(f"{status} - {slug} \n")
 
         except: 
-            status = 'Failed to retrieve.'
+            status = 'Failed to retrieve'
             slug = row['slug']
+            print(f'Dataset with identifier {slug} was not successfully retrieved.\n\n')
+            print("********************************************************************")
+
+            # breakpoint()
+            
+            # Write to failed queries file
+            with open(file_status_queries, 'a') as f:
+                f.write(f"{status} - {slug}\n")
+
+
+    # --------------------------------------------------------
+    time.sleep(24*60*60) # Sleep for a day and re-try
+
+    # ...... Now deal with 'Failed to retrieve' or "Incomplete"
+    slugs_failed, slugs_incomplete = [], []
+    with open(file_status_queries, 'r') as f:
+        lines = [line.strip() for line in f]
+        for line in lines: 
+            i = line.find('-')
+            slug = line[i+2:]
+            if "Failed to retrieve" in line:
+                slugs_failed.append(slug)
+            if "Incomplete" in line: 
+                slugs_incomplete.append(slug)
+
+    with open(file_status_queries, 'a') as f:
+        f.write('Retrying failed slugs... \n')
+
+    # Run failed to retrieve again
+    for slug in slugs_failed:
+        try: 
+            # Get parameters to pass into API
+            link = df.loc[df['slug']==slug, 'Link'].values[0]
+            columnList = get_columnList(link)
+            
+            print("Retrying failed slug... ")
+            print('Slug: ', slug)
+            print('Columns: ', columnList)
+
+            # Fetching dataset
+            df_data, status = get_html_table_api(
+                api_url, 
+                slug,
+                columnList=columnList,
+                _token=_token
+            )
+
+            save_data(output_dir, slug, status, file_status_queries)
+            
+        except: 
+            status = 'Failed to retrieve'
             print(f'Dataset with identifier {slug} was not successfully retrieved.\n\n')
             print("********************************************************************")
 
             # Write to failed queries file
             with open(file_status_queries, 'a') as f:
                 f.write(f"{status} - {slug}\n")
-
-
-
-
 
     
     
