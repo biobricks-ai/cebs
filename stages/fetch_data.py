@@ -267,7 +267,7 @@ def get_html_table_api(
     N_fetched = len(df)
     print('# records fetched: ', N_fetched)
 
-    status = 'Failed'
+    status = 'Failed to retrieve'
     if len(df) < records_total:
         status = f'Incomplete ({N_fetched}/{records_total})'
     if len(df) == records_total: 
@@ -276,6 +276,7 @@ def get_html_table_api(
     return df, status
 
 
+# Save dataframe to folder
 def save_data(ouptut_dir, slug, status, file_status_queries):
     # Save data
     output_path = output_dir / f'{slug}.parquet'
@@ -289,147 +290,97 @@ def save_data(ouptut_dir, slug, status, file_status_queries):
     return
 
 
+# Calls `get_html_table_api()` given a slug
+def fetch_and_save_dataset(slug, output_dir, api_url, _token, file_status_queries, df):
+    try:
+        link = df.loc[df['slug'] == slug, 'Link'].values[0]
+        columnList = get_columnList(link)
+        print(f'Processing slug: {slug} with columns: {columnList}')
 
+        df_data, status = get_html_table_api(api_url, slug, columnList=columnList, _token=_token)
+        output_path = output_dir / f'{slug}.parquet'
+        df_data.to_parquet(output_path)
+        print(f'Dataframe saved to {output_path}\n')
+
+        with open(file_status_queries, 'a') as f:
+            f.write(f"{status} - {slug}\n")
+        return status
     
+    except Exception as e:
+        print(f'Failed to retrieve dataset {slug}: {e}\n')
+        with open(file_status_queries, 'a') as f:
+            f.write(f"Failed to retrieve - {slug}\n")
+        status = "Failed to retrieve"
+        return status
+    
+
 if __name__ == '__main__':
- 
-    # *********************************************************************
     # Fetch initial table on site (indexes all datasets and their links)
-    # *********************************************************************
     url = "https://cebs-ext.niehs.nih.gov/datasets/"
     df = get_html_table(url, get_name_links=True)
 
     # ... Slug is the identifier of each dataset
     df['slug'] = df['Link'].apply(get_slug)
 
-    # ... Saving initial table.
-
-    output_dir = Path("brick/") # Create directory
-    output_dir.mkdir(parents=True, exist_ok=True)
-    output_path = output_dir / f'cebs_DDT_datasets.parquet'
-    
-    # df.to_csv(output_path, index=False)
-    df.to_parquet(output_path)
-    print(f"Initial table scraped and saved to '{output_path}'", '\n')
-    print(f"There are {len(df)} datasets to retrieve.", '\n')
-
-
-
-    # *********************************************************************
-    # Fetch each dataset in the initial table.
-    # *********************************************************************
-    
-    api_url = "https://cebs-ext.niehs.nih.gov/datasets/api/dataset/data/fetch"
-    _token = "Yk9ru1CcmxkmgOhbtYh2yXxQ3ZA0W8b67Gsv2wRT"  # Payload parameters - CSRF token (cross-site request forgery)
-
-    # Create output directory
     output_dir = Path("brick/datasets/")
     output_dir.mkdir(parents=True, exist_ok=True)
+    output_path = output_dir / f'cebs_DDT_datasets.parquet'
 
     # Create file to track status of API requests 
     file_status_queries = 'status_queries.txt'
     open(file_status_queries, "w").close()
 
+    # Saving initial table
+    df.to_parquet(output_path)
+    print(f"Initial table scraped and saved to '{output_path}'", '\n')
+    print(f"There are {len(df)} datasets to retrieve.", '\n')
+
+
+    # Begin fetching individual datasets from slugs
+    api_url = "https://cebs-ext.niehs.nih.gov/datasets/api/dataset/data/fetch"
+    _token = "Yk9ru1CcmxkmgOhbtYh2yXxQ3ZA0W8b67Gsv2wRT"
+
     slugs_requested = [
         'clin-chem-iad-2024',
         'hematol-iad-2024',
         'organ-weight-iad-2024'
-    ]
+    ] # subset of data requested - if desired, can set slugs_queue to slugs_requested
 
-    for index, row in df.iterrows():
-        name = row['Name']
-        group = row['Group']
-        desc = row['Description']
-        link = row['Link']
-        slug = row['slug']  # Dataset identifier for API
-            
-        try: 
-            # Get parameters to pass into API
-        
-            columnList = get_columnList(link)
-            
-            print(f'Index: {index}.')
-            print('Slug: ', slug)
-            print('Columns: ', columnList)
+    slugs_queue = Queue()
+    
+    for slug in df['slug']:
+        slugs_queue.put(slug)
 
-            # Fetching dataset
-            df_data, status = get_html_table_api(
-                api_url, 
-                slug, 
-                columnList=columnList,
-                _token=_token
-            )
+ 
+    # This loop allows for multiple retries of the slugs, with a fixed delay
+    # of 1 day between each set of retries.
+    
+    n_retries = 0 # count iterate
+    MAX_RETRIES = 3
+    ONE_DAY = 24 * 60 * 60 # one day in seconds 
 
-            # Save data
-            output_path = output_dir / f'{slug}.parquet'
-            df_data.to_parquet(output_path)
-            print(f'Dataframe saved to {output_path}' , '\n')
+    while not slugs_queue.empty():
+        retry_queue = Queue()
+        while not slugs_queue.empty():
+            slug = slugs_queue.get()
+            status = fetch_and_save_dataset(slug, output_dir, api_url, _token, file_status_queries, df)
+            if status == "Failed to retrieve":
+                retry_queue.put(slug)
 
-            #  Write slug and status to file
-            with open(file_status_queries, 'a') as f:
-                f.write(f"{status} - {slug} \n")
-
-        except: 
-            status = 'Failed to retrieve'
-            slug = row['slug']
-            print(f'Dataset with identifier {slug} was not successfully retrieved.\n\n')
-            print("********************************************************************")
-
-            # breakpoint()
-            
-            # Write to failed queries file
             with open(file_status_queries, 'a') as f:
                 f.write(f"{status} - {slug}\n")
 
-
-    # --------------------------------------------------------
-    time.sleep(24*60*60) # Sleep for a day and re-try
-
-    # ...... Now deal with 'Failed to retrieve' or "Incomplete"
-    slugs_failed, slugs_incomplete = [], []
-    with open(file_status_queries, 'r') as f:
-        lines = [line.strip() for line in f]
-        for line in lines: 
-            i = line.find('-')
-            slug = line[i+2:]
-            if "Failed to retrieve" in line:
-                slugs_failed.append(slug)
-            if "Incomplete" in line: 
-                slugs_incomplete.append(slug)
-
-    with open(file_status_queries, 'a') as f:
-        f.write('Retrying failed slugs... \n')
-
-    # Run failed to retrieve again
-    for slug in slugs_failed:
-        try: 
-            # Get parameters to pass into API
-            link = df.loc[df['slug']==slug, 'Link'].values[0]
-            columnList = get_columnList(link)
-            
-            print("Retrying failed slug... ")
-            print('Slug: ', slug)
-            print('Columns: ', columnList)
-
-            # Fetching dataset
-            df_data, status = get_html_table_api(
-                api_url, 
-                slug,
-                columnList=columnList,
-                _token=_token
-            )
-
-            save_data(output_dir, slug, status, file_status_queries)
-            
-        except: 
-            status = 'Failed to retrieve'
-            print(f'Dataset with identifier {slug} was not successfully retrieved.\n\n')
-            print("********************************************************************")
-
-            # Write to failed queries file
-            with open(file_status_queries, 'a') as f:
-                f.write(f"{status} - {slug}\n")
-
+        if retry_queue.empty():
+            print("All datasets retrieved successfully.")
+            break
     
-    
-# write problematic slugs to a separate file
+        if n_retries < MAX_RETRIES:
+            n_retries += 1
+        else:
+            break
+
+        print("Retrying failed slugs in 24 hours...")
+        time.sleep(ONE_DAY)
+
+        while not retry_queue.empty():
+            slugs_queue.put(retry_queue.get())
