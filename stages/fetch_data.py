@@ -141,10 +141,10 @@ def get_columnList(url):
 
 
 # Function with backoff to deal with mis-behaving slugs. Called during pagination.
-@backoff.on_exception(backoff.expo, requests.exceptions.RequestException, max_tries=50)
+@backoff.on_exception(backoff.expo, requests.exceptions.RequestException, max_tries=10)
 def fetch_api_data(api_url, payload, headers):
     """ Fetch a single batch from API. """
-    response = requests.post(api_url, data=payload, headers=headers, timeout=15)
+    response = requests.post(api_url, data=payload, headers=headers, timeout=10)
     
     if response.status_code == 200:
         return response
@@ -246,7 +246,6 @@ def get_html_table_api(
             "previewMode": "false",              # Preview mode
         }
         
-        # response = requests.post(api_url, data=payload, headers=headers)
         response = fetch_api_data(api_url, payload, headers)
         
         if response.status_code == 200:
