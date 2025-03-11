@@ -276,20 +276,6 @@ def get_html_table_api(
     return df, status
 
 
-# Save dataframe to folder
-def save_data(ouptut_dir, slug, status, file_status_queries):
-    # Save data
-    output_path = output_dir / f'{slug}.parquet'
-    df_data.to_parquet(output_path)
-    print(f'Dataframe saved to {output_path}' , '\n')
-
-    #  Write slug and status to file
-    with open(file_status_queries, 'a') as f:
-        f.write(f"{status} - {slug} \n")
-
-    return
-
-
 # Calls `get_html_table_api()` given a slug
 def fetch_and_save_dataset(slug, output_dir, api_url, _token, file_status_queries, df):
     try:
@@ -322,17 +308,20 @@ if __name__ == '__main__':
     # ... Slug is the identifier of each dataset
     df['slug'] = df['Link'].apply(get_slug)
 
-    output_dir = Path("brick/datasets/")
-    output_dir.mkdir(parents=True, exist_ok=True)
-    output_path = output_dir / f'cebs_DDT_datasets.parquet'
+    output_dir_outer = Path("brick/")
+    output_dir_inner = Path("brick/datasets/")
+    output_dir_outer.mkdir(parents=True, exist_ok=True)
+    output_dir_inner.mkdir(parents=True, exist_ok=True)
+
+    output_path_reference = output_dir_outer / f'cebs_DDT_datasets.parquet'
 
     # Create file to track status of API requests 
     file_status_queries = 'status_queries.txt'
     open(file_status_queries, "w").close()
 
     # Saving initial table
-    df.to_parquet(output_path)
-    print(f"Initial table scraped and saved to '{output_path}'", '\n')
+    df.to_parquet(output_path_reference)
+    print(f"Initial table scraped and saved to '{output_path_reference}'", '\n')
     print(f"There are {len(df)} datasets to retrieve.", '\n')
 
 
@@ -363,7 +352,7 @@ if __name__ == '__main__':
         retry_queue = Queue()
         while not slugs_queue.empty():
             slug = slugs_queue.get()
-            status = fetch_and_save_dataset(slug, output_dir, api_url, _token, file_status_queries, df)
+            status = fetch_and_save_dataset(slug, output_dir_inner, api_url, _token, file_status_queries, df)
             if status == "Failed to retrieve":
                 retry_queue.put(slug)
 
