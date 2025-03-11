@@ -356,7 +356,7 @@ if __name__ == '__main__':
     # of 1 day between each set of retries.
     
     n_retries = 0 # count iterate
-    MAX_RETRIES = 3
+    MAX_RETRIES = 5
     ONE_DAY = 24 * 60 * 60 # one day in seconds 
 
     while not slugs_queue.empty():
