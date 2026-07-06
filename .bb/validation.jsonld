@@ -1,0 +1,6153 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@type": "prov:Entity",
+  "schema:name": "cebs validation report",
+  "prov:generatedAtTime": "2026-07-06T09:28:44Z",
+  "bb:validator": "tools/bb_validate.py",
+  "bb:verdict": "WARN",
+  "bb:summary": {
+    "n_parquet_files": 48,
+    "total_rows": 25781,
+    "total_bytes": 2960641,
+    "note": ""
+  },
+  "bb:deterministic_checks": [
+    {
+      "file": "cebs_DDT_datasets.parquet",
+      "path": "cebs/brick/cebs_DDT_datasets.parquet",
+      "rows": 47,
+      "cols": 5,
+      "bytes": 19085,
+      "columns": [
+        {
+          "name": "Name",
+          "type": "string"
+        },
+        {
+          "name": "Group",
+          "type": "string"
+        },
+        {
+          "name": "Description",
+          "type": "string"
+        },
+        {
+          "name": "Link",
+          "type": "string"
+        },
+        {
+          "name": "slug",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "Name": 0.0,
+        "Group": 0.0,
+        "Description": 0.0,
+        "Link": 0.0,
+        "slug": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 47,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "2015-acgih-tlvs.parquet",
+      "path": "cebs/brick/datasets/2015-acgih-tlvs.parquet",
+      "rows": 114,
+      "cols": 6,
+      "bytes": 9374,
+      "columns": [
+        {
+          "name": "id_num",
+          "type": "string"
+        },
+        {
+          "name": "chemical_names",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "document_date",
+          "type": "string"
+        },
+        {
+          "name": "tlv_twa_stel",
+          "type": "string"
+        },
+        {
+          "name": "tlv_basis",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "id_num": 0.0,
+        "chemical_names": 0.0,
+        "casrn": 0.0,
+        "document_date": 0.0,
+        "tlv_twa_stel": 0.0,
+        "tlv_basis": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 114,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "ames.parquet",
+      "path": "cebs/brick/datasets/ames.parquet",
+      "rows": 1000,
+      "cols": 17,
+      "bytes": 23503,
+      "columns": [
+        {
+          "name": "ames_chemical_name",
+          "type": "string"
+        },
+        {
+          "name": "ames_study_conclusion",
+          "type": "string"
+        },
+        {
+          "name": "ames_trial_result",
+          "type": "string"
+        },
+        {
+          "name": "ames_trial_strain",
+          "type": "string"
+        },
+        {
+          "name": "ames_doses",
+          "type": "string"
+        },
+        {
+          "name": "ames_dose_unit",
+          "type": "string"
+        },
+        {
+          "name": "ames_max_dose",
+          "type": "string"
+        },
+        {
+          "name": "ames_microsomal_activ_used",
+          "type": "string"
+        },
+        {
+          "name": "ames_protocol_type",
+          "type": "string"
+        },
+        {
+          "name": "ames_study_start_year",
+          "type": "string"
+        },
+        {
+          "name": "ames_trial_start_date",
+          "type": "string"
+        },
+        {
+          "name": "ames_trial_name",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "ames_depositor_study_num",
+          "type": "string"
+        },
+        {
+          "name": "ames_accession_number",
+          "type": "string"
+        },
+        {
+          "name": "casrn_url",
+          "type": "string"
+        },
+        {
+          "name": "ames_depositor_study_num_url",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "ames_chemical_name": 0.0,
+        "ames_study_conclusion": 0.0,
+        "ames_trial_result": 0.0,
+        "ames_trial_strain": 0.0,
+        "ames_doses": 0.0,
+        "ames_dose_unit": 0.0,
+        "ames_max_dose": 0.0,
+        "ames_microsomal_activ_used": 0.0,
+        "ames_protocol_type": 0.0,
+        "ames_study_start_year": 0.0,
+        "ames_trial_start_date": 0.0,
+        "ames_trial_name": 0.0,
+        "casrn": 0.0,
+        "ames_depositor_study_num": 0.0,
+        "ames_accession_number": 0.0,
+        "casrn_url": 0.0,
+        "ames_depositor_study_num_url": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 1000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "ames_dose_unit"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "analyte-ddd.parquet",
+      "path": "cebs/brick/datasets/analyte-ddd.parquet",
+      "rows": 123,
+      "cols": 7,
+      "bytes": 23866,
+      "columns": [
+        {
+          "name": "measurand",
+          "type": "string"
+        },
+        {
+          "name": "measurand_ontology_term",
+          "type": "string"
+        },
+        {
+          "name": "definition",
+          "type": "string"
+        },
+        {
+          "name": "measurand_ontology_iri",
+          "type": "string"
+        },
+        {
+          "name": "category",
+          "type": "string"
+        },
+        {
+          "name": "status",
+          "type": "string"
+        },
+        {
+          "name": "term_id",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "measurand": 0.0,
+        "measurand_ontology_term": 0.203252,
+        "definition": 0.105691,
+        "measurand_ontology_iri": 0.0,
+        "category": 0.0,
+        "status": 0.0,
+        "term_id": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 123,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "status"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "androgen_agonists.parquet",
+      "path": "cebs/brick/datasets/androgen_agonists.parquet",
+      "rows": 40,
+      "cols": 41,
+      "bytes": 37690,
+      "columns": [
+        {
+          "name": "chemical",
+          "type": "string"
+        },
+        {
+          "name": "nvs_nr_har",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "rat_and_human_invitro",
+          "type": "string"
+        },
+        {
+          "name": "ar_model_call",
+          "type": "string"
+        },
+        {
+          "name": "no_pos_assay",
+          "type": "string"
+        },
+        {
+          "name": "all_agonist_assay_neg_t_f",
+          "type": "string"
+        },
+        {
+          "name": "agon_loel_t_f",
+          "type": "string"
+        },
+        {
+          "name": "andro_recept_activity_group",
+          "type": "string"
+        },
+        {
+          "name": "hershberg_noel",
+          "type": "string"
+        },
+        {
+          "name": "hershberg_min_noel",
+          "type": "string"
+        },
+        {
+          "name": "hershberg_med_noel",
+          "type": "string"
+        },
+        {
+          "name": "hershberg_max_noel",
+          "type": "string"
+        },
+        {
+          "name": "pk_frac_unbound_chem",
+          "type": "string"
+        },
+        {
+          "name": "pk_renal_clearance",
+          "type": "string"
+        },
+        {
+          "name": "pk_mw",
+          "type": "string"
+        },
+        {
+          "name": "pk_instrin_clearance",
+          "type": "string"
+        },
+        {
+          "name": "src_for_fraction_unbnd",
+          "type": "string"
+        },
+        {
+          "name": "atg_ar_trans_up",
+          "type": "string"
+        },
+        {
+          "name": "nvs_nr_car",
+          "type": "string"
+        },
+        {
+          "name": "nvs_nr_rar",
+          "type": "string"
+        },
+        {
+          "name": "ot_ar_areluc_ag_1440",
+          "type": "string"
+        },
+        {
+          "name": "ot_ar_arsrc1_0480",
+          "type": "string"
+        },
+        {
+          "name": "ot_ar_arsrc1_0960",
+          "type": "string"
+        },
+        {
+          "name": "tox21_ar_bla_agonist_ratio",
+          "type": "string"
+        },
+        {
+          "name": "tox21_ar_luc_mdakb2_agonist",
+          "type": "string"
+        },
+        {
+          "name": "ead_atg_ar_trans_up",
+          "type": "string"
+        },
+        {
+          "name": "ead_nvs_nr_har",
+          "type": "string"
+        },
+        {
+          "name": "ead_nvs_nr_car",
+          "type": "string"
+        },
+        {
+          "name": "ead_nvs_nr_rar",
+          "type": "string"
+        },
+        {
+          "name": "ead_ot_ar_areluc_ag_1440",
+          "type": "string"
+        },
+        {
+          "name": "ead_ot_ar_arsrc1_0480",
+          "type": "string"
+        },
+        {
+          "name": "ead_ot_ar_arsrc1_0960",
+          "type": "string"
+        },
+        {
+          "name": "ead_tox21_ar_bla_ag_ratio",
+          "type": "string"
+        },
+        {
+          "name": "ead_tox21_ar_luc_mdakb2_ag",
+          "type": "string"
+        },
+        {
+          "name": "meadian_ead",
+          "type": "string"
+        },
+        {
+          "name": "max_ead_pred_100",
+          "type": "string"
+        },
+        {
+          "name": "auc_agonist",
+          "type": "string"
+        },
+        {
+          "name": "auc_antagonist",
+          "type": "string"
+        },
+        {
+          "name": "antag_confid_score",
+          "type": "string"
+        },
+        {
+          "name": "confirm_assay_flag",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "chemical": 0.0,
+        "nvs_nr_har": 0.0,
+        "casrn": 0.0,
+        "rat_and_human_invitro": 0.0,
+        "ar_model_call": 0.0,
+        "no_pos_assay": 0.175,
+        "all_agonist_assay_neg_t_f": 0.0,
+        "agon_loel_t_f": 0.0,
+        "andro_recept_activity_group": 0.0,
+        "hershberg_noel": 0.175,
+        "hershberg_min_noel": 0.825,
+        "hershberg_med_noel": 0.825,
+        "hershberg_max_noel": 0.825,
+        "pk_frac_unbound_chem": 0.0,
+        "pk_renal_clearance": 0.0,
+        "pk_mw": 0.0,
+        "pk_instrin_clearance": 0.0,
+        "src_for_fraction_unbnd": 0.0,
+        "atg_ar_trans_up": 0.0,
+        "nvs_nr_car": 0.0,
+        "nvs_nr_rar": 0.0,
+        "ot_ar_areluc_ag_1440": 0.0,
+        "ot_ar_arsrc1_0480": 0.0,
+        "ot_ar_arsrc1_0960": 0.0,
+        "tox21_ar_bla_agonist_ratio": 0.0,
+        "tox21_ar_luc_mdakb2_agonist": 0.0,
+        "ead_atg_ar_trans_up": 0.0,
+        "ead_nvs_nr_har": 0.0,
+        "ead_nvs_nr_car": 0.0,
+        "ead_nvs_nr_rar": 0.0,
+        "ead_ot_ar_areluc_ag_1440": 0.0,
+        "ead_ot_ar_arsrc1_0480": 0.0,
+        "ead_ot_ar_arsrc1_0960": 0.0,
+        "ead_tox21_ar_bla_ag_ratio": 0.0,
+        "ead_tox21_ar_luc_mdakb2_ag": 0.0,
+        "meadian_ead": 0.0,
+        "max_ead_pred_100": 0.0,
+        "auc_agonist": 0.0,
+        "auc_antagonist": 0.0,
+        "antag_confid_score": 0.0,
+        "confirm_assay_flag": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 40,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "androgen_antagonists.parquet",
+      "path": "cebs/brick/datasets/androgen_antagonists.parquet",
+      "rows": 69,
+      "cols": 37,
+      "bytes": 40380,
+      "columns": [
+        {
+          "name": "chemical_name",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "ar_model_call",
+          "type": "string"
+        },
+        {
+          "name": "number_of_positive_assays",
+          "type": "string"
+        },
+        {
+          "name": "all_antagonist_assays_neg_t_f",
+          "type": "string"
+        },
+        {
+          "name": "has_antagonist_loel",
+          "type": "string"
+        },
+        {
+          "name": "activity_group_ar_antagonist",
+          "type": "string"
+        },
+        {
+          "name": "noel",
+          "type": "string"
+        },
+        {
+          "name": "min_loel",
+          "type": "string"
+        },
+        {
+          "name": "median_loel",
+          "type": "string"
+        },
+        {
+          "name": "max_loel",
+          "type": "string"
+        },
+        {
+          "name": "fub",
+          "type": "string"
+        },
+        {
+          "name": "renal_clearance",
+          "type": "string"
+        },
+        {
+          "name": "mw",
+          "type": "string"
+        },
+        {
+          "name": "intrinsic_clearance",
+          "type": "string"
+        },
+        {
+          "name": "src_fraction_of_unbnd_chem",
+          "type": "string"
+        },
+        {
+          "name": "source_for_clearance_in_vitro",
+          "type": "string"
+        },
+        {
+          "name": "nvs_nr_har",
+          "type": "string"
+        },
+        {
+          "name": "nvs_nr_car",
+          "type": "string"
+        },
+        {
+          "name": "nvs_nr_rar",
+          "type": "string"
+        },
+        {
+          "name": "ot_ar_arsrc1_0480",
+          "type": "string"
+        },
+        {
+          "name": "ot_ar_arsrc1_0960",
+          "type": "string"
+        },
+        {
+          "name": "tox21_ar_bla_antagonist_ratio",
+          "type": "string"
+        },
+        {
+          "name": "tox21_ar_luc_mdakb2_antgonist2",
+          "type": "string"
+        },
+        {
+          "name": "ead_nvs_nr_har",
+          "type": "string"
+        },
+        {
+          "name": "ead_nvs_nr_car",
+          "type": "string"
+        },
+        {
+          "name": "ead_nvs_nr_rar",
+          "type": "string"
+        },
+        {
+          "name": "ead_ot_ar_arsrc1_0480",
+          "type": "string"
+        },
+        {
+          "name": "ead_ot_ar_arsrc1_0960",
+          "type": "string"
+        },
+        {
+          "name": "ead_tox21_ar_bla_antgnst_ratio",
+          "type": "string"
+        },
+        {
+          "name": "ead_tx21ar_luc_mdakb2_antgnst2",
+          "type": "string"
+        },
+        {
+          "name": "median_ead",
+          "type": "string"
+        },
+        {
+          "name": "max_ead_predicted_acc_100_um",
+          "type": "string"
+        },
+        {
+          "name": "auc_agonist",
+          "type": "string"
+        },
+        {
+          "name": "auc_antagonist",
+          "type": "string"
+        },
+        {
+          "name": "antagonist_confidence_score",
+          "type": "string"
+        },
+        {
+          "name": "toxcast_assay_confirmation",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "chemical_name": 0.0,
+        "casrn": 0.0,
+        "ar_model_call": 0.0,
+        "number_of_positive_assays": 0.521739,
+        "all_antagonist_assays_neg_t_f": 0.0,
+        "has_antagonist_loel": 0.0,
+        "activity_group_ar_antagonist": 0.0,
+        "noel": 0.521739,
+        "min_loel": 0.478261,
+        "median_loel": 0.478261,
+        "max_loel": 0.478261,
+        "fub": 0.0,
+        "renal_clearance": 0.0,
+        "mw": 0.0,
+        "intrinsic_clearance": 0.0,
+        "src_fraction_of_unbnd_chem": 0.0,
+        "source_for_clearance_in_vitro": 0.0,
+        "nvs_nr_har": 0.0,
+        "nvs_nr_car": 0.0,
+        "nvs_nr_rar": 0.0,
+        "ot_ar_arsrc1_0480": 0.0,
+        "ot_ar_arsrc1_0960": 0.0,
+        "tox21_ar_bla_antagonist_ratio": 0.0,
+        "tox21_ar_luc_mdakb2_antgonist2": 0.0,
+        "ead_nvs_nr_har": 0.0,
+        "ead_nvs_nr_car": 0.0,
+        "ead_nvs_nr_rar": 0.0,
+        "ead_ot_ar_arsrc1_0480": 0.0,
+        "ead_ot_ar_arsrc1_0960": 0.0,
+        "ead_tox21_ar_bla_antgnst_ratio": 0.0,
+        "ead_tx21ar_luc_mdakb2_antgnst2": 0.0,
+        "median_ead": 0.0,
+        "max_ead_predicted_acc_100_um": 0.0,
+        "auc_agonist": 0.0,
+        "auc_antagonist": 0.0,
+        "antagonist_confidence_score": 0.0,
+        "toxcast_assay_confirmation": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 69,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "animal-studies-neonicotinoid-exposure.parquet",
+      "path": "cebs/brick/datasets/animal-studies-neonicotinoid-exposure.parquet",
+      "rows": 456,
+      "cols": 13,
+      "bytes": 65208,
+      "columns": [
+        {
+          "name": "abstract",
+          "type": "string"
+        },
+        {
+          "name": "neonicotinoid_studied",
+          "type": "string"
+        },
+        {
+          "name": "route_of_exposure",
+          "type": "string"
+        },
+        {
+          "name": "species",
+          "type": "string"
+        },
+        {
+          "name": "health_effect",
+          "type": "string"
+        },
+        {
+          "name": "outcome_category",
+          "type": "string"
+        },
+        {
+          "name": "specific_outcome",
+          "type": "string"
+        },
+        {
+          "name": "dose_concentration",
+          "type": "string"
+        },
+        {
+          "name": "dose_concentration_units",
+          "type": "string"
+        },
+        {
+          "name": "short_citation",
+          "type": "string"
+        },
+        {
+          "name": "full_citation",
+          "type": "string"
+        },
+        {
+          "name": "neon_refid",
+          "type": "string"
+        },
+        {
+          "name": "full_citation_url",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "abstract": 0.0,
+        "neonicotinoid_studied": 0.0,
+        "route_of_exposure": 0.0,
+        "species": 0.0,
+        "health_effect": 0.0,
+        "outcome_category": 0.0,
+        "specific_outcome": 0.0,
+        "dose_concentration": 0.0,
+        "dose_concentration_units": 0.0,
+        "short_citation": 0.0,
+        "full_citation": 0.0,
+        "neon_refid": 0.004386,
+        "full_citation_url": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 456,
+      "sample_dup_fraction": 0.7215,
+      "sample_constant_columns": [],
+      "warnings": [
+        "high duplicate-row fraction in sample: 329/456"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "aragonistrl2016.parquet",
+      "path": "cebs/brick/datasets/aragonistrl2016.parquet",
+      "rows": 37,
+      "cols": 3,
+      "bytes": 3902,
+      "columns": [
+        {
+          "name": "chemicalname",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "agonpotcat",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "chemicalname": 0.0,
+        "casrn": 0.0,
+        "agonpotcat": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 37,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "assay-ddd.parquet",
+      "path": "cebs/brick/datasets/assay-ddd.parquet",
+      "rows": 209,
+      "cols": 10,
+      "bytes": 28688,
+      "columns": [
+        {
+          "name": "dtt_assay_name",
+          "type": "string"
+        },
+        {
+          "name": "dtt_unit",
+          "type": "string"
+        },
+        {
+          "name": "display_name",
+          "type": "string"
+        },
+        {
+          "name": "general_domain",
+          "type": "string"
+        },
+        {
+          "name": "dtt_assay_definition",
+          "type": "string"
+        },
+        {
+          "name": "ontology_iri",
+          "type": "string"
+        },
+        {
+          "name": "measurand",
+          "type": "string"
+        },
+        {
+          "name": "measurand_obo_id",
+          "type": "string"
+        },
+        {
+          "name": "status",
+          "type": "string"
+        },
+        {
+          "name": "term_id",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "dtt_assay_name": 0.0,
+        "dtt_unit": 0.229665,
+        "display_name": 0.086124,
+        "general_domain": 0.052632,
+        "dtt_assay_definition": 0.028708,
+        "ontology_iri": 0.019139,
+        "measurand": 0.076555,
+        "measurand_obo_id": 0.157895,
+        "status": 0.0,
+        "term_id": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 209,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "status"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "biomarker-data-collection.parquet",
+      "path": "cebs/brick/datasets/biomarker-data-collection.parquet",
+      "rows": 125,
+      "cols": 5,
+      "bytes": 63407,
+      "columns": [
+        {
+          "name": "gene",
+          "type": "string"
+        },
+        {
+          "name": "gene_desc",
+          "type": "string"
+        },
+        {
+          "name": "tissue",
+          "type": "string"
+        },
+        {
+          "name": "biomark_sum_file",
+          "type": "string"
+        },
+        {
+          "name": "biomark_sum_file_url",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "gene": 0.0,
+        "gene_desc": 0.0,
+        "tissue": 0.0,
+        "biomark_sum_file": 0.0,
+        "biomark_sum_file_url": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 125,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "body-weight-loss-in-f344.parquet",
+      "path": "cebs/brick/datasets/body-weight-loss-in-f344.parquet",
+      "rows": 1000,
+      "cols": 31,
+      "bytes": 62988,
+      "columns": [
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "f344_chemical_name",
+          "type": "string"
+        },
+        {
+          "name": "f344_dose",
+          "type": "string"
+        },
+        {
+          "name": "f344_dose_unit",
+          "type": "string"
+        },
+        {
+          "name": "f344_dose_description",
+          "type": "string"
+        },
+        {
+          "name": "f344_ratio_of_body_wt_mean",
+          "type": "string"
+        },
+        {
+          "name": "f344_tolerance",
+          "type": "string"
+        },
+        {
+          "name": "f344_body_wt_mean_trt_ctl_grp",
+          "type": "string"
+        },
+        {
+          "name": "f344_body_wt_sd_trt_ctl_grp",
+          "type": "string"
+        },
+        {
+          "name": "f344_no_sub_in_trt_ctl_grp",
+          "type": "string"
+        },
+        {
+          "name": "f344_body_wt_mean_of_ctl_grp",
+          "type": "string"
+        },
+        {
+          "name": "f344_body_wt_sd_of_ctl_grp",
+          "type": "string"
+        },
+        {
+          "name": "f344_no_sub_in_ctl_grp",
+          "type": "string"
+        },
+        {
+          "name": "f344_sex",
+          "type": "string"
+        },
+        {
+          "name": "f344_strain",
+          "type": "string"
+        },
+        {
+          "name": "f344_is_control_group",
+          "type": "string"
+        },
+        {
+          "name": "f344_treatment_group_type",
+          "type": "string"
+        },
+        {
+          "name": "f344_route",
+          "type": "string"
+        },
+        {
+          "name": "f344_vehicle",
+          "type": "string"
+        },
+        {
+          "name": "f344_death_status",
+          "type": "string"
+        },
+        {
+          "name": "f344_time_in_study",
+          "type": "string"
+        },
+        {
+          "name": "f344_group_name",
+          "type": "string"
+        },
+        {
+          "name": "f344_ntp_study_type",
+          "type": "string"
+        },
+        {
+          "name": "f344_study_title",
+          "type": "string"
+        },
+        {
+          "name": "f344_duration",
+          "type": "string"
+        },
+        {
+          "name": "f344_is_ntp_study",
+          "type": "string"
+        },
+        {
+          "name": "f344_laboratory",
+          "type": "string"
+        },
+        {
+          "name": "f344_start_date",
+          "type": "string"
+        },
+        {
+          "name": "f344_accession_number",
+          "type": "string"
+        },
+        {
+          "name": "f344_ntp_tdms_number",
+          "type": "string"
+        },
+        {
+          "name": "f344_ntp_chemtrack_number",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "casrn": 0.0,
+        "f344_chemical_name": 0.0,
+        "f344_dose": 0.0,
+        "f344_dose_unit": 0.028,
+        "f344_dose_description": 0.0,
+        "f344_ratio_of_body_wt_mean": 0.0,
+        "f344_tolerance": 0.0,
+        "f344_body_wt_mean_trt_ctl_grp": 0.0,
+        "f344_body_wt_sd_trt_ctl_grp": 0.0,
+        "f344_no_sub_in_trt_ctl_grp": 0.0,
+        "f344_body_wt_mean_of_ctl_grp": 0.0,
+        "f344_body_wt_sd_of_ctl_grp": 0.0,
+        "f344_no_sub_in_ctl_grp": 0.0,
+        "f344_sex": 0.0,
+        "f344_strain": 0.0,
+        "f344_is_control_group": 0.0,
+        "f344_treatment_group_type": 0.847,
+        "f344_route": 0.013,
+        "f344_vehicle": 0.1,
+        "f344_death_status": 0.847,
+        "f344_time_in_study": 0.0,
+        "f344_group_name": 0.0,
+        "f344_ntp_study_type": 0.0,
+        "f344_study_title": 0.0,
+        "f344_duration": 0.0,
+        "f344_is_ntp_study": 0.0,
+        "f344_laboratory": 0.847,
+        "f344_start_date": 0.847,
+        "f344_accession_number": 0.0,
+        "f344_ntp_tdms_number": 0.0,
+        "f344_ntp_chemtrack_number": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 1000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "f344_strain",
+        "f344_is_ntp_study"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "catexstudies.parquet",
+      "path": "cebs/brick/datasets/catexstudies.parquet",
+      "rows": 150,
+      "cols": 35,
+      "bytes": 125193,
+      "columns": [
+        {
+          "name": "ma_geo",
+          "type": "string"
+        },
+        {
+          "name": "ma_pmid",
+          "type": "string"
+        },
+        {
+          "name": "ma_institution",
+          "type": "string"
+        },
+        {
+          "name": "ma_author",
+          "type": "string"
+        },
+        {
+          "name": "ma_coauthor",
+          "type": "string"
+        },
+        {
+          "name": "ma_yearpublished",
+          "type": "string"
+        },
+        {
+          "name": "ma_platformdescription",
+          "type": "string"
+        },
+        {
+          "name": "ma_platform",
+          "type": "string"
+        },
+        {
+          "name": "ma_geoprofiletype",
+          "type": "string"
+        },
+        {
+          "name": "ma_title",
+          "type": "string"
+        },
+        {
+          "name": "ma_objective",
+          "type": "string"
+        },
+        {
+          "name": "ma_design",
+          "type": "string"
+        },
+        {
+          "name": "ma_species",
+          "type": "string"
+        },
+        {
+          "name": "ma_strain",
+          "type": "string"
+        },
+        {
+          "name": "ma_tissue",
+          "type": "string"
+        },
+        {
+          "name": "ma_chemicals",
+          "type": "string"
+        },
+        {
+          "name": "ma_multiplechemicals",
+          "type": "string"
+        },
+        {
+          "name": "ma_cellline",
+          "type": "string"
+        },
+        {
+          "name": "ma_geneticchange",
+          "type": "string"
+        },
+        {
+          "name": "ma_otheragent",
+          "type": "string"
+        },
+        {
+          "name": "ma_studyduration",
+          "type": "string"
+        },
+        {
+          "name": "ma_timepoints",
+          "type": "string"
+        },
+        {
+          "name": "ma_route",
+          "type": "string"
+        },
+        {
+          "name": "ma_vehicle",
+          "type": "string"
+        },
+        {
+          "name": "ma_additionalmetadata",
+          "type": "string"
+        },
+        {
+          "name": "ma_additionalinlifedata",
+          "type": "string"
+        },
+        {
+          "name": "ma_cebsaccno",
+          "type": "string"
+        },
+        {
+          "name": "ma_geolink",
+          "type": "string"
+        },
+        {
+          "name": "ma_analysislink",
+          "type": "string"
+        },
+        {
+          "name": "ma_additionalinformation",
+          "type": "string"
+        },
+        {
+          "name": "ma_additionalmetadata_url",
+          "type": "string"
+        },
+        {
+          "name": "ma_additionalinlifedata_url",
+          "type": "string"
+        },
+        {
+          "name": "ma_geolink_url",
+          "type": "string"
+        },
+        {
+          "name": "ma_analysislink_url",
+          "type": "string"
+        },
+        {
+          "name": "ma_additionalinformation_url",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "ma_geo": 0.026667,
+        "ma_pmid": 0.206667,
+        "ma_institution": 0.0,
+        "ma_author": 0.0,
+        "ma_coauthor": 0.746667,
+        "ma_yearpublished": 0.0,
+        "ma_platformdescription": 0.08,
+        "ma_platform": 0.08,
+        "ma_geoprofiletype": 0.146667,
+        "ma_title": 0.0,
+        "ma_objective": 0.086667,
+        "ma_design": 0.086667,
+        "ma_species": 0.02,
+        "ma_strain": 0.573333,
+        "ma_tissue": 0.32,
+        "ma_chemicals": 0.526667,
+        "ma_multiplechemicals": 0.726667,
+        "ma_cellline": 0.913333,
+        "ma_geneticchange": 0.88,
+        "ma_otheragent": 0.973333,
+        "ma_studyduration": 0.82,
+        "ma_timepoints": 0.9,
+        "ma_route": 0.8,
+        "ma_vehicle": 0.846667,
+        "ma_additionalmetadata": 0.766667,
+        "ma_additionalinlifedata": 0.9,
+        "ma_cebsaccno": 0.72,
+        "ma_geolink": 0.026667,
+        "ma_analysislink": 0.026667,
+        "ma_additionalinformation": 0.973333,
+        "ma_additionalmetadata_url": 0.766667,
+        "ma_additionalinlifedata_url": 0.9,
+        "ma_geolink_url": 0.026667,
+        "ma_analysislink_url": 0.026667,
+        "ma_additionalinformation_url": 0.973333
+      },
+      "all_null_columns": [],
+      "sample_rows": 150,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "cebs-study-catalog.parquet",
+      "path": "cebs/brick/datasets/cebs-study-catalog.parquet",
+      "rows": 1000,
+      "cols": 22,
+      "bytes": 98257,
+      "columns": [
+        {
+          "name": "study_uid",
+          "type": "string"
+        },
+        {
+          "name": "depositor_study_number",
+          "type": "string"
+        },
+        {
+          "name": "merged_study_type",
+          "type": "string"
+        },
+        {
+          "name": "publication_uid",
+          "type": "string"
+        },
+        {
+          "name": "ntp_study_type",
+          "type": "string"
+        },
+        {
+          "name": "study_title",
+          "type": "string"
+        },
+        {
+          "name": "test_compound",
+          "type": "string"
+        },
+        {
+          "name": "ntp_casrn",
+          "type": "string"
+        },
+        {
+          "name": "dtxsid",
+          "type": "string"
+        },
+        {
+          "name": "standard_sex",
+          "type": "string"
+        },
+        {
+          "name": "standard_species",
+          "type": "string"
+        },
+        {
+          "name": "standard_strain",
+          "type": "string"
+        },
+        {
+          "name": "standard_route",
+          "type": "string"
+        },
+        {
+          "name": "standard_role",
+          "type": "string"
+        },
+        {
+          "name": "standard_vehicle",
+          "type": "string"
+        },
+        {
+          "name": "positive_control",
+          "type": "string"
+        },
+        {
+          "name": "pos_con_dtxsid",
+          "type": "string"
+        },
+        {
+          "name": "pos_con_ntp_casrn",
+          "type": "string"
+        },
+        {
+          "name": "microsomal_activation_species",
+          "type": "string"
+        },
+        {
+          "name": "microsomal_activation_used",
+          "type": "string"
+        },
+        {
+          "name": "start_year",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "null"
+        }
+      ],
+      "null_fraction": {
+        "study_uid": 0.0,
+        "depositor_study_number": 0.0,
+        "merged_study_type": 0.974,
+        "publication_uid": 0.814,
+        "ntp_study_type": 0.0,
+        "study_title": 0.0,
+        "test_compound": 0.0,
+        "ntp_casrn": 0.0,
+        "dtxsid": 0.007,
+        "standard_sex": 0.951,
+        "standard_species": 0.97,
+        "standard_strain": 0.0,
+        "standard_route": 0.951,
+        "standard_role": 0.0,
+        "standard_vehicle": 0.003,
+        "positive_control": 0.039,
+        "pos_con_dtxsid": 0.048,
+        "pos_con_ntp_casrn": 0.039,
+        "microsomal_activation_species": 0.03,
+        "microsomal_activation_used": 0.049,
+        "start_year": 0.0,
+        "casrn": null
+      },
+      "all_null_columns": [],
+      "sample_rows": 1000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "casrn"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "cebs-subject-decoder.parquet",
+      "path": "cebs/brick/datasets/cebs-subject-decoder.parquet",
+      "rows": 1000,
+      "cols": 23,
+      "bytes": 75123,
+      "columns": [
+        {
+          "name": "study_uid_in_cebsdwh",
+          "type": "string"
+        },
+        {
+          "name": "study_uid_tdmse",
+          "type": "string"
+        },
+        {
+          "name": "study_uid_gdb",
+          "type": "string"
+        },
+        {
+          "name": "ntp_tdmse_number_tdmse",
+          "type": "string"
+        },
+        {
+          "name": "ntp_tdmse_number_gdb",
+          "type": "string"
+        },
+        {
+          "name": "subject_uid_in_cebsdwh",
+          "type": "string"
+        },
+        {
+          "name": "subject_display_name_tdmse",
+          "type": "string"
+        },
+        {
+          "name": "subject_id_tdmse",
+          "type": "string"
+        },
+        {
+          "name": "subject_id_gdb",
+          "type": "string"
+        },
+        {
+          "name": "group_name_tdmse",
+          "type": "string"
+        },
+        {
+          "name": "group_name_gdb",
+          "type": "string"
+        },
+        {
+          "name": "cage_name_tdmse",
+          "type": "string"
+        },
+        {
+          "name": "standard_sex",
+          "type": "string"
+        },
+        {
+          "name": "gdb_sex_in_cebsa_is_incorrect",
+          "type": "string"
+        },
+        {
+          "name": "dose",
+          "type": "string"
+        },
+        {
+          "name": "standard_dose_unit",
+          "type": "string"
+        },
+        {
+          "name": "stressor_name",
+          "type": "string"
+        },
+        {
+          "name": "ntp_casrn",
+          "type": "string"
+        },
+        {
+          "name": "standard_route",
+          "type": "string"
+        },
+        {
+          "name": "standard_vehicle",
+          "type": "string"
+        },
+        {
+          "name": "standard_species",
+          "type": "string"
+        },
+        {
+          "name": "standard_strain",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "null"
+        }
+      ],
+      "null_fraction": {
+        "study_uid_in_cebsdwh": 0.0,
+        "study_uid_tdmse": 0.0,
+        "study_uid_gdb": 0.0,
+        "ntp_tdmse_number_tdmse": 0.0,
+        "ntp_tdmse_number_gdb": 0.0,
+        "subject_uid_in_cebsdwh": 0.0,
+        "subject_display_name_tdmse": 0.31,
+        "subject_id_tdmse": 0.31,
+        "subject_id_gdb": 0.104,
+        "group_name_tdmse": 0.31,
+        "group_name_gdb": 0.104,
+        "cage_name_tdmse": 0.31,
+        "standard_sex": 0.0,
+        "gdb_sex_in_cebsa_is_incorrect": 0.0,
+        "dose": 0.0,
+        "standard_dose_unit": 0.002,
+        "stressor_name": 0.0,
+        "ntp_casrn": 0.0,
+        "standard_route": 0.0,
+        "standard_vehicle": 0.041,
+        "standard_species": 0.0,
+        "standard_strain": 0.0,
+        "casrn": null
+      },
+      "all_null_columns": [],
+      "sample_rows": 1000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "casrn"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "chemlists.parquet",
+      "path": "cebs/brick/datasets/chemlists.parquet",
+      "rows": 1000,
+      "cols": 47,
+      "bytes": 122339,
+      "columns": [
+        {
+          "name": "clid",
+          "type": "string"
+        },
+        {
+          "name": "list_name",
+          "type": "string"
+        },
+        {
+          "name": "project_title",
+          "type": "string"
+        },
+        {
+          "name": "is_category",
+          "type": "string"
+        },
+        {
+          "name": "requestor",
+          "type": "string"
+        },
+        {
+          "name": "request_branch_office_program",
+          "type": "null"
+        },
+        {
+          "name": "recipient",
+          "type": "string"
+        },
+        {
+          "name": "recipient_company",
+          "type": "string"
+        },
+        {
+          "name": "recipient_company_department",
+          "type": "string"
+        },
+        {
+          "name": "project_type",
+          "type": "null"
+        },
+        {
+          "name": "program_of_work",
+          "type": "string"
+        },
+        {
+          "name": "keywords",
+          "type": "string"
+        },
+        {
+          "name": "assays",
+          "type": "string"
+        },
+        {
+          "name": "contributor",
+          "type": "string"
+        },
+        {
+          "name": "shipping_date",
+          "type": "string"
+        },
+        {
+          "name": "smiles_code",
+          "type": "string"
+        },
+        {
+          "name": "dtt_chemical_name",
+          "type": "string"
+        },
+        {
+          "name": "ddd_chemical_name",
+          "type": "string"
+        },
+        {
+          "name": "epa_chemical_name",
+          "type": "string"
+        },
+        {
+          "name": "ta_ddd_id",
+          "type": "string"
+        },
+        {
+          "name": "dtxsid",
+          "type": "string"
+        },
+        {
+          "name": "dtt_casrn",
+          "type": "string"
+        },
+        {
+          "name": "epa_cas_no",
+          "type": "string"
+        },
+        {
+          "name": "role",
+          "type": "string"
+        },
+        {
+          "name": "epa_molecular_weight",
+          "type": "string"
+        },
+        {
+          "name": "list_molecular_weight",
+          "type": "string"
+        },
+        {
+          "name": "amount",
+          "type": "string"
+        },
+        {
+          "name": "amount_unit",
+          "type": "string"
+        },
+        {
+          "name": "supplier",
+          "type": "string"
+        },
+        {
+          "name": "lot_number",
+          "type": "string"
+        },
+        {
+          "name": "concentration",
+          "type": "string"
+        },
+        {
+          "name": "concentration_unit",
+          "type": "string"
+        },
+        {
+          "name": "coa_purity",
+          "type": "string"
+        },
+        {
+          "name": "determined_purity",
+          "type": "string"
+        },
+        {
+          "name": "storage_conditions",
+          "type": "string"
+        },
+        {
+          "name": "blind_code",
+          "type": "string"
+        },
+        {
+          "name": "plate_number",
+          "type": "null"
+        },
+        {
+          "name": "plate_position",
+          "type": "string"
+        },
+        {
+          "name": "additional_information",
+          "type": "string"
+        },
+        {
+          "name": "species",
+          "type": "string"
+        },
+        {
+          "name": "plant_part",
+          "type": "string"
+        },
+        {
+          "name": "extract_method",
+          "type": "string"
+        },
+        {
+          "name": "abbreviation",
+          "type": "string"
+        },
+        {
+          "name": "biological",
+          "type": "null"
+        },
+        {
+          "name": "category",
+          "type": "null"
+        },
+        {
+          "name": "dttid_activity",
+          "type": "string"
+        },
+        {
+          "name": "show_unique_list",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "clid": 0.0,
+        "list_name": 0.042,
+        "project_title": 0.941,
+        "is_category": 0.0,
+        "requestor": 0.127,
+        "request_branch_office_program": null,
+        "recipient": 0.053,
+        "recipient_company": 0.051,
+        "recipient_company_department": 0.603,
+        "project_type": null,
+        "program_of_work": 0.89,
+        "keywords": 0.134,
+        "assays": 0.907,
+        "contributor": 0.991,
+        "shipping_date": 0.056,
+        "smiles_code": 0.049,
+        "dtt_chemical_name": 0.0,
+        "ddd_chemical_name": 0.003,
+        "epa_chemical_name": 0.007,
+        "ta_ddd_id": 0.0,
+        "dtxsid": 0.004,
+        "dtt_casrn": 0.0,
+        "epa_cas_no": 0.004,
+        "role": 0.958,
+        "epa_molecular_weight": 0.043,
+        "list_molecular_weight": 0.045,
+        "amount": 0.051,
+        "amount_unit": 0.051,
+        "supplier": 0.054,
+        "lot_number": 0.054,
+        "concentration": 0.185,
+        "concentration_unit": 0.185,
+        "coa_purity": 0.054,
+        "determined_purity": 0.055,
+        "storage_conditions": 0.051,
+        "blind_code": 0.622,
+        "plate_number": null,
+        "plate_position": 0.22,
+        "additional_information": 0.538,
+        "species": 0.997,
+        "plant_part": 0.999,
+        "extract_method": 0.999,
+        "abbreviation": 0.896,
+        "biological": null,
+        "category": null,
+        "dttid_activity": 0.983,
+        "show_unique_list": 0.987
+      },
+      "all_null_columns": [],
+      "sample_rows": 1000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "request_branch_office_program",
+        "project_type",
+        "plate_number",
+        "biological",
+        "category"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "chemtrack-testing-stat.parquet",
+      "path": "cebs/brick/datasets/chemtrack-testing-stat.parquet",
+      "rows": 1000,
+      "cols": 15,
+      "bytes": 105392,
+      "columns": [
+        {
+          "name": "public_flag",
+          "type": "string"
+        },
+        {
+          "name": "ta_name",
+          "type": "string"
+        },
+        {
+          "name": "ta_number",
+          "type": "string"
+        },
+        {
+          "name": "test_stat_pg",
+          "type": "string"
+        },
+        {
+          "name": "cebs_ta_pg",
+          "type": "string"
+        },
+        {
+          "name": "species",
+          "type": "string"
+        },
+        {
+          "name": "study_type",
+          "type": "string"
+        },
+        {
+          "name": "exp_type",
+          "type": "string"
+        },
+        {
+          "name": "study_length",
+          "type": "string"
+        },
+        {
+          "name": "study_num",
+          "type": "string"
+        },
+        {
+          "name": "study_status",
+          "type": "string"
+        },
+        {
+          "name": "strain",
+          "type": "string"
+        },
+        {
+          "name": "route",
+          "type": "string"
+        },
+        {
+          "name": "vehicle",
+          "type": "string"
+        },
+        {
+          "name": "cas_display",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "public_flag": 0.0,
+        "ta_name": 0.0,
+        "ta_number": 0.0,
+        "test_stat_pg": 0.004,
+        "cebs_ta_pg": 0.004,
+        "species": 0.002,
+        "study_type": 0.001,
+        "exp_type": 0.001,
+        "study_length": 0.709,
+        "study_num": 0.001,
+        "study_status": 0.001,
+        "strain": 0.568,
+        "route": 0.581,
+        "vehicle": 0.686,
+        "cas_display": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 1000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "clin-chem-iad-2024.parquet",
+      "path": "cebs/brick/datasets/clin-chem-iad-2024.parquet",
+      "rows": 1000,
+      "cols": 47,
+      "bytes": 102868,
+      "columns": [
+        {
+          "name": "accession_number",
+          "type": "string"
+        },
+        {
+          "name": "depositor_study_number",
+          "type": "string"
+        },
+        {
+          "name": "publication_uid",
+          "type": "string"
+        },
+        {
+          "name": "standard_study_type",
+          "type": "string"
+        },
+        {
+          "name": "study_title",
+          "type": "string"
+        },
+        {
+          "name": "start_year",
+          "type": "string"
+        },
+        {
+          "name": "standard_test_compound_name",
+          "type": "string"
+        },
+        {
+          "name": "dtxsid",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "dose_desc",
+          "type": "string"
+        },
+        {
+          "name": "dose",
+          "type": "string"
+        },
+        {
+          "name": "standard_dose_unit",
+          "type": "string"
+        },
+        {
+          "name": "subject_name",
+          "type": "string"
+        },
+        {
+          "name": "standard_assay_name",
+          "type": "string"
+        },
+        {
+          "name": "standard_assay_input",
+          "type": "string"
+        },
+        {
+          "name": "original_value",
+          "type": "string"
+        },
+        {
+          "name": "original_value_adjusted",
+          "type": "string"
+        },
+        {
+          "name": "original_value_unit",
+          "type": "string"
+        },
+        {
+          "name": "conversion_factor",
+          "type": "string"
+        },
+        {
+          "name": "standard_unit",
+          "type": "string"
+        },
+        {
+          "name": "standard_species",
+          "type": "string"
+        },
+        {
+          "name": "standard_strain",
+          "type": "string"
+        },
+        {
+          "name": "standard_sex",
+          "type": "string"
+        },
+        {
+          "name": "standard_route",
+          "type": "string"
+        },
+        {
+          "name": "standard_role",
+          "type": "string"
+        },
+        {
+          "name": "standard_component_name",
+          "type": "string"
+        },
+        {
+          "name": "component_dtxsid",
+          "type": "string"
+        },
+        {
+          "name": "component_casrn",
+          "type": "string"
+        },
+        {
+          "name": "standard_vehicle_name",
+          "type": "string"
+        },
+        {
+          "name": "standard_removal_reason",
+          "type": "string"
+        },
+        {
+          "name": "time_in_study",
+          "type": "string"
+        },
+        {
+          "name": "time_in_study_unit",
+          "type": "string"
+        },
+        {
+          "name": "comments",
+          "type": "string"
+        },
+        {
+          "name": "study_chemical",
+          "type": "string"
+        },
+        {
+          "name": "ntp_study_type",
+          "type": "string"
+        },
+        {
+          "name": "species",
+          "type": "string"
+        },
+        {
+          "name": "strain",
+          "type": "string"
+        },
+        {
+          "name": "sex",
+          "type": "string"
+        },
+        {
+          "name": "route",
+          "type": "string"
+        },
+        {
+          "name": "treatment_role",
+          "type": "string"
+        },
+        {
+          "name": "component_name",
+          "type": "string"
+        },
+        {
+          "name": "dose_unit",
+          "type": "string"
+        },
+        {
+          "name": "vehicle",
+          "type": "string"
+        },
+        {
+          "name": "assay_name_ori",
+          "type": "string"
+        },
+        {
+          "name": "assay_input",
+          "type": "string"
+        },
+        {
+          "name": "removal_reason",
+          "type": "string"
+        },
+        {
+          "name": "dose_response_study",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "accession_number": 0.0,
+        "depositor_study_number": 0.0,
+        "publication_uid": 0.076,
+        "standard_study_type": 0.0,
+        "study_title": 0.0,
+        "start_year": 0.011,
+        "standard_test_compound_name": 0.0,
+        "dtxsid": 0.005,
+        "casrn": 0.0,
+        "dose_desc": 0.0,
+        "dose": 0.002,
+        "standard_dose_unit": 0.0,
+        "subject_name": 0.0,
+        "standard_assay_name": 0.0,
+        "standard_assay_input": 0.0,
+        "original_value": 0.0,
+        "original_value_adjusted": 0.0,
+        "original_value_unit": 0.02,
+        "conversion_factor": 0.0,
+        "standard_unit": 0.0,
+        "standard_species": 0.0,
+        "standard_strain": 0.0,
+        "standard_sex": 0.0,
+        "standard_route": 0.079,
+        "standard_role": 0.0,
+        "standard_component_name": 0.186,
+        "component_dtxsid": 0.191,
+        "component_casrn": 0.186,
+        "standard_vehicle_name": 0.582,
+        "standard_removal_reason": 0.538,
+        "time_in_study": 0.0,
+        "time_in_study_unit": 0.0,
+        "comments": 0.999,
+        "study_chemical": 0.0,
+        "ntp_study_type": 0.0,
+        "species": 0.0,
+        "strain": 0.0,
+        "sex": 0.0,
+        "route": 0.079,
+        "treatment_role": 0.0,
+        "component_name": 0.079,
+        "dose_unit": 0.0,
+        "vehicle": 0.582,
+        "assay_name_ori": 0.0,
+        "assay_input": 0.0,
+        "removal_reason": 0.538,
+        "dose_response_study": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 1000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "conversion_factor"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "comet.parquet",
+      "path": "cebs/brick/datasets/comet.parquet",
+      "rows": 292,
+      "cols": 19,
+      "bytes": 25049,
+      "columns": [
+        {
+          "name": "comet_chem_name",
+          "type": "string"
+        },
+        {
+          "name": "comet_trial_conclusion",
+          "type": "string"
+        },
+        {
+          "name": "comet_percent_pvalue",
+          "type": "string"
+        },
+        {
+          "name": "comet_male_conclusion",
+          "type": "string"
+        },
+        {
+          "name": "comet_female_conclusion",
+          "type": "string"
+        },
+        {
+          "name": "comet_species",
+          "type": "string"
+        },
+        {
+          "name": "comet_strain",
+          "type": "string"
+        },
+        {
+          "name": "comet_group_sex",
+          "type": "string"
+        },
+        {
+          "name": "comet_organ",
+          "type": "string"
+        },
+        {
+          "name": "comet_dosing",
+          "type": "string"
+        },
+        {
+          "name": "comet_dose_unit",
+          "type": "string"
+        },
+        {
+          "name": "comet_start_date",
+          "type": "string"
+        },
+        {
+          "name": "comet_protocol",
+          "type": "string"
+        },
+        {
+          "name": "comet_study_page",
+          "type": "string"
+        },
+        {
+          "name": "comet_ntp_study_no",
+          "type": "string"
+        },
+        {
+          "name": "comet_cebs_trial_name",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "comet_study_page_url",
+          "type": "string"
+        },
+        {
+          "name": "casrn_url",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "comet_chem_name": 0.0,
+        "comet_trial_conclusion": 0.143836,
+        "comet_percent_pvalue": 0.0,
+        "comet_male_conclusion": 0.263699,
+        "comet_female_conclusion": 0.736301,
+        "comet_species": 0.0,
+        "comet_strain": 0.0,
+        "comet_group_sex": 0.0,
+        "comet_organ": 0.0,
+        "comet_dosing": 0.0,
+        "comet_dose_unit": 0.0,
+        "comet_start_date": 0.280822,
+        "comet_protocol": 0.0,
+        "comet_study_page": 0.0,
+        "comet_ntp_study_no": 0.0,
+        "comet_cebs_trial_name": 0.0,
+        "casrn": 0.0,
+        "comet_study_page_url": 0.0,
+        "casrn_url": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 292,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "cytotoxacuteoral2006.parquet",
+      "path": "cebs/brick/datasets/cytotoxacuteoral2006.parquet",
+      "rows": 35,
+      "cols": 6,
+      "bytes": 6797,
+      "columns": [
+        {
+          "name": "chemicalname",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "endporalacutetoxld50mgkg",
+          "type": "string"
+        },
+        {
+          "name": "endp3t3ic50mm",
+          "type": "string"
+        },
+        {
+          "name": "endpnhkic50mm",
+          "type": "string"
+        },
+        {
+          "name": "recordid",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "chemicalname": 0.0,
+        "casrn": 0.0,
+        "endporalacutetoxld50mgkg": 0.0,
+        "endp3t3ic50mm": 0.0,
+        "endpnhkic50mm": 0.0,
+        "recordid": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 35,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "developmental-morphology-ddd.parquet",
+      "path": "cebs/brick/datasets/developmental-morphology-ddd.parquet",
+      "rows": 841,
+      "cols": 13,
+      "bytes": 28270,
+      "columns": [
+        {
+          "name": "species",
+          "type": "string"
+        },
+        {
+          "name": "strain",
+          "type": "string"
+        },
+        {
+          "name": "area",
+          "type": "string"
+        },
+        {
+          "name": "location",
+          "type": "string"
+        },
+        {
+          "name": "observation",
+          "type": "string"
+        },
+        {
+          "name": "classification",
+          "type": "string"
+        },
+        {
+          "name": "devtox_localization",
+          "type": "string"
+        },
+        {
+          "name": "devtox_observation",
+          "type": "string"
+        },
+        {
+          "name": "devtox_id",
+          "type": "string"
+        },
+        {
+          "name": "devtox_class",
+          "type": "string"
+        },
+        {
+          "name": "obo_term",
+          "type": "string"
+        },
+        {
+          "name": "status",
+          "type": "string"
+        },
+        {
+          "name": "term_id",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "species": 0.0,
+        "strain": 0.0,
+        "area": 0.029727,
+        "location": 0.029727,
+        "observation": 0.0,
+        "classification": 0.033294,
+        "devtox_localization": 0.834721,
+        "devtox_observation": 0.046373,
+        "devtox_id": 0.047562,
+        "devtox_class": 0.030916,
+        "obo_term": 0.984542,
+        "status": 0.0,
+        "term_id": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 841,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "strain"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "drosophila.parquet",
+      "path": "cebs/brick/datasets/drosophila.parquet",
+      "rows": 448,
+      "cols": 8,
+      "bytes": 25501,
+      "columns": [
+        {
+          "name": "test_article_name",
+          "type": "string"
+        },
+        {
+          "name": "study_conclusion",
+          "type": "string"
+        },
+        {
+          "name": "species",
+          "type": "string"
+        },
+        {
+          "name": "strain",
+          "type": "string"
+        },
+        {
+          "name": "protocol",
+          "type": "string"
+        },
+        {
+          "name": "depositor_views",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "ntp_study_id",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "test_article_name": 0.0,
+        "study_conclusion": 0.0,
+        "species": 0.0,
+        "strain": 0.0,
+        "protocol": 0.0,
+        "depositor_views": 0.0,
+        "casrn": 0.0,
+        "ntp_study_id": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 448,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "species",
+        "strain"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "dtt-publications-pds.parquet",
+      "path": "cebs/brick/datasets/dtt-publications-pds.parquet",
+      "rows": 1000,
+      "cols": 24,
+      "bytes": 161401,
+      "columns": [
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "authors",
+          "type": "string"
+        },
+        {
+          "name": "publication_year",
+          "type": "string"
+        },
+        {
+          "name": "publication_id",
+          "type": "string"
+        },
+        {
+          "name": "study_type",
+          "type": "string"
+        },
+        {
+          "name": "test_article_name",
+          "type": "string"
+        },
+        {
+          "name": "species",
+          "type": "string"
+        },
+        {
+          "name": "abstract_pg",
+          "type": "string"
+        },
+        {
+          "name": "publication_pg",
+          "type": "string"
+        },
+        {
+          "name": "data_pg",
+          "type": "string"
+        },
+        {
+          "name": "cebs_test_article_page_pg",
+          "type": "string"
+        },
+        {
+          "name": "citation",
+          "type": "string"
+        },
+        {
+          "name": "strain",
+          "type": "string"
+        },
+        {
+          "name": "route",
+          "type": "string"
+        },
+        {
+          "name": "vehicle",
+          "type": "string"
+        },
+        {
+          "name": "dtxsid",
+          "type": "string"
+        },
+        {
+          "name": "cas_display",
+          "type": "string"
+        },
+        {
+          "name": "chemlist",
+          "type": "string"
+        },
+        {
+          "name": "pmid",
+          "type": "string"
+        },
+        {
+          "name": "mice",
+          "type": "string"
+        },
+        {
+          "name": "rats",
+          "type": "string"
+        },
+        {
+          "name": "bacteria",
+          "type": "string"
+        },
+        {
+          "name": "in_vitro",
+          "type": "string"
+        },
+        {
+          "name": "other_species",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "title": 0.0,
+        "authors": 0.033,
+        "publication_year": 0.022,
+        "publication_id": 0.0,
+        "study_type": 0.132,
+        "test_article_name": 0.028,
+        "species": 0.078,
+        "abstract_pg": 0.021,
+        "publication_pg": 0.049,
+        "data_pg": 0.905,
+        "cebs_test_article_page_pg": 0.255,
+        "citation": 0.042,
+        "strain": 0.169,
+        "route": 0.179,
+        "vehicle": 0.442,
+        "dtxsid": 0.123,
+        "cas_display": 0.03,
+        "chemlist": 0.95,
+        "pmid": 0.055,
+        "mice": 0.256,
+        "rats": 0.268,
+        "bacteria": 0.998,
+        "in_vitro": 0.98,
+        "other_species": 0.964
+      },
+      "all_null_columns": [],
+      "sample_rows": 1000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "flame-retardants.parquet",
+      "path": "cebs/brick/datasets/flame-retardants.parquet",
+      "rows": 287,
+      "cols": 40,
+      "bytes": 58070,
+      "columns": [
+        {
+          "name": "fr_authors",
+          "type": "string"
+        },
+        {
+          "name": "fr_title",
+          "type": "string"
+        },
+        {
+          "name": "fr_pmid",
+          "type": "string"
+        },
+        {
+          "name": "fr_year",
+          "type": "string"
+        },
+        {
+          "name": "fr_source",
+          "type": "string"
+        },
+        {
+          "name": "fr_dtxsidstudied",
+          "type": "string"
+        },
+        {
+          "name": "fr_preferredname",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "fr_datapage",
+          "type": "string"
+        },
+        {
+          "name": "fr_chemicalabbreviation",
+          "type": "string"
+        },
+        {
+          "name": "fr_citationnotes",
+          "type": "string"
+        },
+        {
+          "name": "fr_note",
+          "type": "string"
+        },
+        {
+          "name": "fr_publishednameifdifferent",
+          "type": "string"
+        },
+        {
+          "name": "fr_celegans",
+          "type": "string"
+        },
+        {
+          "name": "fr_planaria",
+          "type": "string"
+        },
+        {
+          "name": "fr_zebrafish",
+          "type": "string"
+        },
+        {
+          "name": "fr_rodent",
+          "type": "string"
+        },
+        {
+          "name": "fr_human",
+          "type": "string"
+        },
+        {
+          "name": "fr_tissue",
+          "type": "string"
+        },
+        {
+          "name": "fr_invitro",
+          "type": "string"
+        },
+        {
+          "name": "fr_exposureduration",
+          "type": "string"
+        },
+        {
+          "name": "fr_dttgenetoxresult",
+          "type": "string"
+        },
+        {
+          "name": "fr_dttbioassayconclusion",
+          "type": "string"
+        },
+        {
+          "name": "fr_development",
+          "type": "string"
+        },
+        {
+          "name": "fr_differentiation",
+          "type": "string"
+        },
+        {
+          "name": "fr_proliferationandgrowth",
+          "type": "string"
+        },
+        {
+          "name": "fr_neuronalgrthnetwrk",
+          "type": "string"
+        },
+        {
+          "name": "fr_genetictoxicology",
+          "type": "string"
+        },
+        {
+          "name": "fr_reproductivedevelopment",
+          "type": "string"
+        },
+        {
+          "name": "fr_behavior",
+          "type": "string"
+        },
+        {
+          "name": "fr_immune",
+          "type": "string"
+        },
+        {
+          "name": "fr_tumoranalysis",
+          "type": "string"
+        },
+        {
+          "name": "fr_mitochondriaevaluation",
+          "type": "string"
+        },
+        {
+          "name": "fr_cardiovascular",
+          "type": "string"
+        },
+        {
+          "name": "fr_tgmx",
+          "type": "string"
+        },
+        {
+          "name": "fr_pcr",
+          "type": "string"
+        },
+        {
+          "name": "fr_metabolomics",
+          "type": "string"
+        },
+        {
+          "name": "fr_othermethods",
+          "type": "string"
+        },
+        {
+          "name": "fr_otherendpoints",
+          "type": "string"
+        },
+        {
+          "name": "fr_datapage_url",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "fr_authors": 0.0,
+        "fr_title": 0.0,
+        "fr_pmid": 0.013937,
+        "fr_year": 0.003484,
+        "fr_source": 0.006969,
+        "fr_dtxsidstudied": 0.0,
+        "fr_preferredname": 0.017422,
+        "casrn": 0.017422,
+        "fr_datapage": 0.017422,
+        "fr_chemicalabbreviation": 0.508711,
+        "fr_citationnotes": 0.28223,
+        "fr_note": 0.494774,
+        "fr_publishednameifdifferent": 0.672474,
+        "fr_celegans": 0.916376,
+        "fr_planaria": 0.95122,
+        "fr_zebrafish": 0.825784,
+        "fr_rodent": 0.637631,
+        "fr_human": 0.773519,
+        "fr_tissue": 0.8223,
+        "fr_invitro": 0.756098,
+        "fr_exposureduration": 0.794425,
+        "fr_dttgenetoxresult": 0.797909,
+        "fr_dttbioassayconclusion": 0.930314,
+        "fr_development": 0.724739,
+        "fr_differentiation": 0.916376,
+        "fr_proliferationandgrowth": 0.916376,
+        "fr_neuronalgrthnetwrk": 0.825784,
+        "fr_genetictoxicology": 0.801394,
+        "fr_reproductivedevelopment": 0.986063,
+        "fr_behavior": 0.759582,
+        "fr_immune": 0.965157,
+        "fr_tumoranalysis": 0.979094,
+        "fr_mitochondriaevaluation": 0.909408,
+        "fr_cardiovascular": 0.933798,
+        "fr_tgmx": 0.909408,
+        "fr_pcr": 0.961672,
+        "fr_metabolomics": 0.979094,
+        "fr_othermethods": 0.940767,
+        "fr_otherendpoints": 0.905923,
+        "fr_datapage_url": 0.651568
+      },
+      "all_null_columns": [],
+      "sample_rows": 287,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "hallmark-geneset-annotation.parquet",
+      "path": "cebs/brick/datasets/hallmark-geneset-annotation.parquet",
+      "rows": 50,
+      "cols": 14,
+      "bytes": 70977,
+      "columns": [
+        {
+          "name": "hallmark_gene_set",
+          "type": "string"
+        },
+        {
+          "name": "tissue_expression",
+          "type": "string"
+        },
+        {
+          "name": "associated_hallmark_sets",
+          "type": "string"
+        },
+        {
+          "name": "up_regulation",
+          "type": "string"
+        },
+        {
+          "name": "down_regulation",
+          "type": "string"
+        },
+        {
+          "name": "msigdb_interpretation",
+          "type": "string"
+        },
+        {
+          "name": "canonical_pathway_assoc",
+          "type": "string"
+        },
+        {
+          "name": "mechanistic_interpretation",
+          "type": "string"
+        },
+        {
+          "name": "highest_3_correlate_liver",
+          "type": "string"
+        },
+        {
+          "name": "highest_3_correlate_heart",
+          "type": "string"
+        },
+        {
+          "name": "highest_3_correlate_kidney",
+          "type": "string"
+        },
+        {
+          "name": "gene_set_enrichment_analy",
+          "type": "string"
+        },
+        {
+          "name": "gene_list",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "hallmark_gene_set": 0.0,
+        "tissue_expression": 0.0,
+        "associated_hallmark_sets": 0.38,
+        "up_regulation": 0.04,
+        "down_regulation": 0.22,
+        "msigdb_interpretation": 0.0,
+        "canonical_pathway_assoc": 0.02,
+        "mechanistic_interpretation": 0.0,
+        "highest_3_correlate_liver": 0.0,
+        "highest_3_correlate_heart": 0.0,
+        "highest_3_correlate_kidney": 0.0,
+        "gene_set_enrichment_analy": 0.0,
+        "gene_list": 0.0,
+        "casrn": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 50,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "hematol-iad-2024.parquet",
+      "path": "cebs/brick/datasets/hematol-iad-2024.parquet",
+      "rows": 1000,
+      "cols": 47,
+      "bytes": 102521,
+      "columns": [
+        {
+          "name": "accession_number",
+          "type": "string"
+        },
+        {
+          "name": "depositor_study_number",
+          "type": "string"
+        },
+        {
+          "name": "publication_uid",
+          "type": "string"
+        },
+        {
+          "name": "standard_study_type",
+          "type": "string"
+        },
+        {
+          "name": "study_title",
+          "type": "string"
+        },
+        {
+          "name": "start_year",
+          "type": "string"
+        },
+        {
+          "name": "standard_test_compound_name",
+          "type": "string"
+        },
+        {
+          "name": "dtxsid",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "dose_desc",
+          "type": "string"
+        },
+        {
+          "name": "dose",
+          "type": "string"
+        },
+        {
+          "name": "standard_dose_unit",
+          "type": "string"
+        },
+        {
+          "name": "subject_name",
+          "type": "string"
+        },
+        {
+          "name": "standard_assay_name",
+          "type": "string"
+        },
+        {
+          "name": "standard_assay_input",
+          "type": "string"
+        },
+        {
+          "name": "original_value",
+          "type": "string"
+        },
+        {
+          "name": "original_value_adjusted",
+          "type": "string"
+        },
+        {
+          "name": "original_value_unit",
+          "type": "string"
+        },
+        {
+          "name": "conversion_factor",
+          "type": "string"
+        },
+        {
+          "name": "standard_unit",
+          "type": "string"
+        },
+        {
+          "name": "standard_species",
+          "type": "string"
+        },
+        {
+          "name": "standard_strain",
+          "type": "string"
+        },
+        {
+          "name": "standard_sex",
+          "type": "string"
+        },
+        {
+          "name": "standard_route",
+          "type": "string"
+        },
+        {
+          "name": "standard_role",
+          "type": "string"
+        },
+        {
+          "name": "standard_component_name",
+          "type": "string"
+        },
+        {
+          "name": "component_dtxsid",
+          "type": "string"
+        },
+        {
+          "name": "component_casrn",
+          "type": "string"
+        },
+        {
+          "name": "standard_vehicle_name",
+          "type": "string"
+        },
+        {
+          "name": "standard_removal_reason",
+          "type": "string"
+        },
+        {
+          "name": "time_in_study",
+          "type": "string"
+        },
+        {
+          "name": "time_in_study_unit",
+          "type": "string"
+        },
+        {
+          "name": "comments",
+          "type": "string"
+        },
+        {
+          "name": "study_chemical",
+          "type": "string"
+        },
+        {
+          "name": "ntp_study_type",
+          "type": "string"
+        },
+        {
+          "name": "species",
+          "type": "string"
+        },
+        {
+          "name": "strain",
+          "type": "string"
+        },
+        {
+          "name": "sex",
+          "type": "string"
+        },
+        {
+          "name": "route",
+          "type": "string"
+        },
+        {
+          "name": "treatment_role",
+          "type": "string"
+        },
+        {
+          "name": "component_name",
+          "type": "string"
+        },
+        {
+          "name": "dose_unit",
+          "type": "string"
+        },
+        {
+          "name": "vehicle",
+          "type": "string"
+        },
+        {
+          "name": "assay_name_ori",
+          "type": "string"
+        },
+        {
+          "name": "assay_input",
+          "type": "string"
+        },
+        {
+          "name": "removal_reason",
+          "type": "string"
+        },
+        {
+          "name": "dose_response_study",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "accession_number": 0.0,
+        "depositor_study_number": 0.0,
+        "publication_uid": 0.071,
+        "standard_study_type": 0.0,
+        "study_title": 0.0,
+        "start_year": 0.009,
+        "standard_test_compound_name": 0.0,
+        "dtxsid": 0.008,
+        "casrn": 0.0,
+        "dose_desc": 0.0,
+        "dose": 0.0,
+        "standard_dose_unit": 0.0,
+        "subject_name": 0.0,
+        "standard_assay_name": 0.0,
+        "standard_assay_input": 0.0,
+        "original_value": 0.0,
+        "original_value_adjusted": 0.0,
+        "original_value_unit": 0.0,
+        "conversion_factor": 0.0,
+        "standard_unit": 0.0,
+        "standard_species": 0.0,
+        "standard_strain": 0.0,
+        "standard_sex": 0.0,
+        "standard_route": 0.105,
+        "standard_role": 0.0,
+        "standard_component_name": 0.176,
+        "component_dtxsid": 0.183,
+        "component_casrn": 0.176,
+        "standard_vehicle_name": 0.487,
+        "standard_removal_reason": 0.428,
+        "time_in_study": 0.0,
+        "time_in_study_unit": 0.0,
+        "comments": 0.999,
+        "study_chemical": 0.0,
+        "ntp_study_type": 0.0,
+        "species": 0.0,
+        "strain": 0.0,
+        "sex": 0.0,
+        "route": 0.105,
+        "treatment_role": 0.0,
+        "component_name": 0.105,
+        "dose_unit": 0.0,
+        "vehicle": 0.487,
+        "assay_name_ori": 0.0,
+        "assay_input": 0.0,
+        "removal_reason": 0.428,
+        "dose_response_study": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 1000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "standard_assay_input",
+        "assay_input"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "iad-pathology-lesions.parquet",
+      "path": "cebs/brick/datasets/iad-pathology-lesions.parquet",
+      "rows": 1000,
+      "cols": 45,
+      "bytes": 34166,
+      "columns": [
+        {
+          "name": "tissue",
+          "type": "string"
+        },
+        {
+          "name": "morphology",
+          "type": "string"
+        },
+        {
+          "name": "locator",
+          "type": "string"
+        },
+        {
+          "name": "modifier",
+          "type": "string"
+        },
+        {
+          "name": "laterality",
+          "type": "null"
+        },
+        {
+          "name": "severity",
+          "type": "string"
+        },
+        {
+          "name": "other_pathology_term",
+          "type": "null"
+        },
+        {
+          "name": "is_neoplastic",
+          "type": "string"
+        },
+        {
+          "name": "is_malignant",
+          "type": "null"
+        },
+        {
+          "name": "is_systemic",
+          "type": "string"
+        },
+        {
+          "name": "is_metastatic",
+          "type": "null"
+        },
+        {
+          "name": "metastasis_primary_tissue",
+          "type": "null"
+        },
+        {
+          "name": "species",
+          "type": "string"
+        },
+        {
+          "name": "strain",
+          "type": "string"
+        },
+        {
+          "name": "chemical_name",
+          "type": "string"
+        },
+        {
+          "name": "dose",
+          "type": "string"
+        },
+        {
+          "name": "dose_unit",
+          "type": "string"
+        },
+        {
+          "name": "treatment_group_type",
+          "type": "string"
+        },
+        {
+          "name": "route",
+          "type": "string"
+        },
+        {
+          "name": "vehicle",
+          "type": "string"
+        },
+        {
+          "name": "start_date",
+          "type": "string"
+        },
+        {
+          "name": "study_duration",
+          "type": "null"
+        },
+        {
+          "name": "sex",
+          "type": "string"
+        },
+        {
+          "name": "animal_number_depositor_name",
+          "type": "string"
+        },
+        {
+          "name": "death_day",
+          "type": "string"
+        },
+        {
+          "name": "dtxsid",
+          "type": "null"
+        },
+        {
+          "name": "ntp_publication",
+          "type": "string"
+        },
+        {
+          "name": "chemtrack_study_number",
+          "type": "string"
+        },
+        {
+          "name": "ntp_tdmse_number",
+          "type": "null"
+        },
+        {
+          "name": "accession_number",
+          "type": "string"
+        },
+        {
+          "name": "tissue_original_term",
+          "type": "string"
+        },
+        {
+          "name": "morphology_original_term",
+          "type": "string"
+        },
+        {
+          "name": "locator_original_term",
+          "type": "string"
+        },
+        {
+          "name": "modifier_original_term",
+          "type": "string"
+        },
+        {
+          "name": "severity_original_term",
+          "type": "string"
+        },
+        {
+          "name": "study_title",
+          "type": "string"
+        },
+        {
+          "name": "subject_death_status_inlife",
+          "type": "string"
+        },
+        {
+          "name": "removal_reason",
+          "type": "string"
+        },
+        {
+          "name": "primary_cause_of_death",
+          "type": "null"
+        },
+        {
+          "name": "contributory_cause_of_death",
+          "type": "null"
+        },
+        {
+          "name": "trackable_gross_lesion",
+          "type": "null"
+        },
+        {
+          "name": "histology_number",
+          "type": "string"
+        },
+        {
+          "name": "study_type",
+          "type": "null"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "casrn_url",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "tissue": 0.0,
+        "morphology": 0.0,
+        "locator": 0.945,
+        "modifier": 0.986,
+        "laterality": null,
+        "severity": 0.985,
+        "other_pathology_term": null,
+        "is_neoplastic": 0.985,
+        "is_malignant": null,
+        "is_systemic": 0.996,
+        "is_metastatic": null,
+        "metastasis_primary_tissue": null,
+        "species": 0.0,
+        "strain": 0.0,
+        "chemical_name": 0.0,
+        "dose": 0.0,
+        "dose_unit": 0.0,
+        "treatment_group_type": 0.0,
+        "route": 0.0,
+        "vehicle": 0.88,
+        "start_date": 0.0,
+        "study_duration": null,
+        "sex": 0.0,
+        "animal_number_depositor_name": 0.0,
+        "death_day": 0.0,
+        "dtxsid": null,
+        "ntp_publication": 0.0,
+        "chemtrack_study_number": 0.0,
+        "ntp_tdmse_number": null,
+        "accession_number": 0.0,
+        "tissue_original_term": 0.0,
+        "morphology_original_term": 0.0,
+        "locator_original_term": 0.995,
+        "modifier_original_term": 0.986,
+        "severity_original_term": 0.985,
+        "study_title": 0.0,
+        "subject_death_status_inlife": 0.0,
+        "removal_reason": 0.0,
+        "primary_cause_of_death": null,
+        "contributory_cause_of_death": null,
+        "trackable_gross_lesion": null,
+        "histology_number": 0.0,
+        "study_type": null,
+        "casrn": 0.0,
+        "casrn_url": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 1000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "laterality",
+        "other_pathology_term",
+        "is_malignant",
+        "is_metastatic",
+        "metastasis_primary_tissue",
+        "species",
+        "strain",
+        "chemical_name",
+        "start_date",
+        "study_duration",
+        "sex",
+        "death_day",
+        "dtxsid",
+        "ntp_publication",
+        "ntp_tdmse_number",
+        "subject_death_status_inlife",
+        "removal_reason",
+        "primary_cause_of_death",
+        "contributory_cause_of_death",
+        "trackable_gross_lesion",
+        "study_type",
+        "casrn",
+        "casrn_url"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "inlife-bodyweight-iad-2024.parquet",
+      "path": "cebs/brick/datasets/inlife-bodyweight-iad-2024.parquet",
+      "rows": 1000,
+      "cols": 45,
+      "bytes": 142533,
+      "columns": [
+        {
+          "name": "accession_number",
+          "type": "string"
+        },
+        {
+          "name": "depositor_study_number",
+          "type": "string"
+        },
+        {
+          "name": "publication_uid",
+          "type": "string"
+        },
+        {
+          "name": "standard_study_type",
+          "type": "string"
+        },
+        {
+          "name": "study_title",
+          "type": "string"
+        },
+        {
+          "name": "start_year",
+          "type": "string"
+        },
+        {
+          "name": "standard_test_compound_name",
+          "type": "string"
+        },
+        {
+          "name": "dtxsid",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "dose_desc",
+          "type": "string"
+        },
+        {
+          "name": "dose",
+          "type": "string"
+        },
+        {
+          "name": "standard_dose_unit",
+          "type": "string"
+        },
+        {
+          "name": "subject_name",
+          "type": "string"
+        },
+        {
+          "name": "standard_assay_name",
+          "type": "string"
+        },
+        {
+          "name": "original_value",
+          "type": "string"
+        },
+        {
+          "name": "original_value_unit",
+          "type": "string"
+        },
+        {
+          "name": "conversion_factor",
+          "type": "string"
+        },
+        {
+          "name": "standard_unit",
+          "type": "string"
+        },
+        {
+          "name": "standard_species",
+          "type": "string"
+        },
+        {
+          "name": "standard_strain",
+          "type": "string"
+        },
+        {
+          "name": "standard_sex",
+          "type": "string"
+        },
+        {
+          "name": "standard_route",
+          "type": "string"
+        },
+        {
+          "name": "standard_role",
+          "type": "string"
+        },
+        {
+          "name": "standard_component_name",
+          "type": "string"
+        },
+        {
+          "name": "component_dtxsid",
+          "type": "string"
+        },
+        {
+          "name": "component_casrn",
+          "type": "string"
+        },
+        {
+          "name": "standard_vehicle_name",
+          "type": "string"
+        },
+        {
+          "name": "standard_removal_reason",
+          "type": "string"
+        },
+        {
+          "name": "time_in_study",
+          "type": "string"
+        },
+        {
+          "name": "time_in_study_unit",
+          "type": "string"
+        },
+        {
+          "name": "study_chemical",
+          "type": "string"
+        },
+        {
+          "name": "ntp_study_type",
+          "type": "string"
+        },
+        {
+          "name": "species",
+          "type": "string"
+        },
+        {
+          "name": "strain",
+          "type": "string"
+        },
+        {
+          "name": "sex",
+          "type": "string"
+        },
+        {
+          "name": "route",
+          "type": "string"
+        },
+        {
+          "name": "treatment_role",
+          "type": "string"
+        },
+        {
+          "name": "component_name",
+          "type": "string"
+        },
+        {
+          "name": "dose_unit",
+          "type": "string"
+        },
+        {
+          "name": "vehicle",
+          "type": "string"
+        },
+        {
+          "name": "assay_name_ori",
+          "type": "string"
+        },
+        {
+          "name": "removal_reason",
+          "type": "string"
+        },
+        {
+          "name": "dose_response_study",
+          "type": "string"
+        },
+        {
+          "name": "weight_event_date",
+          "type": "string"
+        },
+        {
+          "name": "weight_event_time",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "accession_number": 0.0,
+        "depositor_study_number": 0.0,
+        "publication_uid": 0.041,
+        "standard_study_type": 0.0,
+        "study_title": 0.0,
+        "start_year": 0.0,
+        "standard_test_compound_name": 0.0,
+        "dtxsid": 0.059,
+        "casrn": 0.0,
+        "dose_desc": 0.0,
+        "dose": 0.047,
+        "standard_dose_unit": 0.033,
+        "subject_name": 0.0,
+        "standard_assay_name": 0.0,
+        "original_value": 0.0,
+        "original_value_unit": 0.0,
+        "conversion_factor": 0.0,
+        "standard_unit": 0.0,
+        "standard_species": 0.0,
+        "standard_strain": 0.0,
+        "standard_sex": 0.0,
+        "standard_route": 0.228,
+        "standard_role": 0.0,
+        "standard_component_name": 0.237,
+        "component_dtxsid": 0.281,
+        "component_casrn": 0.237,
+        "standard_vehicle_name": 0.316,
+        "standard_removal_reason": 0.0,
+        "time_in_study": 0.0,
+        "time_in_study_unit": 0.0,
+        "study_chemical": 0.0,
+        "ntp_study_type": 0.0,
+        "species": 0.0,
+        "strain": 0.0,
+        "sex": 0.0,
+        "route": 0.228,
+        "treatment_role": 0.0,
+        "component_name": 0.232,
+        "dose_unit": 0.033,
+        "vehicle": 0.315,
+        "assay_name_ori": 0.0,
+        "removal_reason": 0.0,
+        "dose_response_study": 0.0,
+        "weight_event_date": 0.0,
+        "weight_event_time": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 1000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "conversion_factor",
+        "standard_unit",
+        "time_in_study_unit"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "llna2013.parquet",
+      "path": "cebs/brick/datasets/llna2013.parquet",
+      "rows": 22,
+      "cols": 14,
+      "bytes": 11031,
+      "columns": [
+        {
+          "name": "chemicalname",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "llnacall",
+          "type": "string"
+        },
+        {
+          "name": "llnamaxsimindexpct",
+          "type": "string"
+        },
+        {
+          "name": "gpigmaxbuehlercall",
+          "type": "string"
+        },
+        {
+          "name": "hummaxcall",
+          "type": "string"
+        },
+        {
+          "name": "humpatchtstallergencall",
+          "type": "string"
+        },
+        {
+          "name": "llnaec3pct",
+          "type": "string"
+        },
+        {
+          "name": "molecularwgt",
+          "type": "string"
+        },
+        {
+          "name": "molecularwgtunits",
+          "type": "string"
+        },
+        {
+          "name": "peptidereactivity",
+          "type": "string"
+        },
+        {
+          "name": "physicalform",
+          "type": "string"
+        },
+        {
+          "name": "vce",
+          "type": "string"
+        },
+        {
+          "name": "recordid",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "chemicalname": 0.0,
+        "casrn": 0.0,
+        "llnacall": 0.0,
+        "llnamaxsimindexpct": 0.0,
+        "gpigmaxbuehlercall": 0.0,
+        "hummaxcall": 0.0,
+        "humpatchtstallergencall": 0.0,
+        "llnaec3pct": 0.0,
+        "molecularwgt": 0.0,
+        "molecularwgtunits": 0.0,
+        "peptidereactivity": 0.0,
+        "physicalform": 0.0,
+        "vce": 0.0,
+        "recordid": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 22,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "molecularwgtunits"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "locator-ddd.parquet",
+      "path": "cebs/brick/datasets/locator-ddd.parquet",
+      "rows": 446,
+      "cols": 10,
+      "bytes": 53977,
+      "columns": [
+        {
+          "name": "dtt_standard_term",
+          "type": "string"
+        },
+        {
+          "name": "synonym_term",
+          "type": "string"
+        },
+        {
+          "name": "histopathology_term",
+          "type": "string"
+        },
+        {
+          "name": "gross_pathology_term",
+          "type": "string"
+        },
+        {
+          "name": "other_term",
+          "type": "string"
+        },
+        {
+          "name": "scope",
+          "type": "string"
+        },
+        {
+          "name": "ontology_term",
+          "type": "string"
+        },
+        {
+          "name": "ontology_definition",
+          "type": "string"
+        },
+        {
+          "name": "status",
+          "type": "string"
+        },
+        {
+          "name": "term_id",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "dtt_standard_term": 0.0,
+        "synonym_term": 0.977578,
+        "histopathology_term": 0.0,
+        "gross_pathology_term": 0.0,
+        "other_term": 0.997758,
+        "scope": 0.932735,
+        "ontology_term": 0.14574,
+        "ontology_definition": 0.188341,
+        "status": 0.0,
+        "term_id": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 446,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "mammalian_cytogenics.parquet",
+      "path": "cebs/brick/datasets/mammalian_cytogenics.parquet",
+      "rows": 1000,
+      "cols": 8,
+      "bytes": 41631,
+      "columns": [
+        {
+          "name": "test_article_name",
+          "type": "string"
+        },
+        {
+          "name": "study_conclusion",
+          "type": "string"
+        },
+        {
+          "name": "species",
+          "type": "string"
+        },
+        {
+          "name": "strain",
+          "type": "string"
+        },
+        {
+          "name": "protocol",
+          "type": "string"
+        },
+        {
+          "name": "depositor_views",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "ntp_study_id",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "test_article_name": 0.0,
+        "study_conclusion": 0.0,
+        "species": 0.0,
+        "strain": 0.0,
+        "protocol": 0.0,
+        "depositor_views": 0.0,
+        "casrn": 0.0,
+        "ntp_study_id": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 1000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "species",
+        "strain"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "mammalian_mutagenics.parquet",
+      "path": "cebs/brick/datasets/mammalian_mutagenics.parquet",
+      "rows": 1000,
+      "cols": 8,
+      "bytes": 27096,
+      "columns": [
+        {
+          "name": "test_article_name",
+          "type": "string"
+        },
+        {
+          "name": "study_conclusion",
+          "type": "string"
+        },
+        {
+          "name": "trial_result",
+          "type": "string"
+        },
+        {
+          "name": "microsomal_activation_used",
+          "type": "string"
+        },
+        {
+          "name": "protocol",
+          "type": "string"
+        },
+        {
+          "name": "depositor_views",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "ntp_study_id",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "test_article_name": 0.0,
+        "study_conclusion": 0.0,
+        "trial_result": 0.038,
+        "microsomal_activation_used": 0.0,
+        "protocol": 0.0,
+        "depositor_views": 0.0,
+        "casrn": 0.0,
+        "ntp_study_id": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 1000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "mn_in_vitro.parquet",
+      "path": "cebs/brick/datasets/mn_in_vitro.parquet",
+      "rows": 5,
+      "cols": 16,
+      "bytes": 12157,
+      "columns": [
+        {
+          "name": "chemical_name",
+          "type": "string"
+        },
+        {
+          "name": "study_conclusion",
+          "type": "string"
+        },
+        {
+          "name": "trial_conclusion",
+          "type": "string"
+        },
+        {
+          "name": "doses",
+          "type": "string"
+        },
+        {
+          "name": "dose_unit",
+          "type": "string"
+        },
+        {
+          "name": "dose_duration",
+          "type": "string"
+        },
+        {
+          "name": "trial_start_date",
+          "type": "string"
+        },
+        {
+          "name": "trial_name",
+          "type": "string"
+        },
+        {
+          "name": "activation",
+          "type": "string"
+        },
+        {
+          "name": "total_culture_time",
+          "type": "string"
+        },
+        {
+          "name": "cell_type",
+          "type": "string"
+        },
+        {
+          "name": "percent_trend_p_value",
+          "type": "string"
+        },
+        {
+          "name": "percent_trend_p_alue_test",
+          "type": "string"
+        },
+        {
+          "name": "study_view",
+          "type": "string"
+        },
+        {
+          "name": "study_number",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "chemical_name": 0.0,
+        "study_conclusion": 0.0,
+        "trial_conclusion": 0.0,
+        "doses": 0.0,
+        "dose_unit": 0.0,
+        "dose_duration": 0.0,
+        "trial_start_date": 0.0,
+        "trial_name": 0.0,
+        "activation": 0.0,
+        "total_culture_time": 0.0,
+        "cell_type": 0.0,
+        "percent_trend_p_value": 0.0,
+        "percent_trend_p_alue_test": 0.0,
+        "study_view": 0.0,
+        "study_number": 0.0,
+        "casrn": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 5,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "study_conclusion",
+        "total_culture_time",
+        "cell_type",
+        "percent_trend_p_alue_test"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "mn_in_vivo.parquet",
+      "path": "cebs/brick/datasets/mn_in_vivo.parquet",
+      "rows": 1000,
+      "cols": 27,
+      "bytes": 66604,
+      "columns": [
+        {
+          "name": "chemical_name",
+          "type": "string"
+        },
+        {
+          "name": "male_study_conclusion",
+          "type": "string"
+        },
+        {
+          "name": "female_study_conclusion",
+          "type": "string"
+        },
+        {
+          "name": "species",
+          "type": "string"
+        },
+        {
+          "name": "strain",
+          "type": "string"
+        },
+        {
+          "name": "sex",
+          "type": "string"
+        },
+        {
+          "name": "tissue",
+          "type": "string"
+        },
+        {
+          "name": "doses",
+          "type": "string"
+        },
+        {
+          "name": "dose_unit",
+          "type": "string"
+        },
+        {
+          "name": "route",
+          "type": "string"
+        },
+        {
+          "name": "trial_start_date",
+          "type": "string"
+        },
+        {
+          "name": "trial_name",
+          "type": "string"
+        },
+        {
+          "name": "study_methodology",
+          "type": "string"
+        },
+        {
+          "name": "study_duration",
+          "type": "string"
+        },
+        {
+          "name": "study_duration_unit",
+          "type": "string"
+        },
+        {
+          "name": "protocol_name",
+          "type": "string"
+        },
+        {
+          "name": "cell_type",
+          "type": "string"
+        },
+        {
+          "name": "mn_nce_1000_trend_pvalue",
+          "type": "string"
+        },
+        {
+          "name": "mn_pce_1000_trend_pvalue",
+          "type": "string"
+        },
+        {
+          "name": "pct_pce_trend",
+          "type": "string"
+        },
+        {
+          "name": "pct_pvalue_test",
+          "type": "string"
+        },
+        {
+          "name": "number_of_treatments",
+          "type": "string"
+        },
+        {
+          "name": "time_between_final_dose",
+          "type": "string"
+        },
+        {
+          "name": "time_between_final_dose_unit",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "study_view",
+          "type": "string"
+        },
+        {
+          "name": "study_number",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "chemical_name": 0.0,
+        "male_study_conclusion": 0.206,
+        "female_study_conclusion": 0.794,
+        "species": 0.0,
+        "strain": 0.0,
+        "sex": 0.0,
+        "tissue": 0.0,
+        "doses": 0.0,
+        "dose_unit": 0.0,
+        "route": 0.0,
+        "trial_start_date": 0.0,
+        "trial_name": 0.0,
+        "study_methodology": 0.0,
+        "study_duration": 0.0,
+        "study_duration_unit": 0.0,
+        "protocol_name": 0.0,
+        "cell_type": 0.0,
+        "mn_nce_1000_trend_pvalue": 0.588,
+        "mn_pce_1000_trend_pvalue": 0.305,
+        "pct_pce_trend": 0.971,
+        "pct_pvalue_test": 0.971,
+        "number_of_treatments": 0.0,
+        "time_between_final_dose": 0.0,
+        "time_between_final_dose_unit": 0.0,
+        "casrn": 0.0,
+        "study_view": 0.0,
+        "study_number": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 1000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "time_between_final_dose_unit"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "modifier-ddd.parquet",
+      "path": "cebs/brick/datasets/modifier-ddd.parquet",
+      "rows": 195,
+      "cols": 10,
+      "bytes": 23206,
+      "columns": [
+        {
+          "name": "dtt_standard_term",
+          "type": "string"
+        },
+        {
+          "name": "synonym_term",
+          "type": "null"
+        },
+        {
+          "name": "histopathology_term",
+          "type": "string"
+        },
+        {
+          "name": "gross_pathology_term",
+          "type": "string"
+        },
+        {
+          "name": "other_term",
+          "type": "null"
+        },
+        {
+          "name": "scope",
+          "type": "string"
+        },
+        {
+          "name": "ontology_term",
+          "type": "string"
+        },
+        {
+          "name": "ontology_definition",
+          "type": "string"
+        },
+        {
+          "name": "status",
+          "type": "string"
+        },
+        {
+          "name": "term_id",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "dtt_standard_term": 0.0,
+        "synonym_term": null,
+        "histopathology_term": 0.0,
+        "gross_pathology_term": 0.0,
+        "other_term": null,
+        "scope": 0.928205,
+        "ontology_term": 0.25641,
+        "ontology_definition": 0.323077,
+        "status": 0.0,
+        "term_id": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 195,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "synonym_term",
+        "other_term",
+        "status"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "morphology-ddd.parquet",
+      "path": "cebs/brick/datasets/morphology-ddd.parquet",
+      "rows": 425,
+      "cols": 15,
+      "bytes": 50360,
+      "columns": [
+        {
+          "name": "dtt_standard_term",
+          "type": "string"
+        },
+        {
+          "name": "synonym_term",
+          "type": "string"
+        },
+        {
+          "name": "histopathology_term",
+          "type": "string"
+        },
+        {
+          "name": "gross_pathology_term",
+          "type": "string"
+        },
+        {
+          "name": "other_term",
+          "type": "string"
+        },
+        {
+          "name": "neoplastic",
+          "type": "string"
+        },
+        {
+          "name": "malignant",
+          "type": "string"
+        },
+        {
+          "name": "qualifier_needed",
+          "type": "string"
+        },
+        {
+          "name": "systemic",
+          "type": "string"
+        },
+        {
+          "name": "exclude_severity",
+          "type": "string"
+        },
+        {
+          "name": "scope",
+          "type": "string"
+        },
+        {
+          "name": "ontology_term",
+          "type": "string"
+        },
+        {
+          "name": "ontology_definition",
+          "type": "string"
+        },
+        {
+          "name": "status",
+          "type": "string"
+        },
+        {
+          "name": "term_id",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "dtt_standard_term": 0.0,
+        "synonym_term": 0.988235,
+        "histopathology_term": 0.0,
+        "gross_pathology_term": 0.0,
+        "other_term": 0.92,
+        "neoplastic": 0.863529,
+        "malignant": 0.0,
+        "qualifier_needed": 0.781176,
+        "systemic": 0.988235,
+        "exclude_severity": 0.931765,
+        "scope": 0.990588,
+        "ontology_term": 0.183529,
+        "ontology_definition": 0.218824,
+        "status": 0.0,
+        "term_id": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 425,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "neonicotinoid-health-effects-by-evidence-stream.parquet",
+      "path": "cebs/brick/datasets/neonicotinoid-health-effects-by-evidence-stream.parquet",
+      "rows": 427,
+      "cols": 14,
+      "bytes": 210047,
+      "columns": [
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "abstract",
+          "type": "string"
+        },
+        {
+          "name": "neonicotinoid_studied",
+          "type": "string"
+        },
+        {
+          "name": "health_effect",
+          "type": "string"
+        },
+        {
+          "name": "evidence_stream_detailed",
+          "type": "string"
+        },
+        {
+          "name": "evidence_stream",
+          "type": "string"
+        },
+        {
+          "name": "evidence_stream_1",
+          "type": "string"
+        },
+        {
+          "name": "evidence_stream_2",
+          "type": "string"
+        },
+        {
+          "name": "study_design",
+          "type": "string"
+        },
+        {
+          "name": "short_citation",
+          "type": "string"
+        },
+        {
+          "name": "full_citation",
+          "type": "string"
+        },
+        {
+          "name": "pmid",
+          "type": "string"
+        },
+        {
+          "name": "neon_refid",
+          "type": "string"
+        },
+        {
+          "name": "full_citation_url",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "title": 0.0,
+        "abstract": 0.0,
+        "neonicotinoid_studied": 0.0,
+        "health_effect": 0.0,
+        "evidence_stream_detailed": 0.063232,
+        "evidence_stream": 0.283372,
+        "evidence_stream_1": 0.0,
+        "evidence_stream_2": 0.0,
+        "study_design": 0.283372,
+        "short_citation": 0.0,
+        "full_citation": 0.0,
+        "pmid": 0.0,
+        "neon_refid": 0.0,
+        "full_citation_url": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 427,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "ntp-pathology.parquet",
+      "path": "cebs/brick/datasets/ntp-pathology.parquet",
+      "rows": 1000,
+      "cols": 20,
+      "bytes": 17379,
+      "columns": [
+        {
+          "name": "chemical_name",
+          "type": "string"
+        },
+        {
+          "name": "organ",
+          "type": "string"
+        },
+        {
+          "name": "morph",
+          "type": "string"
+        },
+        {
+          "name": "is_trend_significant",
+          "type": "string"
+        },
+        {
+          "name": "is_pairwise_significant",
+          "type": "string"
+        },
+        {
+          "name": "species",
+          "type": "string"
+        },
+        {
+          "name": "strain",
+          "type": "string"
+        },
+        {
+          "name": "sex",
+          "type": "string"
+        },
+        {
+          "name": "route",
+          "type": "string"
+        },
+        {
+          "name": "dose",
+          "type": "string"
+        },
+        {
+          "name": "dose_unit",
+          "type": "string"
+        },
+        {
+          "name": "is_neoplastic",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "ntp_tdmse_number",
+          "type": "string"
+        },
+        {
+          "name": "chemtrack_number",
+          "type": "string"
+        },
+        {
+          "name": "ntp_publication",
+          "type": "string"
+        },
+        {
+          "name": "abstract",
+          "type": "null"
+        },
+        {
+          "name": "tech_report",
+          "type": "string"
+        },
+        {
+          "name": "tumor_count",
+          "type": "string"
+        },
+        {
+          "name": "subject_count",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "chemical_name": 0.0,
+        "organ": 0.0,
+        "morph": 0.0,
+        "is_trend_significant": 0.808,
+        "is_pairwise_significant": 0.748,
+        "species": 0.0,
+        "strain": 0.0,
+        "sex": 0.0,
+        "route": 0.0,
+        "dose": 0.0,
+        "dose_unit": 0.0,
+        "is_neoplastic": 0.0,
+        "casrn": 0.0,
+        "ntp_tdmse_number": 0.0,
+        "chemtrack_number": 0.0,
+        "ntp_publication": 0.0,
+        "abstract": null,
+        "tech_report": 0.0,
+        "tumor_count": 0.0,
+        "subject_count": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 1000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "route",
+        "is_neoplastic",
+        "abstract"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "organ-weight-iad-2024.parquet",
+      "path": "cebs/brick/datasets/organ-weight-iad-2024.parquet",
+      "rows": 1000,
+      "cols": 47,
+      "bytes": 115229,
+      "columns": [
+        {
+          "name": "accession_number",
+          "type": "string"
+        },
+        {
+          "name": "depositor_study_number",
+          "type": "string"
+        },
+        {
+          "name": "publication_uid",
+          "type": "string"
+        },
+        {
+          "name": "standard_study_type",
+          "type": "string"
+        },
+        {
+          "name": "study_title",
+          "type": "string"
+        },
+        {
+          "name": "start_year",
+          "type": "string"
+        },
+        {
+          "name": "standard_test_compound_name",
+          "type": "string"
+        },
+        {
+          "name": "dtxsid",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "dose_desc",
+          "type": "string"
+        },
+        {
+          "name": "dose",
+          "type": "string"
+        },
+        {
+          "name": "standard_dose_unit",
+          "type": "string"
+        },
+        {
+          "name": "subject_name",
+          "type": "string"
+        },
+        {
+          "name": "standard_assay_name",
+          "type": "string"
+        },
+        {
+          "name": "standard_assay_input",
+          "type": "string"
+        },
+        {
+          "name": "original_value",
+          "type": "string"
+        },
+        {
+          "name": "original_value_adjusted",
+          "type": "string"
+        },
+        {
+          "name": "original_value_unit",
+          "type": "string"
+        },
+        {
+          "name": "conversion_factor",
+          "type": "string"
+        },
+        {
+          "name": "standard_unit",
+          "type": "string"
+        },
+        {
+          "name": "standard_species",
+          "type": "string"
+        },
+        {
+          "name": "standard_strain",
+          "type": "string"
+        },
+        {
+          "name": "standard_sex",
+          "type": "string"
+        },
+        {
+          "name": "standard_route",
+          "type": "string"
+        },
+        {
+          "name": "standard_role",
+          "type": "string"
+        },
+        {
+          "name": "standard_component_name",
+          "type": "string"
+        },
+        {
+          "name": "component_dtxsid",
+          "type": "string"
+        },
+        {
+          "name": "component_casrn",
+          "type": "string"
+        },
+        {
+          "name": "standard_vehicle_name",
+          "type": "string"
+        },
+        {
+          "name": "standard_removal_reason",
+          "type": "string"
+        },
+        {
+          "name": "time_in_study",
+          "type": "string"
+        },
+        {
+          "name": "time_in_study_unit",
+          "type": "string"
+        },
+        {
+          "name": "comments",
+          "type": "string"
+        },
+        {
+          "name": "study_chemical",
+          "type": "string"
+        },
+        {
+          "name": "ntp_study_type",
+          "type": "string"
+        },
+        {
+          "name": "species",
+          "type": "string"
+        },
+        {
+          "name": "strain",
+          "type": "string"
+        },
+        {
+          "name": "sex",
+          "type": "string"
+        },
+        {
+          "name": "route",
+          "type": "string"
+        },
+        {
+          "name": "treatment_role",
+          "type": "string"
+        },
+        {
+          "name": "component_name",
+          "type": "string"
+        },
+        {
+          "name": "dose_unit",
+          "type": "string"
+        },
+        {
+          "name": "vehicle",
+          "type": "string"
+        },
+        {
+          "name": "assay_name_ori",
+          "type": "string"
+        },
+        {
+          "name": "assay_input",
+          "type": "string"
+        },
+        {
+          "name": "removal_reason",
+          "type": "string"
+        },
+        {
+          "name": "dose_response_study",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "accession_number": 0.0,
+        "depositor_study_number": 0.0,
+        "publication_uid": 0.089,
+        "standard_study_type": 0.0,
+        "study_title": 0.0,
+        "start_year": 0.026,
+        "standard_test_compound_name": 0.0,
+        "dtxsid": 0.012,
+        "casrn": 0.0,
+        "dose_desc": 0.0,
+        "dose": 0.017,
+        "standard_dose_unit": 0.002,
+        "subject_name": 0.0,
+        "standard_assay_name": 0.0,
+        "standard_assay_input": 0.0,
+        "original_value": 0.0,
+        "original_value_adjusted": 0.0,
+        "original_value_unit": 0.0,
+        "conversion_factor": 0.0,
+        "standard_unit": 0.0,
+        "standard_species": 0.0,
+        "standard_strain": 0.0,
+        "standard_sex": 0.0,
+        "standard_route": 0.173,
+        "standard_role": 0.0,
+        "standard_component_name": 0.18,
+        "component_dtxsid": 0.188,
+        "component_casrn": 0.18,
+        "standard_vehicle_name": 0.223,
+        "standard_removal_reason": 0.051,
+        "time_in_study": 0.0,
+        "time_in_study_unit": 0.0,
+        "comments": 0.997,
+        "study_chemical": 0.0,
+        "ntp_study_type": 0.0,
+        "species": 0.0,
+        "strain": 0.0,
+        "sex": 0.0,
+        "route": 0.173,
+        "treatment_role": 0.0,
+        "component_name": 0.174,
+        "dose_unit": 0.002,
+        "vehicle": 0.223,
+        "assay_name_ori": 0.0,
+        "assay_input": 0.0,
+        "removal_reason": 0.051,
+        "dose_response_study": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 1000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "rodent_cytogenics.parquet",
+      "path": "cebs/brick/datasets/rodent_cytogenics.parquet",
+      "rows": 243,
+      "cols": 8,
+      "bytes": 15977,
+      "columns": [
+        {
+          "name": "test_article_name",
+          "type": "string"
+        },
+        {
+          "name": "study_conclusion",
+          "type": "string"
+        },
+        {
+          "name": "species",
+          "type": "string"
+        },
+        {
+          "name": "strain",
+          "type": "string"
+        },
+        {
+          "name": "protocol",
+          "type": "string"
+        },
+        {
+          "name": "depositor_views",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "ntp_study_id",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "test_article_name": 0.0,
+        "study_conclusion": 0.004115,
+        "species": 0.0,
+        "strain": 0.0,
+        "protocol": 0.0,
+        "depositor_views": 0.0,
+        "casrn": 0.0,
+        "ntp_study_id": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 243,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "species",
+        "strain"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "tgx-ddi-biomarker-pos.parquet",
+      "path": "cebs/brick/datasets/tgx-ddi-biomarker-pos.parquet",
+      "rows": 274,
+      "cols": 11,
+      "bytes": 23686,
+      "columns": [
+        {
+          "name": "bioset_name",
+          "type": "string"
+        },
+        {
+          "name": "chemical",
+          "type": "string"
+        },
+        {
+          "name": "tier",
+          "type": "string"
+        },
+        {
+          "name": "tgxbduration",
+          "type": "string"
+        },
+        {
+          "name": "tgxbconcentration",
+          "type": "string"
+        },
+        {
+          "name": "study",
+          "type": "string"
+        },
+        {
+          "name": "biosource",
+          "type": "string"
+        },
+        {
+          "name": "tgxlogvalue",
+          "type": "string"
+        },
+        {
+          "name": "possmech",
+          "type": "string"
+        },
+        {
+          "name": "comments",
+          "type": "string"
+        },
+        {
+          "name": "references",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "bioset_name": 0.0,
+        "chemical": 0.0,
+        "tier": 0.0,
+        "tgxbduration": 0.0,
+        "tgxbconcentration": 0.0,
+        "study": 0.0,
+        "biosource": 0.0,
+        "tgxlogvalue": 0.0,
+        "possmech": 0.0,
+        "comments": 0.649635,
+        "references": 0.631387
+      },
+      "all_null_columns": [],
+      "sample_rows": 274,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "tgx-ddi-tox21-pos.parquet",
+      "path": "cebs/brick/datasets/tgx-ddi-tox21-pos.parquet",
+      "rows": 19,
+      "cols": 11,
+      "bytes": 11005,
+      "columns": [
+        {
+          "name": "bioset_name",
+          "type": "string"
+        },
+        {
+          "name": "chemical",
+          "type": "string"
+        },
+        {
+          "name": "duration",
+          "type": "string"
+        },
+        {
+          "name": "concentration",
+          "type": "string"
+        },
+        {
+          "name": "study",
+          "type": "string"
+        },
+        {
+          "name": "biosource",
+          "type": "string"
+        },
+        {
+          "name": "tgxlogvalue",
+          "type": "string"
+        },
+        {
+          "name": "possmech",
+          "type": "string"
+        },
+        {
+          "name": "comments",
+          "type": "string"
+        },
+        {
+          "name": "classification",
+          "type": "string"
+        },
+        {
+          "name": "references",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "bioset_name": 0.0,
+        "chemical": 0.0,
+        "duration": 0.0,
+        "concentration": 0.0,
+        "study": 0.0,
+        "biosource": 0.0,
+        "tgxlogvalue": 0.0,
+        "possmech": 0.0,
+        "comments": 0.105263,
+        "classification": 0.736842,
+        "references": 0.315789
+      },
+      "all_null_columns": [],
+      "sample_rows": 19,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "tissue-ddd.parquet",
+      "path": "cebs/brick/datasets/tissue-ddd.parquet",
+      "rows": 199,
+      "cols": 13,
+      "bytes": 32940,
+      "columns": [
+        {
+          "name": "dtt_standard_term",
+          "type": "string"
+        },
+        {
+          "name": "synonym_term",
+          "type": "string"
+        },
+        {
+          "name": "histopathology_term",
+          "type": "string"
+        },
+        {
+          "name": "gross_pathology_term",
+          "type": "string"
+        },
+        {
+          "name": "other_term",
+          "type": "string"
+        },
+        {
+          "name": "scope",
+          "type": "string"
+        },
+        {
+          "name": "body_system",
+          "type": "string"
+        },
+        {
+          "name": "sex_specificity",
+          "type": "string"
+        },
+        {
+          "name": "paired",
+          "type": "string"
+        },
+        {
+          "name": "ontology_term",
+          "type": "string"
+        },
+        {
+          "name": "ontology_definition",
+          "type": "string"
+        },
+        {
+          "name": "status",
+          "type": "string"
+        },
+        {
+          "name": "term_id",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "dtt_standard_term": 0.0,
+        "synonym_term": 0.959799,
+        "histopathology_term": 0.070352,
+        "gross_pathology_term": 0.070352,
+        "other_term": 0.924623,
+        "scope": 0.718593,
+        "body_system": 0.145729,
+        "sex_specificity": 0.0,
+        "paired": 0.929648,
+        "ontology_term": 0.060302,
+        "ontology_definition": 0.060302,
+        "status": 0.0,
+        "term_id": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 199,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "tox21.parquet",
+      "path": "cebs/brick/datasets/tox21.parquet",
+      "rows": 1000,
+      "cols": 17,
+      "bytes": 121390,
+      "columns": [
+        {
+          "name": "epa_chem_name",
+          "type": "string"
+        },
+        {
+          "name": "epa_casrn",
+          "type": "string"
+        },
+        {
+          "name": "coa_purity",
+          "type": "string"
+        },
+        {
+          "name": "hts_purity",
+          "type": "string"
+        },
+        {
+          "name": "mri_report",
+          "type": "string"
+        },
+        {
+          "name": "id_confirm",
+          "type": "string"
+        },
+        {
+          "name": "analysis_method",
+          "type": "string"
+        },
+        {
+          "name": "ntp_chem_name",
+          "type": "string"
+        },
+        {
+          "name": "ntp_casrn",
+          "type": "string"
+        },
+        {
+          "name": "ntp_cid",
+          "type": "string"
+        },
+        {
+          "name": "tox21_id",
+          "type": "string"
+        },
+        {
+          "name": "dsstox_source_rec_id",
+          "type": "string"
+        },
+        {
+          "name": "dsstox_sub_id",
+          "type": "string"
+        },
+        {
+          "name": "dsstox_sub_id_short",
+          "type": "string"
+        },
+        {
+          "name": "plate_id",
+          "type": "string"
+        },
+        {
+          "name": "supplier",
+          "type": "string"
+        },
+        {
+          "name": "lot_number",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "epa_chem_name": 0.0,
+        "epa_casrn": 0.0,
+        "coa_purity": 0.0,
+        "hts_purity": 0.0,
+        "mri_report": 0.0,
+        "id_confirm": 0.0,
+        "analysis_method": 0.0,
+        "ntp_chem_name": 0.0,
+        "ntp_casrn": 0.0,
+        "ntp_cid": 0.0,
+        "tox21_id": 0.0,
+        "dsstox_source_rec_id": 0.0,
+        "dsstox_sub_id": 0.0,
+        "dsstox_sub_id_short": 0.0,
+        "plate_id": 0.0,
+        "supplier": 0.0,
+        "lot_number": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 1000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "tox21_androgen.parquet",
+      "path": "cebs/brick/datasets/tox21_androgen.parquet",
+      "rows": 602,
+      "cols": 92,
+      "bytes": 171351,
+      "columns": [
+        {
+          "name": "record_id",
+          "type": "string"
+        },
+        {
+          "name": "citation_id",
+          "type": "string"
+        },
+        {
+          "name": "hershberger_code",
+          "type": "string"
+        },
+        {
+          "name": "citation",
+          "type": "string"
+        },
+        {
+          "name": "exclude_article",
+          "type": "string"
+        },
+        {
+          "name": "exclusion_reason",
+          "type": "string"
+        },
+        {
+          "name": "exclusion_note",
+          "type": "string"
+        },
+        {
+          "name": "chemical_name",
+          "type": "string"
+        },
+        {
+          "name": "chemical_name_other",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "supplier",
+          "type": "string"
+        },
+        {
+          "name": "catalogue_number",
+          "type": "string"
+        },
+        {
+          "name": "chemical_purity",
+          "type": "string"
+        },
+        {
+          "name": "rat_strain",
+          "type": "string"
+        },
+        {
+          "name": "castrated",
+          "type": "string"
+        },
+        {
+          "name": "age_at_castration",
+          "type": "string"
+        },
+        {
+          "name": "age_at_first_dose",
+          "type": "string"
+        },
+        {
+          "name": "time_frm_castration_first_dose",
+          "type": "string"
+        },
+        {
+          "name": "dosing_duration",
+          "type": "string"
+        },
+        {
+          "name": "dosing_note",
+          "type": "string"
+        },
+        {
+          "name": "dosing_route",
+          "type": "string"
+        },
+        {
+          "name": "number_of_androgenic_doses",
+          "type": "string"
+        },
+        {
+          "name": "rats_per_vehicle_control_group",
+          "type": "string"
+        },
+        {
+          "name": "rats_per_androgen_only_group",
+          "type": "string"
+        },
+        {
+          "name": "rats_per_androgenic_trt_group",
+          "type": "string"
+        },
+        {
+          "name": "reference_androgen",
+          "type": "string"
+        },
+        {
+          "name": "reference_androgen_dose",
+          "type": "string"
+        },
+        {
+          "name": "reference_androgen_dose_route",
+          "type": "string"
+        },
+        {
+          "name": "ref_androgen_dose_route_note",
+          "type": "string"
+        },
+        {
+          "name": "number_of_antiandrogen_doses",
+          "type": "string"
+        },
+        {
+          "name": "rats_antiandrgn_neg_ctrl_grp",
+          "type": "string"
+        },
+        {
+          "name": "rats_androgen_antiandrogen_grp",
+          "type": "string"
+        },
+        {
+          "name": "rats_per_antiandrogentrt_grp",
+          "type": "string"
+        },
+        {
+          "name": "reference_antiandrogen",
+          "type": "string"
+        },
+        {
+          "name": "reference_antiandrogen_dose",
+          "type": "string"
+        },
+        {
+          "name": "ref_anitandrogen_dose_route",
+          "type": "string"
+        },
+        {
+          "name": "androgen_coadministration",
+          "type": "string"
+        },
+        {
+          "name": "androgen_coadministration_dose",
+          "type": "string"
+        },
+        {
+          "name": "androgen_coadmin_dose_route",
+          "type": "string"
+        },
+        {
+          "name": "treatment_vehicle_control",
+          "type": "string"
+        },
+        {
+          "name": "time_btw_last_dose_necropsy",
+          "type": "string"
+        },
+        {
+          "name": "prostate_ventral_lobe_weighed",
+          "type": "string"
+        },
+        {
+          "name": "seminal_vesicle_weighed",
+          "type": "string"
+        },
+        {
+          "name": "labc_weighed",
+          "type": "string"
+        },
+        {
+          "name": "cowpers_gland_weighed",
+          "type": "string"
+        },
+        {
+          "name": "glans_penis_weighed",
+          "type": "string"
+        },
+        {
+          "name": "additional_rep_tissue_weighed",
+          "type": "string"
+        },
+        {
+          "name": "additional_rep_tissue_name",
+          "type": "string"
+        },
+        {
+          "name": "no_addll_rep_tissue_weighed",
+          "type": "string"
+        },
+        {
+          "name": "tot_no_of_rep_tissues_weighed",
+          "type": "string"
+        },
+        {
+          "name": "sig_eff_addnl_rep_tissue_wgt",
+          "type": "string"
+        },
+        {
+          "name": "response",
+          "type": "string"
+        },
+        {
+          "name": "response_notes",
+          "type": "string"
+        },
+        {
+          "name": "ast_wts__pos_androgen_veh_ctrl",
+          "type": "string"
+        },
+        {
+          "name": "no_ast_wts_signif_increased",
+          "type": "string"
+        },
+        {
+          "name": "androgenic_response_comment",
+          "type": "string"
+        },
+        {
+          "name": "ast_pos_anti__andrgn_cntl_wts",
+          "type": "string"
+        },
+        {
+          "name": "num_addnl_rep_tissue_wgts_dec",
+          "type": "string"
+        },
+        {
+          "name": "antiandrgnic_response_comment",
+          "type": "string"
+        },
+        {
+          "name": "hb_noel",
+          "type": "string"
+        },
+        {
+          "name": "hb_loel",
+          "type": "string"
+        },
+        {
+          "name": "dose_units",
+          "type": "string"
+        },
+        {
+          "name": "pubertal_other_assay_assoc",
+          "type": "string"
+        },
+        {
+          "name": "iv_bicheml_pbpk_molecular_data",
+          "type": "string"
+        },
+        {
+          "name": "notes",
+          "type": "string"
+        },
+        {
+          "name": "considered_for_ref_chemical",
+          "type": "string"
+        },
+        {
+          "name": "secondary_reason_for_exclusion",
+          "type": "string"
+        },
+        {
+          "name": "androgenic_call",
+          "type": "string"
+        },
+        {
+          "name": "antiandrogenic_call",
+          "type": "string"
+        },
+        {
+          "name": "hershberger_total_activity",
+          "type": "string"
+        },
+        {
+          "name": "hb_systemic_tox_flag",
+          "type": "string"
+        },
+        {
+          "name": "systemic_toxicity_note",
+          "type": "string"
+        },
+        {
+          "name": "citation_w_addnl_in_vivo_data",
+          "type": "string"
+        },
+        {
+          "name": "citation_model",
+          "type": "string"
+        },
+        {
+          "name": "exposure_duration",
+          "type": "string"
+        },
+        {
+          "name": "dosing_route2",
+          "type": "string"
+        },
+        {
+          "name": "in_vivo_noel_antiandrogenic",
+          "type": "string"
+        },
+        {
+          "name": "in_vivo_loel_antiandrogenic",
+          "type": "string"
+        },
+        {
+          "name": "other_in_vivo_effects_cited",
+          "type": "string"
+        },
+        {
+          "name": "comment_on_study_cited",
+          "type": "string"
+        },
+        {
+          "name": "hb_versus_in_vivo_response",
+          "type": "string"
+        },
+        {
+          "name": "edsp_tier_1_ar_binding",
+          "type": "string"
+        },
+        {
+          "name": "edsp_ar_binding_comment",
+          "type": "string"
+        },
+        {
+          "name": "dsstox_gsid_number",
+          "type": "string"
+        },
+        {
+          "name": "toxcast_androgen_receptor_data",
+          "type": "string"
+        },
+        {
+          "name": "toxcast_data",
+          "type": "string"
+        },
+        {
+          "name": "ar_aucagonist",
+          "type": "string"
+        },
+        {
+          "name": "max_auc_score",
+          "type": "string"
+        },
+        {
+          "name": "antagonist_confirmation_flag",
+          "type": "string"
+        },
+        {
+          "name": "antagonist_confirmation_score",
+          "type": "string"
+        },
+        {
+          "name": "androgen_receptor_model_call",
+          "type": "string"
+        },
+        {
+          "name": "citations_5ar_citationfreq",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "record_id": 0.0,
+        "citation_id": 0.0,
+        "hershberger_code": 0.196013,
+        "citation": 0.0,
+        "exclude_article": 0.0,
+        "exclusion_reason": 0.752492,
+        "exclusion_note": 0.77907,
+        "chemical_name": 0.112957,
+        "chemical_name_other": 0.669435,
+        "casrn": 0.317276,
+        "supplier": 0.149502,
+        "catalogue_number": 0.981728,
+        "chemical_purity": 0.561462,
+        "rat_strain": 0.137874,
+        "castrated": 0.137874,
+        "age_at_castration": 0.225914,
+        "age_at_first_dose": 0.146179,
+        "time_frm_castration_first_dose": 0.184385,
+        "dosing_duration": 0.142857,
+        "dosing_note": 0.725914,
+        "dosing_route": 0.142857,
+        "number_of_androgenic_doses": 0.16113,
+        "rats_per_vehicle_control_group": 0.217608,
+        "rats_per_androgen_only_group": 0.355482,
+        "rats_per_androgenic_trt_group": 0.519934,
+        "reference_androgen": 0.222591,
+        "reference_androgen_dose": 0.237542,
+        "reference_androgen_dose_route": 0.224252,
+        "ref_androgen_dose_route_note": 0.978405,
+        "number_of_antiandrogen_doses": 0.154485,
+        "rats_antiandrgn_neg_ctrl_grp": 0.215947,
+        "rats_androgen_antiandrogen_grp": 0.436877,
+        "rats_per_antiandrogentrt_grp": 0.237542,
+        "reference_antiandrogen": 0.564784,
+        "reference_antiandrogen_dose": 0.566445,
+        "ref_anitandrogen_dose_route": 0.563123,
+        "androgen_coadministration": 0.372093,
+        "androgen_coadministration_dose": 0.380399,
+        "androgen_coadmin_dose_route": 0.39701,
+        "treatment_vehicle_control": 0.197674,
+        "time_btw_last_dose_necropsy": 0.147841,
+        "prostate_ventral_lobe_weighed": 0.146179,
+        "seminal_vesicle_weighed": 0.149502,
+        "labc_weighed": 0.16113,
+        "cowpers_gland_weighed": 0.32392,
+        "glans_penis_weighed": 0.480066,
+        "additional_rep_tissue_weighed": 0.873754,
+        "additional_rep_tissue_name": 0.873754,
+        "no_addll_rep_tissue_weighed": 0.0,
+        "tot_no_of_rep_tissues_weighed": 0.0,
+        "sig_eff_addnl_rep_tissue_wgt": 0.0,
+        "response": 0.151163,
+        "response_notes": 0.815615,
+        "ast_wts__pos_androgen_veh_ctrl": 0.299003,
+        "no_ast_wts_signif_increased": 0.41196,
+        "androgenic_response_comment": 0.963455,
+        "ast_pos_anti__andrgn_cntl_wts": 0.445183,
+        "num_addnl_rep_tissue_wgts_dec": 0.343854,
+        "antiandrgnic_response_comment": 0.930233,
+        "hb_noel": 0.486711,
+        "hb_loel": 0.415282,
+        "dose_units": 0.149502,
+        "pubertal_other_assay_assoc": 0.325581,
+        "iv_bicheml_pbpk_molecular_data": 0.200997,
+        "notes": 0.322259,
+        "considered_for_ref_chemical": 0.0,
+        "secondary_reason_for_exclusion": 0.586379,
+        "androgenic_call": 0.727575,
+        "antiandrogenic_call": 0.443522,
+        "hershberger_total_activity": 0.352159,
+        "hb_systemic_tox_flag": 0.948505,
+        "systemic_toxicity_note": 0.996678,
+        "citation_w_addnl_in_vivo_data": 0.45515,
+        "citation_model": 0.486711,
+        "exposure_duration": 0.4701,
+        "dosing_route2": 0.466777,
+        "in_vivo_noel_antiandrogenic": 0.729236,
+        "in_vivo_loel_antiandrogenic": 0.541528,
+        "other_in_vivo_effects_cited": 0.461794,
+        "comment_on_study_cited": 0.581395,
+        "hb_versus_in_vivo_response": 0.518272,
+        "edsp_tier_1_ar_binding": 0.903654,
+        "edsp_ar_binding_comment": 0.9701,
+        "dsstox_gsid_number": 0.363787,
+        "toxcast_androgen_receptor_data": 0.362126,
+        "toxcast_data": 0.362126,
+        "ar_aucagonist": 0.362126,
+        "max_auc_score": 0.362126,
+        "antagonist_confirmation_flag": 0.362126,
+        "antagonist_confirmation_score": 0.362126,
+        "androgen_receptor_model_call": 0.362126,
+        "citations_5ar_citationfreq": 0.784053
+      },
+      "all_null_columns": [],
+      "sample_rows": 602,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "trf.parquet",
+      "path": "cebs/brick/datasets/trf.parquet",
+      "rows": 1000,
+      "cols": 25,
+      "bytes": 77693,
+      "columns": [
+        {
+          "name": "chemical_name",
+          "type": "string"
+        },
+        {
+          "name": "male_rat_chronic_loe",
+          "type": "string"
+        },
+        {
+          "name": "female_rat_chronic_loe",
+          "type": "string"
+        },
+        {
+          "name": "male_mouse_chronic_loe",
+          "type": "string"
+        },
+        {
+          "name": "female_mouse_chronic_loe",
+          "type": "string"
+        },
+        {
+          "name": "male_hamster_chronic_loe",
+          "type": "string"
+        },
+        {
+          "name": "female_hamster_chronic_loe",
+          "type": "string"
+        },
+        {
+          "name": "male_fish_chronic_loe",
+          "type": "string"
+        },
+        {
+          "name": "female_fish_chronic_loe",
+          "type": "string"
+        },
+        {
+          "name": "multiple_loe_conclusion_t_f",
+          "type": "string"
+        },
+        {
+          "name": "ames_conclusion",
+          "type": "string"
+        },
+        {
+          "name": "male_rat_micronucleus",
+          "type": "string"
+        },
+        {
+          "name": "female_rat_micronucleus",
+          "type": "string"
+        },
+        {
+          "name": "male_mouse_micronucleus",
+          "type": "string"
+        },
+        {
+          "name": "female_mouse_micronucleus",
+          "type": "string"
+        },
+        {
+          "name": "in_vitro_mn_conclusion",
+          "type": "string"
+        },
+        {
+          "name": "male_rat_comet",
+          "type": "string"
+        },
+        {
+          "name": "female_rat_comet",
+          "type": "string"
+        },
+        {
+          "name": "male_mouse_comet",
+          "type": "string"
+        },
+        {
+          "name": "female_mouse_comet",
+          "type": "string"
+        },
+        {
+          "name": "ntp_publication",
+          "type": "string"
+        },
+        {
+          "name": "dtxsid",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "ames_conclusion_url",
+          "type": "string"
+        },
+        {
+          "name": "casrn_url",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "chemical_name": 0.0,
+        "male_rat_chronic_loe": 0.495,
+        "female_rat_chronic_loe": 0.489,
+        "male_mouse_chronic_loe": 0.51,
+        "female_mouse_chronic_loe": 0.499,
+        "male_hamster_chronic_loe": 0.998,
+        "female_hamster_chronic_loe": 0.998,
+        "male_fish_chronic_loe": 0.997,
+        "female_fish_chronic_loe": 0.997,
+        "multiple_loe_conclusion_t_f": 0.462,
+        "ames_conclusion": 0.062,
+        "male_rat_micronucleus": 0.945,
+        "female_rat_micronucleus": 0.985,
+        "male_mouse_micronucleus": 0.739,
+        "female_mouse_micronucleus": 0.853,
+        "in_vitro_mn_conclusion": 0.999,
+        "male_rat_comet": 0.985,
+        "female_rat_comet": 0.994,
+        "male_mouse_comet": 0.992,
+        "female_mouse_comet": 0.995,
+        "ntp_publication": 0.461,
+        "dtxsid": 0.005,
+        "casrn": 0.0,
+        "ames_conclusion_url": 0.062,
+        "casrn_url": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 1000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "updated-1993-tlvs.parquet",
+      "path": "cebs/brick/datasets/updated-1993-tlvs.parquet",
+      "rows": 184,
+      "cols": 13,
+      "bytes": 18281,
+      "columns": [
+        {
+          "name": "id_num",
+          "type": "string"
+        },
+        {
+          "name": "chemicals",
+          "type": "string"
+        },
+        {
+          "name": "chemical_notes_synonyms",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "current_tlv_document_date",
+          "type": "string"
+        },
+        {
+          "name": "mouse_strain",
+          "type": "string"
+        },
+        {
+          "name": "exposure_details_ref_number",
+          "type": "string"
+        },
+        {
+          "name": "rd50",
+          "type": "string"
+        },
+        {
+          "name": "rd50_x_0_03",
+          "type": "string"
+        },
+        {
+          "name": "average_rd50_x_0_03",
+          "type": "string"
+        },
+        {
+          "name": "c19911992tlvtwatlvceilingref1",
+          "type": "string"
+        },
+        {
+          "name": "c2015_tlv_twa_tlv_ceilingstel",
+          "type": "string"
+        },
+        {
+          "name": "c2015_tlv_basis",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "id_num": 0.0,
+        "chemicals": 0.0,
+        "chemical_notes_synonyms": 0.73913,
+        "casrn": 0.0,
+        "current_tlv_document_date": 0.0,
+        "mouse_strain": 0.0,
+        "exposure_details_ref_number": 0.0,
+        "rd50": 0.0,
+        "rd50_x_0_03": 0.0,
+        "average_rd50_x_0_03": 0.538043,
+        "c19911992tlvtwatlvceilingref1": 0.021739,
+        "c2015_tlv_twa_tlv_ceilingstel": 0.021739,
+        "c2015_tlv_basis": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 184,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "ut2016.parquet",
+      "path": "cebs/brick/datasets/ut2016.parquet",
+      "rows": 458,
+      "cols": 16,
+      "bytes": 25075,
+      "columns": [
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "chemicalname",
+          "type": "string"
+        },
+        {
+          "name": "uterocall",
+          "type": "string"
+        },
+        {
+          "name": "uterouterinewgtpctctrl",
+          "type": "string"
+        },
+        {
+          "name": "uterouterinewgtfldctrl",
+          "type": "string"
+        },
+        {
+          "name": "species",
+          "type": "string"
+        },
+        {
+          "name": "strain",
+          "type": "string"
+        },
+        {
+          "name": "adminroute",
+          "type": "string"
+        },
+        {
+          "name": "uterouterinewgtrelpotpct",
+          "type": "string"
+        },
+        {
+          "name": "uterolelmgkgday",
+          "type": "string"
+        },
+        {
+          "name": "uterolelmgday",
+          "type": "string"
+        },
+        {
+          "name": "uterolelmg",
+          "type": "string"
+        },
+        {
+          "name": "dsstoxrecid",
+          "type": "string"
+        },
+        {
+          "name": "dsstoxsubid",
+          "type": "string"
+        },
+        {
+          "name": "dsstoxname",
+          "type": "string"
+        },
+        {
+          "name": "recordid",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "casrn": 0.0,
+        "chemicalname": 0.0,
+        "uterocall": 0.0,
+        "uterouterinewgtpctctrl": 0.0,
+        "uterouterinewgtfldctrl": 0.0,
+        "species": 0.0,
+        "strain": 0.004367,
+        "adminroute": 0.0,
+        "uterouterinewgtrelpotpct": 0.0,
+        "uterolelmgkgday": 0.0,
+        "uterolelmgday": 0.0,
+        "uterolelmg": 0.0,
+        "dsstoxrecid": 0.0,
+        "dsstoxsubid": 0.0,
+        "dsstoxname": 0.0,
+        "recordid": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 458,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "windyboydpub.parquet",
+      "path": "cebs/brick/datasets/windyboydpub.parquet",
+      "rows": 959,
+      "cols": 21,
+      "bytes": 171978,
+      "columns": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "c_elegans_mean_rspnse_0_5_mm",
+          "type": "string"
+        },
+        {
+          "name": "c_elegans_mean_rspnse_1_mm",
+          "type": "string"
+        },
+        {
+          "name": "c_elegans_mean_rspnse_5_mm",
+          "type": "string"
+        },
+        {
+          "name": "c_elegans_mean_rspnse_10_mm",
+          "type": "string"
+        },
+        {
+          "name": "c_elegans_mean_rspnse_50_mm",
+          "type": "string"
+        },
+        {
+          "name": "c_elegans_mean_rspnse_100_mm",
+          "type": "string"
+        },
+        {
+          "name": "c_elegans_mean_rspnse_200_mm",
+          "type": "string"
+        },
+        {
+          "name": "c_elegans_lec_by_size",
+          "type": "string"
+        },
+        {
+          "name": "c_elegans_est_top_asym_hl_fn",
+          "type": "string"
+        },
+        {
+          "name": "c_elegans_est_slope_hl_fn",
+          "type": "string"
+        },
+        {
+          "name": "c_elegans_ac50_hl_fn",
+          "type": "string"
+        },
+        {
+          "name": "c_elegans_est_bot_asym_hl_fn",
+          "type": "string"
+        },
+        {
+          "name": "zebrafish_lecs_min_18_endps",
+          "type": "string"
+        },
+        {
+          "name": "zebrafish_lecs_for_mortality",
+          "type": "string"
+        },
+        {
+          "name": "zebrafish_lecs_17_subltl_endp",
+          "type": "string"
+        },
+        {
+          "name": "zebrafish_tox_padilla_ph_i",
+          "type": "string"
+        },
+        {
+          "name": "zebrafish_ac10_padilla_ph_i",
+          "type": "string"
+        },
+        {
+          "name": "zebrafish_ac50_padilla_ph_i",
+          "type": "string"
+        },
+        {
+          "name": "casrn",
+          "type": "string"
+        },
+        {
+          "name": "chemical_id_number",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "name": 0.0,
+        "c_elegans_mean_rspnse_0_5_mm": 0.0,
+        "c_elegans_mean_rspnse_1_mm": 0.0,
+        "c_elegans_mean_rspnse_5_mm": 0.0,
+        "c_elegans_mean_rspnse_10_mm": 0.0,
+        "c_elegans_mean_rspnse_50_mm": 0.0,
+        "c_elegans_mean_rspnse_100_mm": 0.0,
+        "c_elegans_mean_rspnse_200_mm": 0.0,
+        "c_elegans_lec_by_size": 0.0,
+        "c_elegans_est_top_asym_hl_fn": 0.0,
+        "c_elegans_est_slope_hl_fn": 0.0,
+        "c_elegans_ac50_hl_fn": 0.0,
+        "c_elegans_est_bot_asym_hl_fn": 0.0,
+        "zebrafish_lecs_min_18_endps": 0.0,
+        "zebrafish_lecs_for_mortality": 0.0,
+        "zebrafish_lecs_17_subltl_endp": 0.0,
+        "zebrafish_tox_padilla_ph_i": 0.0,
+        "zebrafish_ac10_padilla_ph_i": 0.0,
+        "zebrafish_ac50_padilla_ph_i": 0.0,
+        "casrn": 0.0,
+        "chemical_id_number": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 959,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    }
+  ],
+  "bb:datapackage_conformance": {
+    "issues": [],
+    "conforms": true
+  },
+  "bb:web_validation": {
+    "validator": "agentic-web",
+    "checked": "2026-07-06",
+    "confidence": "HIGH",
+    "root_cause": "The smiles_code field in the chemlists table was ~97% null (30/1000 rows, ~3%). Root cause is NOT a build/parse bug: CEBS (NIEHS/NTP Chemical Effects in Biological Systems) is an assay-/study-centric resource that keys chemicals by CASRN, DTXSID and chemical name; its source chemlists dataset supplies SMILES for only ~3% of chemicals. Structures are genuinely sparse in the source. Identifiers ARE nearly complete: dtt_casrn 100%, dtxsid 99.6%, epa_cas_no 99.6%, chemical names ~100%.",
+    "resolution": "genuinely-sparse -> enriched",
+    "enrichment": {
+      "date": "2026-07-06",
+      "field": "smiles_code",
+      "table": "brick/datasets/chemlists.parquet",
+      "description": "Backfilled the sparse smiles_code field by mapping the identifiers present in CEBS (DTXSID primary, CASRN fallback) to InChI via the local DSSTox table, then InChI -> RDKit canonical SMILES. Source-provided SMILES preserved as-is; only null cells filled. Implemented as stages/04_enrich_smiles.py and wired into the fetch stage.",
+      "mapping_sources": [
+        "comptox/brick/dsstox_identifiers.parquet (DSSTox DTXSID/CASRN -> InChI -> canonical SMILES via RDKit)"
+      ],
+      "rows_total": 1000,
+      "rows_with_smiles_before": 30,
+      "rows_with_smiles_after": 951,
+      "row_fill_rate_before": 0.03,
+      "row_fill_rate_after": 0.951,
+      "distinct_chemicals": 458,
+      "chemicals_with_smiles_after": 438,
+      "chemical_fill_rate_after": 0.956,
+      "smiles_valid_fraction_sampled": 0.996,
+      "unresolved_note": "The 49 rows (20 distinct chemicals) still lacking SMILES are predominantly mixtures / UVCB / commercial formulations for which DSSTox has no single defined structure (e.g. Tricresyl phosphate, Firemaster 550, Crude MCHM, Benzalkonium chloride, isopropylated-phenol phosphate)."
+    },
+    "notes": "Lead confirmed as genuinely-sparse-in-source (not a build defect) and resolved by DSSTox enrichment: smiles_code raised from 3.0% -> 95.1% of rows (95.6% of distinct chemicals), 99.6% RDKit-parseable. The only remaining bb_validate WARN (animal-studies-neonicotinoid-exposure duplicate-row fraction) is pre-existing and unrelated to this lead."
+  }
+}

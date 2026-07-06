@@ -365,7 +365,18 @@ if __name__ == '__main__':
                 f.write(f"{status} - {slug}\n")
 
 
-
+    # *********************************************************************
+    # Enrich chemlists with SMILES structures.
+    # CEBS is assay-/study-centric and keys chemicals by CASRN/DTXSID/name;
+    # its own smiles_code field is populated for only ~3% of chemicals.
+    # Backfill the missing structures from the local DSSTox table
+    # (DTXSID/CASRN -> InChI -> RDKit canonical SMILES). See 04_enrich_smiles.py.
+    # *********************************************************************
+    import subprocess, sys
+    try:
+        subprocess.run([sys.executable, str(Path(__file__).resolve().parent / '04_enrich_smiles.py')], check=True)
+    except Exception as e:
+        print(f'SMILES enrichment step failed (leaving smiles_code as-is): {e}')
 
 
     

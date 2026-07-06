@@ -13,6 +13,7 @@ stages:
     cmd: python3 stages/fetch_data.py
     deps:
       - stages/fetch_data.py
+      - stages/04_enrich_smiles.py
     outs:
       - brick/cebs_DDT_datasets.parquet
       - brick/datasets/

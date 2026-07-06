@@ -1,0 +1,4505 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "tables": [
+    {
+      "url": "brick/cebs_DDT_datasets.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "Name",
+            "datatype": "string"
+          },
+          {
+            "name": "Group",
+            "datatype": "string"
+          },
+          {
+            "name": "Description",
+            "datatype": "string"
+          },
+          {
+            "name": "Link",
+            "datatype": "string"
+          },
+          {
+            "name": "slug",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/2015-acgih-tlvs.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "id_num",
+            "datatype": "string"
+          },
+          {
+            "name": "chemical_names",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "document_date",
+            "datatype": "string"
+          },
+          {
+            "name": "tlv_twa_stel",
+            "datatype": "string"
+          },
+          {
+            "name": "tlv_basis",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/ames.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "ames_chemical_name",
+            "datatype": "string"
+          },
+          {
+            "name": "ames_study_conclusion",
+            "datatype": "string"
+          },
+          {
+            "name": "ames_trial_result",
+            "datatype": "string"
+          },
+          {
+            "name": "ames_trial_strain",
+            "datatype": "string"
+          },
+          {
+            "name": "ames_doses",
+            "datatype": "string"
+          },
+          {
+            "name": "ames_dose_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "ames_max_dose",
+            "datatype": "string"
+          },
+          {
+            "name": "ames_microsomal_activ_used",
+            "datatype": "string"
+          },
+          {
+            "name": "ames_protocol_type",
+            "datatype": "string"
+          },
+          {
+            "name": "ames_study_start_year",
+            "datatype": "string"
+          },
+          {
+            "name": "ames_trial_start_date",
+            "datatype": "string"
+          },
+          {
+            "name": "ames_trial_name",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "ames_depositor_study_num",
+            "datatype": "string"
+          },
+          {
+            "name": "ames_accession_number",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn_url",
+            "datatype": "string"
+          },
+          {
+            "name": "ames_depositor_study_num_url",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/analyte-ddd.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "measurand",
+            "datatype": "string"
+          },
+          {
+            "name": "measurand_ontology_term",
+            "datatype": "string"
+          },
+          {
+            "name": "definition",
+            "datatype": "string"
+          },
+          {
+            "name": "measurand_ontology_iri",
+            "datatype": "string"
+          },
+          {
+            "name": "category",
+            "datatype": "string"
+          },
+          {
+            "name": "status",
+            "datatype": "string"
+          },
+          {
+            "name": "term_id",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/androgen_agonists.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "chemical",
+            "datatype": "string"
+          },
+          {
+            "name": "nvs_nr_har",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "rat_and_human_invitro",
+            "datatype": "string"
+          },
+          {
+            "name": "ar_model_call",
+            "datatype": "string"
+          },
+          {
+            "name": "no_pos_assay",
+            "datatype": "string"
+          },
+          {
+            "name": "all_agonist_assay_neg_t_f",
+            "datatype": "string"
+          },
+          {
+            "name": "agon_loel_t_f",
+            "datatype": "string"
+          },
+          {
+            "name": "andro_recept_activity_group",
+            "datatype": "string"
+          },
+          {
+            "name": "hershberg_noel",
+            "datatype": "string"
+          },
+          {
+            "name": "hershberg_min_noel",
+            "datatype": "string"
+          },
+          {
+            "name": "hershberg_med_noel",
+            "datatype": "string"
+          },
+          {
+            "name": "hershberg_max_noel",
+            "datatype": "string"
+          },
+          {
+            "name": "pk_frac_unbound_chem",
+            "datatype": "string"
+          },
+          {
+            "name": "pk_renal_clearance",
+            "datatype": "string"
+          },
+          {
+            "name": "pk_mw",
+            "datatype": "string"
+          },
+          {
+            "name": "pk_instrin_clearance",
+            "datatype": "string"
+          },
+          {
+            "name": "src_for_fraction_unbnd",
+            "datatype": "string"
+          },
+          {
+            "name": "atg_ar_trans_up",
+            "datatype": "string"
+          },
+          {
+            "name": "nvs_nr_car",
+            "datatype": "string"
+          },
+          {
+            "name": "nvs_nr_rar",
+            "datatype": "string"
+          },
+          {
+            "name": "ot_ar_areluc_ag_1440",
+            "datatype": "string"
+          },
+          {
+            "name": "ot_ar_arsrc1_0480",
+            "datatype": "string"
+          },
+          {
+            "name": "ot_ar_arsrc1_0960",
+            "datatype": "string"
+          },
+          {
+            "name": "tox21_ar_bla_agonist_ratio",
+            "datatype": "string"
+          },
+          {
+            "name": "tox21_ar_luc_mdakb2_agonist",
+            "datatype": "string"
+          },
+          {
+            "name": "ead_atg_ar_trans_up",
+            "datatype": "string"
+          },
+          {
+            "name": "ead_nvs_nr_har",
+            "datatype": "string"
+          },
+          {
+            "name": "ead_nvs_nr_car",
+            "datatype": "string"
+          },
+          {
+            "name": "ead_nvs_nr_rar",
+            "datatype": "string"
+          },
+          {
+            "name": "ead_ot_ar_areluc_ag_1440",
+            "datatype": "string"
+          },
+          {
+            "name": "ead_ot_ar_arsrc1_0480",
+            "datatype": "string"
+          },
+          {
+            "name": "ead_ot_ar_arsrc1_0960",
+            "datatype": "string"
+          },
+          {
+            "name": "ead_tox21_ar_bla_ag_ratio",
+            "datatype": "string"
+          },
+          {
+            "name": "ead_tox21_ar_luc_mdakb2_ag",
+            "datatype": "string"
+          },
+          {
+            "name": "meadian_ead",
+            "datatype": "string"
+          },
+          {
+            "name": "max_ead_pred_100",
+            "datatype": "string"
+          },
+          {
+            "name": "auc_agonist",
+            "datatype": "string"
+          },
+          {
+            "name": "auc_antagonist",
+            "datatype": "string"
+          },
+          {
+            "name": "antag_confid_score",
+            "datatype": "string"
+          },
+          {
+            "name": "confirm_assay_flag",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/androgen_antagonists.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "chemical_name",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "ar_model_call",
+            "datatype": "string"
+          },
+          {
+            "name": "number_of_positive_assays",
+            "datatype": "string"
+          },
+          {
+            "name": "all_antagonist_assays_neg_t_f",
+            "datatype": "string"
+          },
+          {
+            "name": "has_antagonist_loel",
+            "datatype": "string"
+          },
+          {
+            "name": "activity_group_ar_antagonist",
+            "datatype": "string"
+          },
+          {
+            "name": "noel",
+            "datatype": "string"
+          },
+          {
+            "name": "min_loel",
+            "datatype": "string"
+          },
+          {
+            "name": "median_loel",
+            "datatype": "string"
+          },
+          {
+            "name": "max_loel",
+            "datatype": "string"
+          },
+          {
+            "name": "fub",
+            "datatype": "string"
+          },
+          {
+            "name": "renal_clearance",
+            "datatype": "string"
+          },
+          {
+            "name": "mw",
+            "datatype": "string"
+          },
+          {
+            "name": "intrinsic_clearance",
+            "datatype": "string"
+          },
+          {
+            "name": "src_fraction_of_unbnd_chem",
+            "datatype": "string"
+          },
+          {
+            "name": "source_for_clearance_in_vitro",
+            "datatype": "string"
+          },
+          {
+            "name": "nvs_nr_har",
+            "datatype": "string"
+          },
+          {
+            "name": "nvs_nr_car",
+            "datatype": "string"
+          },
+          {
+            "name": "nvs_nr_rar",
+            "datatype": "string"
+          },
+          {
+            "name": "ot_ar_arsrc1_0480",
+            "datatype": "string"
+          },
+          {
+            "name": "ot_ar_arsrc1_0960",
+            "datatype": "string"
+          },
+          {
+            "name": "tox21_ar_bla_antagonist_ratio",
+            "datatype": "string"
+          },
+          {
+            "name": "tox21_ar_luc_mdakb2_antgonist2",
+            "datatype": "string"
+          },
+          {
+            "name": "ead_nvs_nr_har",
+            "datatype": "string"
+          },
+          {
+            "name": "ead_nvs_nr_car",
+            "datatype": "string"
+          },
+          {
+            "name": "ead_nvs_nr_rar",
+            "datatype": "string"
+          },
+          {
+            "name": "ead_ot_ar_arsrc1_0480",
+            "datatype": "string"
+          },
+          {
+            "name": "ead_ot_ar_arsrc1_0960",
+            "datatype": "string"
+          },
+          {
+            "name": "ead_tox21_ar_bla_antgnst_ratio",
+            "datatype": "string"
+          },
+          {
+            "name": "ead_tx21ar_luc_mdakb2_antgnst2",
+            "datatype": "string"
+          },
+          {
+            "name": "median_ead",
+            "datatype": "string"
+          },
+          {
+            "name": "max_ead_predicted_acc_100_um",
+            "datatype": "string"
+          },
+          {
+            "name": "auc_agonist",
+            "datatype": "string"
+          },
+          {
+            "name": "auc_antagonist",
+            "datatype": "string"
+          },
+          {
+            "name": "antagonist_confidence_score",
+            "datatype": "string"
+          },
+          {
+            "name": "toxcast_assay_confirmation",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/animal-studies-neonicotinoid-exposure.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "abstract",
+            "datatype": "string"
+          },
+          {
+            "name": "neonicotinoid_studied",
+            "datatype": "string"
+          },
+          {
+            "name": "route_of_exposure",
+            "datatype": "string"
+          },
+          {
+            "name": "species",
+            "datatype": "string"
+          },
+          {
+            "name": "health_effect",
+            "datatype": "string"
+          },
+          {
+            "name": "outcome_category",
+            "datatype": "string"
+          },
+          {
+            "name": "specific_outcome",
+            "datatype": "string"
+          },
+          {
+            "name": "dose_concentration",
+            "datatype": "string"
+          },
+          {
+            "name": "dose_concentration_units",
+            "datatype": "string"
+          },
+          {
+            "name": "short_citation",
+            "datatype": "string"
+          },
+          {
+            "name": "full_citation",
+            "datatype": "string"
+          },
+          {
+            "name": "neon_refid",
+            "datatype": "string"
+          },
+          {
+            "name": "full_citation_url",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/aragonistrl2016.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "chemicalname",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "agonpotcat",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/assay-ddd.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "dtt_assay_name",
+            "datatype": "string"
+          },
+          {
+            "name": "dtt_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "display_name",
+            "datatype": "string"
+          },
+          {
+            "name": "general_domain",
+            "datatype": "string"
+          },
+          {
+            "name": "dtt_assay_definition",
+            "datatype": "string"
+          },
+          {
+            "name": "ontology_iri",
+            "datatype": "string"
+          },
+          {
+            "name": "measurand",
+            "datatype": "string"
+          },
+          {
+            "name": "measurand_obo_id",
+            "datatype": "string"
+          },
+          {
+            "name": "status",
+            "datatype": "string"
+          },
+          {
+            "name": "term_id",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/biomarker-data-collection.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "gene",
+            "datatype": "string"
+          },
+          {
+            "name": "gene_desc",
+            "datatype": "string"
+          },
+          {
+            "name": "tissue",
+            "datatype": "string"
+          },
+          {
+            "name": "biomark_sum_file",
+            "datatype": "string"
+          },
+          {
+            "name": "biomark_sum_file_url",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/body-weight-loss-in-f344.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_chemical_name",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_dose",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_dose_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_dose_description",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_ratio_of_body_wt_mean",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_tolerance",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_body_wt_mean_trt_ctl_grp",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_body_wt_sd_trt_ctl_grp",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_no_sub_in_trt_ctl_grp",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_body_wt_mean_of_ctl_grp",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_body_wt_sd_of_ctl_grp",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_no_sub_in_ctl_grp",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_sex",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_strain",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_is_control_group",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_treatment_group_type",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_route",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_vehicle",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_death_status",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_time_in_study",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_group_name",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_ntp_study_type",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_study_title",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_duration",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_is_ntp_study",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_laboratory",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_start_date",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_accession_number",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_ntp_tdms_number",
+            "datatype": "string"
+          },
+          {
+            "name": "f344_ntp_chemtrack_number",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/catexstudies.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "ma_geo",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_pmid",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_institution",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_author",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_coauthor",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_yearpublished",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_platformdescription",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_platform",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_geoprofiletype",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_title",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_objective",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_design",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_species",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_strain",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_tissue",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_chemicals",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_multiplechemicals",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_cellline",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_geneticchange",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_otheragent",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_studyduration",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_timepoints",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_route",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_vehicle",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_additionalmetadata",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_additionalinlifedata",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_cebsaccno",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_geolink",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_analysislink",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_additionalinformation",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_additionalmetadata_url",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_additionalinlifedata_url",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_geolink_url",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_analysislink_url",
+            "datatype": "string"
+          },
+          {
+            "name": "ma_additionalinformation_url",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/cebs-study-catalog.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "study_uid",
+            "datatype": "string"
+          },
+          {
+            "name": "depositor_study_number",
+            "datatype": "string"
+          },
+          {
+            "name": "merged_study_type",
+            "datatype": "string"
+          },
+          {
+            "name": "publication_uid",
+            "datatype": "string"
+          },
+          {
+            "name": "ntp_study_type",
+            "datatype": "string"
+          },
+          {
+            "name": "study_title",
+            "datatype": "string"
+          },
+          {
+            "name": "test_compound",
+            "datatype": "string"
+          },
+          {
+            "name": "ntp_casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "dtxsid",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_sex",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_species",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_strain",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_route",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_role",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_vehicle",
+            "datatype": "string"
+          },
+          {
+            "name": "positive_control",
+            "datatype": "string"
+          },
+          {
+            "name": "pos_con_dtxsid",
+            "datatype": "string"
+          },
+          {
+            "name": "pos_con_ntp_casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "microsomal_activation_species",
+            "datatype": "string"
+          },
+          {
+            "name": "microsomal_activation_used",
+            "datatype": "string"
+          },
+          {
+            "name": "start_year",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/cebs-subject-decoder.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "study_uid_in_cebsdwh",
+            "datatype": "string"
+          },
+          {
+            "name": "study_uid_tdmse",
+            "datatype": "string"
+          },
+          {
+            "name": "study_uid_gdb",
+            "datatype": "string"
+          },
+          {
+            "name": "ntp_tdmse_number_tdmse",
+            "datatype": "string"
+          },
+          {
+            "name": "ntp_tdmse_number_gdb",
+            "datatype": "string"
+          },
+          {
+            "name": "subject_uid_in_cebsdwh",
+            "datatype": "string"
+          },
+          {
+            "name": "subject_display_name_tdmse",
+            "datatype": "string"
+          },
+          {
+            "name": "subject_id_tdmse",
+            "datatype": "string"
+          },
+          {
+            "name": "subject_id_gdb",
+            "datatype": "string"
+          },
+          {
+            "name": "group_name_tdmse",
+            "datatype": "string"
+          },
+          {
+            "name": "group_name_gdb",
+            "datatype": "string"
+          },
+          {
+            "name": "cage_name_tdmse",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_sex",
+            "datatype": "string"
+          },
+          {
+            "name": "gdb_sex_in_cebsa_is_incorrect",
+            "datatype": "string"
+          },
+          {
+            "name": "dose",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_dose_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "stressor_name",
+            "datatype": "string"
+          },
+          {
+            "name": "ntp_casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_route",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_vehicle",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_species",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_strain",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/chemlists.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "clid",
+            "datatype": "string"
+          },
+          {
+            "name": "list_name",
+            "datatype": "string"
+          },
+          {
+            "name": "project_title",
+            "datatype": "string"
+          },
+          {
+            "name": "is_category",
+            "datatype": "string"
+          },
+          {
+            "name": "requestor",
+            "datatype": "string"
+          },
+          {
+            "name": "request_branch_office_program",
+            "datatype": "string"
+          },
+          {
+            "name": "recipient",
+            "datatype": "string"
+          },
+          {
+            "name": "recipient_company",
+            "datatype": "string"
+          },
+          {
+            "name": "recipient_company_department",
+            "datatype": "string"
+          },
+          {
+            "name": "project_type",
+            "datatype": "string"
+          },
+          {
+            "name": "program_of_work",
+            "datatype": "string"
+          },
+          {
+            "name": "keywords",
+            "datatype": "string"
+          },
+          {
+            "name": "assays",
+            "datatype": "string"
+          },
+          {
+            "name": "contributor",
+            "datatype": "string"
+          },
+          {
+            "name": "shipping_date",
+            "datatype": "string"
+          },
+          {
+            "name": "smiles_code",
+            "datatype": "string"
+          },
+          {
+            "name": "dtt_chemical_name",
+            "datatype": "string"
+          },
+          {
+            "name": "ddd_chemical_name",
+            "datatype": "string"
+          },
+          {
+            "name": "epa_chemical_name",
+            "datatype": "string"
+          },
+          {
+            "name": "ta_ddd_id",
+            "datatype": "string"
+          },
+          {
+            "name": "dtxsid",
+            "datatype": "string"
+          },
+          {
+            "name": "dtt_casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "epa_cas_no",
+            "datatype": "string"
+          },
+          {
+            "name": "role",
+            "datatype": "string"
+          },
+          {
+            "name": "epa_molecular_weight",
+            "datatype": "string"
+          },
+          {
+            "name": "list_molecular_weight",
+            "datatype": "string"
+          },
+          {
+            "name": "amount",
+            "datatype": "string"
+          },
+          {
+            "name": "amount_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "supplier",
+            "datatype": "string"
+          },
+          {
+            "name": "lot_number",
+            "datatype": "string"
+          },
+          {
+            "name": "concentration",
+            "datatype": "string"
+          },
+          {
+            "name": "concentration_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "coa_purity",
+            "datatype": "string"
+          },
+          {
+            "name": "determined_purity",
+            "datatype": "string"
+          },
+          {
+            "name": "storage_conditions",
+            "datatype": "string"
+          },
+          {
+            "name": "blind_code",
+            "datatype": "string"
+          },
+          {
+            "name": "plate_number",
+            "datatype": "string"
+          },
+          {
+            "name": "plate_position",
+            "datatype": "string"
+          },
+          {
+            "name": "additional_information",
+            "datatype": "string"
+          },
+          {
+            "name": "species",
+            "datatype": "string"
+          },
+          {
+            "name": "plant_part",
+            "datatype": "string"
+          },
+          {
+            "name": "extract_method",
+            "datatype": "string"
+          },
+          {
+            "name": "abbreviation",
+            "datatype": "string"
+          },
+          {
+            "name": "biological",
+            "datatype": "string"
+          },
+          {
+            "name": "category",
+            "datatype": "string"
+          },
+          {
+            "name": "dttid_activity",
+            "datatype": "string"
+          },
+          {
+            "name": "show_unique_list",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/chemtrack-testing-stat.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "public_flag",
+            "datatype": "string"
+          },
+          {
+            "name": "ta_name",
+            "datatype": "string"
+          },
+          {
+            "name": "ta_number",
+            "datatype": "string"
+          },
+          {
+            "name": "test_stat_pg",
+            "datatype": "string"
+          },
+          {
+            "name": "cebs_ta_pg",
+            "datatype": "string"
+          },
+          {
+            "name": "species",
+            "datatype": "string"
+          },
+          {
+            "name": "study_type",
+            "datatype": "string"
+          },
+          {
+            "name": "exp_type",
+            "datatype": "string"
+          },
+          {
+            "name": "study_length",
+            "datatype": "string"
+          },
+          {
+            "name": "study_num",
+            "datatype": "string"
+          },
+          {
+            "name": "study_status",
+            "datatype": "string"
+          },
+          {
+            "name": "strain",
+            "datatype": "string"
+          },
+          {
+            "name": "route",
+            "datatype": "string"
+          },
+          {
+            "name": "vehicle",
+            "datatype": "string"
+          },
+          {
+            "name": "cas_display",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/clin-chem-iad-2024.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "accession_number",
+            "datatype": "string"
+          },
+          {
+            "name": "depositor_study_number",
+            "datatype": "string"
+          },
+          {
+            "name": "publication_uid",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_study_type",
+            "datatype": "string"
+          },
+          {
+            "name": "study_title",
+            "datatype": "string"
+          },
+          {
+            "name": "start_year",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_test_compound_name",
+            "datatype": "string"
+          },
+          {
+            "name": "dtxsid",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "dose_desc",
+            "datatype": "string"
+          },
+          {
+            "name": "dose",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_dose_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "subject_name",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_assay_name",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_assay_input",
+            "datatype": "string"
+          },
+          {
+            "name": "original_value",
+            "datatype": "string"
+          },
+          {
+            "name": "original_value_adjusted",
+            "datatype": "string"
+          },
+          {
+            "name": "original_value_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "conversion_factor",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_species",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_strain",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_sex",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_route",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_role",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_component_name",
+            "datatype": "string"
+          },
+          {
+            "name": "component_dtxsid",
+            "datatype": "string"
+          },
+          {
+            "name": "component_casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_vehicle_name",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_removal_reason",
+            "datatype": "string"
+          },
+          {
+            "name": "time_in_study",
+            "datatype": "string"
+          },
+          {
+            "name": "time_in_study_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "comments",
+            "datatype": "string"
+          },
+          {
+            "name": "study_chemical",
+            "datatype": "string"
+          },
+          {
+            "name": "ntp_study_type",
+            "datatype": "string"
+          },
+          {
+            "name": "species",
+            "datatype": "string"
+          },
+          {
+            "name": "strain",
+            "datatype": "string"
+          },
+          {
+            "name": "sex",
+            "datatype": "string"
+          },
+          {
+            "name": "route",
+            "datatype": "string"
+          },
+          {
+            "name": "treatment_role",
+            "datatype": "string"
+          },
+          {
+            "name": "component_name",
+            "datatype": "string"
+          },
+          {
+            "name": "dose_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "vehicle",
+            "datatype": "string"
+          },
+          {
+            "name": "assay_name_ori",
+            "datatype": "string"
+          },
+          {
+            "name": "assay_input",
+            "datatype": "string"
+          },
+          {
+            "name": "removal_reason",
+            "datatype": "string"
+          },
+          {
+            "name": "dose_response_study",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/comet.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "comet_chem_name",
+            "datatype": "string"
+          },
+          {
+            "name": "comet_trial_conclusion",
+            "datatype": "string"
+          },
+          {
+            "name": "comet_percent_pvalue",
+            "datatype": "string"
+          },
+          {
+            "name": "comet_male_conclusion",
+            "datatype": "string"
+          },
+          {
+            "name": "comet_female_conclusion",
+            "datatype": "string"
+          },
+          {
+            "name": "comet_species",
+            "datatype": "string"
+          },
+          {
+            "name": "comet_strain",
+            "datatype": "string"
+          },
+          {
+            "name": "comet_group_sex",
+            "datatype": "string"
+          },
+          {
+            "name": "comet_organ",
+            "datatype": "string"
+          },
+          {
+            "name": "comet_dosing",
+            "datatype": "string"
+          },
+          {
+            "name": "comet_dose_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "comet_start_date",
+            "datatype": "string"
+          },
+          {
+            "name": "comet_protocol",
+            "datatype": "string"
+          },
+          {
+            "name": "comet_study_page",
+            "datatype": "string"
+          },
+          {
+            "name": "comet_ntp_study_no",
+            "datatype": "string"
+          },
+          {
+            "name": "comet_cebs_trial_name",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "comet_study_page_url",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn_url",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/cytotoxacuteoral2006.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "chemicalname",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "endporalacutetoxld50mgkg",
+            "datatype": "string"
+          },
+          {
+            "name": "endp3t3ic50mm",
+            "datatype": "string"
+          },
+          {
+            "name": "endpnhkic50mm",
+            "datatype": "string"
+          },
+          {
+            "name": "recordid",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/developmental-morphology-ddd.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "species",
+            "datatype": "string"
+          },
+          {
+            "name": "strain",
+            "datatype": "string"
+          },
+          {
+            "name": "area",
+            "datatype": "string"
+          },
+          {
+            "name": "location",
+            "datatype": "string"
+          },
+          {
+            "name": "observation",
+            "datatype": "string"
+          },
+          {
+            "name": "classification",
+            "datatype": "string"
+          },
+          {
+            "name": "devtox_localization",
+            "datatype": "string"
+          },
+          {
+            "name": "devtox_observation",
+            "datatype": "string"
+          },
+          {
+            "name": "devtox_id",
+            "datatype": "string"
+          },
+          {
+            "name": "devtox_class",
+            "datatype": "string"
+          },
+          {
+            "name": "obo_term",
+            "datatype": "string"
+          },
+          {
+            "name": "status",
+            "datatype": "string"
+          },
+          {
+            "name": "term_id",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/drosophila.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "test_article_name",
+            "datatype": "string"
+          },
+          {
+            "name": "study_conclusion",
+            "datatype": "string"
+          },
+          {
+            "name": "species",
+            "datatype": "string"
+          },
+          {
+            "name": "strain",
+            "datatype": "string"
+          },
+          {
+            "name": "protocol",
+            "datatype": "string"
+          },
+          {
+            "name": "depositor_views",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "ntp_study_id",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/dtt-publications-pds.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "title",
+            "datatype": "string"
+          },
+          {
+            "name": "authors",
+            "datatype": "string"
+          },
+          {
+            "name": "publication_year",
+            "datatype": "string"
+          },
+          {
+            "name": "publication_id",
+            "datatype": "string"
+          },
+          {
+            "name": "study_type",
+            "datatype": "string"
+          },
+          {
+            "name": "test_article_name",
+            "datatype": "string"
+          },
+          {
+            "name": "species",
+            "datatype": "string"
+          },
+          {
+            "name": "abstract_pg",
+            "datatype": "string"
+          },
+          {
+            "name": "publication_pg",
+            "datatype": "string"
+          },
+          {
+            "name": "data_pg",
+            "datatype": "string"
+          },
+          {
+            "name": "cebs_test_article_page_pg",
+            "datatype": "string"
+          },
+          {
+            "name": "citation",
+            "datatype": "string"
+          },
+          {
+            "name": "strain",
+            "datatype": "string"
+          },
+          {
+            "name": "route",
+            "datatype": "string"
+          },
+          {
+            "name": "vehicle",
+            "datatype": "string"
+          },
+          {
+            "name": "dtxsid",
+            "datatype": "string"
+          },
+          {
+            "name": "cas_display",
+            "datatype": "string"
+          },
+          {
+            "name": "chemlist",
+            "datatype": "string"
+          },
+          {
+            "name": "pmid",
+            "datatype": "string"
+          },
+          {
+            "name": "mice",
+            "datatype": "string"
+          },
+          {
+            "name": "rats",
+            "datatype": "string"
+          },
+          {
+            "name": "bacteria",
+            "datatype": "string"
+          },
+          {
+            "name": "in_vitro",
+            "datatype": "string"
+          },
+          {
+            "name": "other_species",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/flame-retardants.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "fr_authors",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_title",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_pmid",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_year",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_source",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_dtxsidstudied",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_preferredname",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_datapage",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_chemicalabbreviation",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_citationnotes",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_note",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_publishednameifdifferent",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_celegans",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_planaria",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_zebrafish",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_rodent",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_human",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_tissue",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_invitro",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_exposureduration",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_dttgenetoxresult",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_dttbioassayconclusion",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_development",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_differentiation",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_proliferationandgrowth",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_neuronalgrthnetwrk",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_genetictoxicology",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_reproductivedevelopment",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_behavior",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_immune",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_tumoranalysis",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_mitochondriaevaluation",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_cardiovascular",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_tgmx",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_pcr",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_metabolomics",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_othermethods",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_otherendpoints",
+            "datatype": "string"
+          },
+          {
+            "name": "fr_datapage_url",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/hallmark-geneset-annotation.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "hallmark_gene_set",
+            "datatype": "string"
+          },
+          {
+            "name": "tissue_expression",
+            "datatype": "string"
+          },
+          {
+            "name": "associated_hallmark_sets",
+            "datatype": "string"
+          },
+          {
+            "name": "up_regulation",
+            "datatype": "string"
+          },
+          {
+            "name": "down_regulation",
+            "datatype": "string"
+          },
+          {
+            "name": "msigdb_interpretation",
+            "datatype": "string"
+          },
+          {
+            "name": "canonical_pathway_assoc",
+            "datatype": "string"
+          },
+          {
+            "name": "mechanistic_interpretation",
+            "datatype": "string"
+          },
+          {
+            "name": "highest_3_correlate_liver",
+            "datatype": "string"
+          },
+          {
+            "name": "highest_3_correlate_heart",
+            "datatype": "string"
+          },
+          {
+            "name": "highest_3_correlate_kidney",
+            "datatype": "string"
+          },
+          {
+            "name": "gene_set_enrichment_analy",
+            "datatype": "string"
+          },
+          {
+            "name": "gene_list",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/hematol-iad-2024.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "accession_number",
+            "datatype": "string"
+          },
+          {
+            "name": "depositor_study_number",
+            "datatype": "string"
+          },
+          {
+            "name": "publication_uid",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_study_type",
+            "datatype": "string"
+          },
+          {
+            "name": "study_title",
+            "datatype": "string"
+          },
+          {
+            "name": "start_year",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_test_compound_name",
+            "datatype": "string"
+          },
+          {
+            "name": "dtxsid",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "dose_desc",
+            "datatype": "string"
+          },
+          {
+            "name": "dose",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_dose_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "subject_name",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_assay_name",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_assay_input",
+            "datatype": "string"
+          },
+          {
+            "name": "original_value",
+            "datatype": "string"
+          },
+          {
+            "name": "original_value_adjusted",
+            "datatype": "string"
+          },
+          {
+            "name": "original_value_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "conversion_factor",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_species",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_strain",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_sex",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_route",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_role",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_component_name",
+            "datatype": "string"
+          },
+          {
+            "name": "component_dtxsid",
+            "datatype": "string"
+          },
+          {
+            "name": "component_casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_vehicle_name",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_removal_reason",
+            "datatype": "string"
+          },
+          {
+            "name": "time_in_study",
+            "datatype": "string"
+          },
+          {
+            "name": "time_in_study_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "comments",
+            "datatype": "string"
+          },
+          {
+            "name": "study_chemical",
+            "datatype": "string"
+          },
+          {
+            "name": "ntp_study_type",
+            "datatype": "string"
+          },
+          {
+            "name": "species",
+            "datatype": "string"
+          },
+          {
+            "name": "strain",
+            "datatype": "string"
+          },
+          {
+            "name": "sex",
+            "datatype": "string"
+          },
+          {
+            "name": "route",
+            "datatype": "string"
+          },
+          {
+            "name": "treatment_role",
+            "datatype": "string"
+          },
+          {
+            "name": "component_name",
+            "datatype": "string"
+          },
+          {
+            "name": "dose_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "vehicle",
+            "datatype": "string"
+          },
+          {
+            "name": "assay_name_ori",
+            "datatype": "string"
+          },
+          {
+            "name": "assay_input",
+            "datatype": "string"
+          },
+          {
+            "name": "removal_reason",
+            "datatype": "string"
+          },
+          {
+            "name": "dose_response_study",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/iad-pathology-lesions.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "tissue",
+            "datatype": "string"
+          },
+          {
+            "name": "morphology",
+            "datatype": "string"
+          },
+          {
+            "name": "locator",
+            "datatype": "string"
+          },
+          {
+            "name": "modifier",
+            "datatype": "string"
+          },
+          {
+            "name": "laterality",
+            "datatype": "string"
+          },
+          {
+            "name": "severity",
+            "datatype": "string"
+          },
+          {
+            "name": "other_pathology_term",
+            "datatype": "string"
+          },
+          {
+            "name": "is_neoplastic",
+            "datatype": "string"
+          },
+          {
+            "name": "is_malignant",
+            "datatype": "string"
+          },
+          {
+            "name": "is_systemic",
+            "datatype": "string"
+          },
+          {
+            "name": "is_metastatic",
+            "datatype": "string"
+          },
+          {
+            "name": "metastasis_primary_tissue",
+            "datatype": "string"
+          },
+          {
+            "name": "species",
+            "datatype": "string"
+          },
+          {
+            "name": "strain",
+            "datatype": "string"
+          },
+          {
+            "name": "chemical_name",
+            "datatype": "string"
+          },
+          {
+            "name": "dose",
+            "datatype": "string"
+          },
+          {
+            "name": "dose_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "treatment_group_type",
+            "datatype": "string"
+          },
+          {
+            "name": "route",
+            "datatype": "string"
+          },
+          {
+            "name": "vehicle",
+            "datatype": "string"
+          },
+          {
+            "name": "start_date",
+            "datatype": "string"
+          },
+          {
+            "name": "study_duration",
+            "datatype": "string"
+          },
+          {
+            "name": "sex",
+            "datatype": "string"
+          },
+          {
+            "name": "animal_number_depositor_name",
+            "datatype": "string"
+          },
+          {
+            "name": "death_day",
+            "datatype": "string"
+          },
+          {
+            "name": "dtxsid",
+            "datatype": "string"
+          },
+          {
+            "name": "ntp_publication",
+            "datatype": "string"
+          },
+          {
+            "name": "chemtrack_study_number",
+            "datatype": "string"
+          },
+          {
+            "name": "ntp_tdmse_number",
+            "datatype": "string"
+          },
+          {
+            "name": "accession_number",
+            "datatype": "string"
+          },
+          {
+            "name": "tissue_original_term",
+            "datatype": "string"
+          },
+          {
+            "name": "morphology_original_term",
+            "datatype": "string"
+          },
+          {
+            "name": "locator_original_term",
+            "datatype": "string"
+          },
+          {
+            "name": "modifier_original_term",
+            "datatype": "string"
+          },
+          {
+            "name": "severity_original_term",
+            "datatype": "string"
+          },
+          {
+            "name": "study_title",
+            "datatype": "string"
+          },
+          {
+            "name": "subject_death_status_inlife",
+            "datatype": "string"
+          },
+          {
+            "name": "removal_reason",
+            "datatype": "string"
+          },
+          {
+            "name": "primary_cause_of_death",
+            "datatype": "string"
+          },
+          {
+            "name": "contributory_cause_of_death",
+            "datatype": "string"
+          },
+          {
+            "name": "trackable_gross_lesion",
+            "datatype": "string"
+          },
+          {
+            "name": "histology_number",
+            "datatype": "string"
+          },
+          {
+            "name": "study_type",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn_url",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/inlife-bodyweight-iad-2024.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "accession_number",
+            "datatype": "string"
+          },
+          {
+            "name": "depositor_study_number",
+            "datatype": "string"
+          },
+          {
+            "name": "publication_uid",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_study_type",
+            "datatype": "string"
+          },
+          {
+            "name": "study_title",
+            "datatype": "string"
+          },
+          {
+            "name": "start_year",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_test_compound_name",
+            "datatype": "string"
+          },
+          {
+            "name": "dtxsid",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "dose_desc",
+            "datatype": "string"
+          },
+          {
+            "name": "dose",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_dose_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "subject_name",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_assay_name",
+            "datatype": "string"
+          },
+          {
+            "name": "original_value",
+            "datatype": "string"
+          },
+          {
+            "name": "original_value_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "conversion_factor",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_species",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_strain",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_sex",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_route",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_role",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_component_name",
+            "datatype": "string"
+          },
+          {
+            "name": "component_dtxsid",
+            "datatype": "string"
+          },
+          {
+            "name": "component_casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_vehicle_name",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_removal_reason",
+            "datatype": "string"
+          },
+          {
+            "name": "time_in_study",
+            "datatype": "string"
+          },
+          {
+            "name": "time_in_study_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "study_chemical",
+            "datatype": "string"
+          },
+          {
+            "name": "ntp_study_type",
+            "datatype": "string"
+          },
+          {
+            "name": "species",
+            "datatype": "string"
+          },
+          {
+            "name": "strain",
+            "datatype": "string"
+          },
+          {
+            "name": "sex",
+            "datatype": "string"
+          },
+          {
+            "name": "route",
+            "datatype": "string"
+          },
+          {
+            "name": "treatment_role",
+            "datatype": "string"
+          },
+          {
+            "name": "component_name",
+            "datatype": "string"
+          },
+          {
+            "name": "dose_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "vehicle",
+            "datatype": "string"
+          },
+          {
+            "name": "assay_name_ori",
+            "datatype": "string"
+          },
+          {
+            "name": "removal_reason",
+            "datatype": "string"
+          },
+          {
+            "name": "dose_response_study",
+            "datatype": "string"
+          },
+          {
+            "name": "weight_event_date",
+            "datatype": "string"
+          },
+          {
+            "name": "weight_event_time",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/llna2013.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "chemicalname",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "llnacall",
+            "datatype": "string"
+          },
+          {
+            "name": "llnamaxsimindexpct",
+            "datatype": "string"
+          },
+          {
+            "name": "gpigmaxbuehlercall",
+            "datatype": "string"
+          },
+          {
+            "name": "hummaxcall",
+            "datatype": "string"
+          },
+          {
+            "name": "humpatchtstallergencall",
+            "datatype": "string"
+          },
+          {
+            "name": "llnaec3pct",
+            "datatype": "string"
+          },
+          {
+            "name": "molecularwgt",
+            "datatype": "string"
+          },
+          {
+            "name": "molecularwgtunits",
+            "datatype": "string"
+          },
+          {
+            "name": "peptidereactivity",
+            "datatype": "string"
+          },
+          {
+            "name": "physicalform",
+            "datatype": "string"
+          },
+          {
+            "name": "vce",
+            "datatype": "string"
+          },
+          {
+            "name": "recordid",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/locator-ddd.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "dtt_standard_term",
+            "datatype": "string"
+          },
+          {
+            "name": "synonym_term",
+            "datatype": "string"
+          },
+          {
+            "name": "histopathology_term",
+            "datatype": "string"
+          },
+          {
+            "name": "gross_pathology_term",
+            "datatype": "string"
+          },
+          {
+            "name": "other_term",
+            "datatype": "string"
+          },
+          {
+            "name": "scope",
+            "datatype": "string"
+          },
+          {
+            "name": "ontology_term",
+            "datatype": "string"
+          },
+          {
+            "name": "ontology_definition",
+            "datatype": "string"
+          },
+          {
+            "name": "status",
+            "datatype": "string"
+          },
+          {
+            "name": "term_id",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/mammalian_cytogenics.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "test_article_name",
+            "datatype": "string"
+          },
+          {
+            "name": "study_conclusion",
+            "datatype": "string"
+          },
+          {
+            "name": "species",
+            "datatype": "string"
+          },
+          {
+            "name": "strain",
+            "datatype": "string"
+          },
+          {
+            "name": "protocol",
+            "datatype": "string"
+          },
+          {
+            "name": "depositor_views",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "ntp_study_id",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/mammalian_mutagenics.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "test_article_name",
+            "datatype": "string"
+          },
+          {
+            "name": "study_conclusion",
+            "datatype": "string"
+          },
+          {
+            "name": "trial_result",
+            "datatype": "string"
+          },
+          {
+            "name": "microsomal_activation_used",
+            "datatype": "string"
+          },
+          {
+            "name": "protocol",
+            "datatype": "string"
+          },
+          {
+            "name": "depositor_views",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "ntp_study_id",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/mn_in_vitro.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "chemical_name",
+            "datatype": "string"
+          },
+          {
+            "name": "study_conclusion",
+            "datatype": "string"
+          },
+          {
+            "name": "trial_conclusion",
+            "datatype": "string"
+          },
+          {
+            "name": "doses",
+            "datatype": "string"
+          },
+          {
+            "name": "dose_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "dose_duration",
+            "datatype": "string"
+          },
+          {
+            "name": "trial_start_date",
+            "datatype": "string"
+          },
+          {
+            "name": "trial_name",
+            "datatype": "string"
+          },
+          {
+            "name": "activation",
+            "datatype": "string"
+          },
+          {
+            "name": "total_culture_time",
+            "datatype": "string"
+          },
+          {
+            "name": "cell_type",
+            "datatype": "string"
+          },
+          {
+            "name": "percent_trend_p_value",
+            "datatype": "string"
+          },
+          {
+            "name": "percent_trend_p_alue_test",
+            "datatype": "string"
+          },
+          {
+            "name": "study_view",
+            "datatype": "string"
+          },
+          {
+            "name": "study_number",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/mn_in_vivo.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "chemical_name",
+            "datatype": "string"
+          },
+          {
+            "name": "male_study_conclusion",
+            "datatype": "string"
+          },
+          {
+            "name": "female_study_conclusion",
+            "datatype": "string"
+          },
+          {
+            "name": "species",
+            "datatype": "string"
+          },
+          {
+            "name": "strain",
+            "datatype": "string"
+          },
+          {
+            "name": "sex",
+            "datatype": "string"
+          },
+          {
+            "name": "tissue",
+            "datatype": "string"
+          },
+          {
+            "name": "doses",
+            "datatype": "string"
+          },
+          {
+            "name": "dose_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "route",
+            "datatype": "string"
+          },
+          {
+            "name": "trial_start_date",
+            "datatype": "string"
+          },
+          {
+            "name": "trial_name",
+            "datatype": "string"
+          },
+          {
+            "name": "study_methodology",
+            "datatype": "string"
+          },
+          {
+            "name": "study_duration",
+            "datatype": "string"
+          },
+          {
+            "name": "study_duration_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "protocol_name",
+            "datatype": "string"
+          },
+          {
+            "name": "cell_type",
+            "datatype": "string"
+          },
+          {
+            "name": "mn_nce_1000_trend_pvalue",
+            "datatype": "string"
+          },
+          {
+            "name": "mn_pce_1000_trend_pvalue",
+            "datatype": "string"
+          },
+          {
+            "name": "pct_pce_trend",
+            "datatype": "string"
+          },
+          {
+            "name": "pct_pvalue_test",
+            "datatype": "string"
+          },
+          {
+            "name": "number_of_treatments",
+            "datatype": "string"
+          },
+          {
+            "name": "time_between_final_dose",
+            "datatype": "string"
+          },
+          {
+            "name": "time_between_final_dose_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "study_view",
+            "datatype": "string"
+          },
+          {
+            "name": "study_number",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/modifier-ddd.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "dtt_standard_term",
+            "datatype": "string"
+          },
+          {
+            "name": "synonym_term",
+            "datatype": "string"
+          },
+          {
+            "name": "histopathology_term",
+            "datatype": "string"
+          },
+          {
+            "name": "gross_pathology_term",
+            "datatype": "string"
+          },
+          {
+            "name": "other_term",
+            "datatype": "string"
+          },
+          {
+            "name": "scope",
+            "datatype": "string"
+          },
+          {
+            "name": "ontology_term",
+            "datatype": "string"
+          },
+          {
+            "name": "ontology_definition",
+            "datatype": "string"
+          },
+          {
+            "name": "status",
+            "datatype": "string"
+          },
+          {
+            "name": "term_id",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/morphology-ddd.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "dtt_standard_term",
+            "datatype": "string"
+          },
+          {
+            "name": "synonym_term",
+            "datatype": "string"
+          },
+          {
+            "name": "histopathology_term",
+            "datatype": "string"
+          },
+          {
+            "name": "gross_pathology_term",
+            "datatype": "string"
+          },
+          {
+            "name": "other_term",
+            "datatype": "string"
+          },
+          {
+            "name": "neoplastic",
+            "datatype": "string"
+          },
+          {
+            "name": "malignant",
+            "datatype": "string"
+          },
+          {
+            "name": "qualifier_needed",
+            "datatype": "string"
+          },
+          {
+            "name": "systemic",
+            "datatype": "string"
+          },
+          {
+            "name": "exclude_severity",
+            "datatype": "string"
+          },
+          {
+            "name": "scope",
+            "datatype": "string"
+          },
+          {
+            "name": "ontology_term",
+            "datatype": "string"
+          },
+          {
+            "name": "ontology_definition",
+            "datatype": "string"
+          },
+          {
+            "name": "status",
+            "datatype": "string"
+          },
+          {
+            "name": "term_id",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/neonicotinoid-health-effects-by-evidence-stream.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "title",
+            "datatype": "string"
+          },
+          {
+            "name": "abstract",
+            "datatype": "string"
+          },
+          {
+            "name": "neonicotinoid_studied",
+            "datatype": "string"
+          },
+          {
+            "name": "health_effect",
+            "datatype": "string"
+          },
+          {
+            "name": "evidence_stream_detailed",
+            "datatype": "string"
+          },
+          {
+            "name": "evidence_stream",
+            "datatype": "string"
+          },
+          {
+            "name": "evidence_stream_1",
+            "datatype": "string"
+          },
+          {
+            "name": "evidence_stream_2",
+            "datatype": "string"
+          },
+          {
+            "name": "study_design",
+            "datatype": "string"
+          },
+          {
+            "name": "short_citation",
+            "datatype": "string"
+          },
+          {
+            "name": "full_citation",
+            "datatype": "string"
+          },
+          {
+            "name": "pmid",
+            "datatype": "string"
+          },
+          {
+            "name": "neon_refid",
+            "datatype": "string"
+          },
+          {
+            "name": "full_citation_url",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/ntp-pathology.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "chemical_name",
+            "datatype": "string"
+          },
+          {
+            "name": "organ",
+            "datatype": "string"
+          },
+          {
+            "name": "morph",
+            "datatype": "string"
+          },
+          {
+            "name": "is_trend_significant",
+            "datatype": "string"
+          },
+          {
+            "name": "is_pairwise_significant",
+            "datatype": "string"
+          },
+          {
+            "name": "species",
+            "datatype": "string"
+          },
+          {
+            "name": "strain",
+            "datatype": "string"
+          },
+          {
+            "name": "sex",
+            "datatype": "string"
+          },
+          {
+            "name": "route",
+            "datatype": "string"
+          },
+          {
+            "name": "dose",
+            "datatype": "string"
+          },
+          {
+            "name": "dose_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "is_neoplastic",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "ntp_tdmse_number",
+            "datatype": "string"
+          },
+          {
+            "name": "chemtrack_number",
+            "datatype": "string"
+          },
+          {
+            "name": "ntp_publication",
+            "datatype": "string"
+          },
+          {
+            "name": "abstract",
+            "datatype": "string"
+          },
+          {
+            "name": "tech_report",
+            "datatype": "string"
+          },
+          {
+            "name": "tumor_count",
+            "datatype": "string"
+          },
+          {
+            "name": "subject_count",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/organ-weight-iad-2024.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "accession_number",
+            "datatype": "string"
+          },
+          {
+            "name": "depositor_study_number",
+            "datatype": "string"
+          },
+          {
+            "name": "publication_uid",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_study_type",
+            "datatype": "string"
+          },
+          {
+            "name": "study_title",
+            "datatype": "string"
+          },
+          {
+            "name": "start_year",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_test_compound_name",
+            "datatype": "string"
+          },
+          {
+            "name": "dtxsid",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "dose_desc",
+            "datatype": "string"
+          },
+          {
+            "name": "dose",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_dose_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "subject_name",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_assay_name",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_assay_input",
+            "datatype": "string"
+          },
+          {
+            "name": "original_value",
+            "datatype": "string"
+          },
+          {
+            "name": "original_value_adjusted",
+            "datatype": "string"
+          },
+          {
+            "name": "original_value_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "conversion_factor",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_species",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_strain",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_sex",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_route",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_role",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_component_name",
+            "datatype": "string"
+          },
+          {
+            "name": "component_dtxsid",
+            "datatype": "string"
+          },
+          {
+            "name": "component_casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_vehicle_name",
+            "datatype": "string"
+          },
+          {
+            "name": "standard_removal_reason",
+            "datatype": "string"
+          },
+          {
+            "name": "time_in_study",
+            "datatype": "string"
+          },
+          {
+            "name": "time_in_study_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "comments",
+            "datatype": "string"
+          },
+          {
+            "name": "study_chemical",
+            "datatype": "string"
+          },
+          {
+            "name": "ntp_study_type",
+            "datatype": "string"
+          },
+          {
+            "name": "species",
+            "datatype": "string"
+          },
+          {
+            "name": "strain",
+            "datatype": "string"
+          },
+          {
+            "name": "sex",
+            "datatype": "string"
+          },
+          {
+            "name": "route",
+            "datatype": "string"
+          },
+          {
+            "name": "treatment_role",
+            "datatype": "string"
+          },
+          {
+            "name": "component_name",
+            "datatype": "string"
+          },
+          {
+            "name": "dose_unit",
+            "datatype": "string"
+          },
+          {
+            "name": "vehicle",
+            "datatype": "string"
+          },
+          {
+            "name": "assay_name_ori",
+            "datatype": "string"
+          },
+          {
+            "name": "assay_input",
+            "datatype": "string"
+          },
+          {
+            "name": "removal_reason",
+            "datatype": "string"
+          },
+          {
+            "name": "dose_response_study",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/rodent_cytogenics.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "test_article_name",
+            "datatype": "string"
+          },
+          {
+            "name": "study_conclusion",
+            "datatype": "string"
+          },
+          {
+            "name": "species",
+            "datatype": "string"
+          },
+          {
+            "name": "strain",
+            "datatype": "string"
+          },
+          {
+            "name": "protocol",
+            "datatype": "string"
+          },
+          {
+            "name": "depositor_views",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "ntp_study_id",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/tgx-ddi-biomarker-pos.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "bioset_name",
+            "datatype": "string"
+          },
+          {
+            "name": "chemical",
+            "datatype": "string"
+          },
+          {
+            "name": "tier",
+            "datatype": "string"
+          },
+          {
+            "name": "tgxbduration",
+            "datatype": "string"
+          },
+          {
+            "name": "tgxbconcentration",
+            "datatype": "string"
+          },
+          {
+            "name": "study",
+            "datatype": "string"
+          },
+          {
+            "name": "biosource",
+            "datatype": "string"
+          },
+          {
+            "name": "tgxlogvalue",
+            "datatype": "string"
+          },
+          {
+            "name": "possmech",
+            "datatype": "string"
+          },
+          {
+            "name": "comments",
+            "datatype": "string"
+          },
+          {
+            "name": "references",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/tgx-ddi-tox21-pos.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "bioset_name",
+            "datatype": "string"
+          },
+          {
+            "name": "chemical",
+            "datatype": "string"
+          },
+          {
+            "name": "duration",
+            "datatype": "string"
+          },
+          {
+            "name": "concentration",
+            "datatype": "string"
+          },
+          {
+            "name": "study",
+            "datatype": "string"
+          },
+          {
+            "name": "biosource",
+            "datatype": "string"
+          },
+          {
+            "name": "tgxlogvalue",
+            "datatype": "string"
+          },
+          {
+            "name": "possmech",
+            "datatype": "string"
+          },
+          {
+            "name": "comments",
+            "datatype": "string"
+          },
+          {
+            "name": "classification",
+            "datatype": "string"
+          },
+          {
+            "name": "references",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/tissue-ddd.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "dtt_standard_term",
+            "datatype": "string"
+          },
+          {
+            "name": "synonym_term",
+            "datatype": "string"
+          },
+          {
+            "name": "histopathology_term",
+            "datatype": "string"
+          },
+          {
+            "name": "gross_pathology_term",
+            "datatype": "string"
+          },
+          {
+            "name": "other_term",
+            "datatype": "string"
+          },
+          {
+            "name": "scope",
+            "datatype": "string"
+          },
+          {
+            "name": "body_system",
+            "datatype": "string"
+          },
+          {
+            "name": "sex_specificity",
+            "datatype": "string"
+          },
+          {
+            "name": "paired",
+            "datatype": "string"
+          },
+          {
+            "name": "ontology_term",
+            "datatype": "string"
+          },
+          {
+            "name": "ontology_definition",
+            "datatype": "string"
+          },
+          {
+            "name": "status",
+            "datatype": "string"
+          },
+          {
+            "name": "term_id",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/tox21.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "epa_chem_name",
+            "datatype": "string"
+          },
+          {
+            "name": "epa_casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "coa_purity",
+            "datatype": "string"
+          },
+          {
+            "name": "hts_purity",
+            "datatype": "string"
+          },
+          {
+            "name": "mri_report",
+            "datatype": "string"
+          },
+          {
+            "name": "id_confirm",
+            "datatype": "string"
+          },
+          {
+            "name": "analysis_method",
+            "datatype": "string"
+          },
+          {
+            "name": "ntp_chem_name",
+            "datatype": "string"
+          },
+          {
+            "name": "ntp_casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "ntp_cid",
+            "datatype": "string"
+          },
+          {
+            "name": "tox21_id",
+            "datatype": "string"
+          },
+          {
+            "name": "dsstox_source_rec_id",
+            "datatype": "string"
+          },
+          {
+            "name": "dsstox_sub_id",
+            "datatype": "string"
+          },
+          {
+            "name": "dsstox_sub_id_short",
+            "datatype": "string"
+          },
+          {
+            "name": "plate_id",
+            "datatype": "string"
+          },
+          {
+            "name": "supplier",
+            "datatype": "string"
+          },
+          {
+            "name": "lot_number",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/tox21_androgen.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "record_id",
+            "datatype": "string"
+          },
+          {
+            "name": "citation_id",
+            "datatype": "string"
+          },
+          {
+            "name": "hershberger_code",
+            "datatype": "string"
+          },
+          {
+            "name": "citation",
+            "datatype": "string"
+          },
+          {
+            "name": "exclude_article",
+            "datatype": "string"
+          },
+          {
+            "name": "exclusion_reason",
+            "datatype": "string"
+          },
+          {
+            "name": "exclusion_note",
+            "datatype": "string"
+          },
+          {
+            "name": "chemical_name",
+            "datatype": "string"
+          },
+          {
+            "name": "chemical_name_other",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "supplier",
+            "datatype": "string"
+          },
+          {
+            "name": "catalogue_number",
+            "datatype": "string"
+          },
+          {
+            "name": "chemical_purity",
+            "datatype": "string"
+          },
+          {
+            "name": "rat_strain",
+            "datatype": "string"
+          },
+          {
+            "name": "castrated",
+            "datatype": "string"
+          },
+          {
+            "name": "age_at_castration",
+            "datatype": "string"
+          },
+          {
+            "name": "age_at_first_dose",
+            "datatype": "string"
+          },
+          {
+            "name": "time_frm_castration_first_dose",
+            "datatype": "string"
+          },
+          {
+            "name": "dosing_duration",
+            "datatype": "string"
+          },
+          {
+            "name": "dosing_note",
+            "datatype": "string"
+          },
+          {
+            "name": "dosing_route",
+            "datatype": "string"
+          },
+          {
+            "name": "number_of_androgenic_doses",
+            "datatype": "string"
+          },
+          {
+            "name": "rats_per_vehicle_control_group",
+            "datatype": "string"
+          },
+          {
+            "name": "rats_per_androgen_only_group",
+            "datatype": "string"
+          },
+          {
+            "name": "rats_per_androgenic_trt_group",
+            "datatype": "string"
+          },
+          {
+            "name": "reference_androgen",
+            "datatype": "string"
+          },
+          {
+            "name": "reference_androgen_dose",
+            "datatype": "string"
+          },
+          {
+            "name": "reference_androgen_dose_route",
+            "datatype": "string"
+          },
+          {
+            "name": "ref_androgen_dose_route_note",
+            "datatype": "string"
+          },
+          {
+            "name": "number_of_antiandrogen_doses",
+            "datatype": "string"
+          },
+          {
+            "name": "rats_antiandrgn_neg_ctrl_grp",
+            "datatype": "string"
+          },
+          {
+            "name": "rats_androgen_antiandrogen_grp",
+            "datatype": "string"
+          },
+          {
+            "name": "rats_per_antiandrogentrt_grp",
+            "datatype": "string"
+          },
+          {
+            "name": "reference_antiandrogen",
+            "datatype": "string"
+          },
+          {
+            "name": "reference_antiandrogen_dose",
+            "datatype": "string"
+          },
+          {
+            "name": "ref_anitandrogen_dose_route",
+            "datatype": "string"
+          },
+          {
+            "name": "androgen_coadministration",
+            "datatype": "string"
+          },
+          {
+            "name": "androgen_coadministration_dose",
+            "datatype": "string"
+          },
+          {
+            "name": "androgen_coadmin_dose_route",
+            "datatype": "string"
+          },
+          {
+            "name": "treatment_vehicle_control",
+            "datatype": "string"
+          },
+          {
+            "name": "time_btw_last_dose_necropsy",
+            "datatype": "string"
+          },
+          {
+            "name": "prostate_ventral_lobe_weighed",
+            "datatype": "string"
+          },
+          {
+            "name": "seminal_vesicle_weighed",
+            "datatype": "string"
+          },
+          {
+            "name": "labc_weighed",
+            "datatype": "string"
+          },
+          {
+            "name": "cowpers_gland_weighed",
+            "datatype": "string"
+          },
+          {
+            "name": "glans_penis_weighed",
+            "datatype": "string"
+          },
+          {
+            "name": "additional_rep_tissue_weighed",
+            "datatype": "string"
+          },
+          {
+            "name": "additional_rep_tissue_name",
+            "datatype": "string"
+          },
+          {
+            "name": "no_addll_rep_tissue_weighed",
+            "datatype": "string"
+          },
+          {
+            "name": "tot_no_of_rep_tissues_weighed",
+            "datatype": "string"
+          },
+          {
+            "name": "sig_eff_addnl_rep_tissue_wgt",
+            "datatype": "string"
+          },
+          {
+            "name": "response",
+            "datatype": "string"
+          },
+          {
+            "name": "response_notes",
+            "datatype": "string"
+          },
+          {
+            "name": "ast_wts__pos_androgen_veh_ctrl",
+            "datatype": "string"
+          },
+          {
+            "name": "no_ast_wts_signif_increased",
+            "datatype": "string"
+          },
+          {
+            "name": "androgenic_response_comment",
+            "datatype": "string"
+          },
+          {
+            "name": "ast_pos_anti__andrgn_cntl_wts",
+            "datatype": "string"
+          },
+          {
+            "name": "num_addnl_rep_tissue_wgts_dec",
+            "datatype": "string"
+          },
+          {
+            "name": "antiandrgnic_response_comment",
+            "datatype": "string"
+          },
+          {
+            "name": "hb_noel",
+            "datatype": "string"
+          },
+          {
+            "name": "hb_loel",
+            "datatype": "string"
+          },
+          {
+            "name": "dose_units",
+            "datatype": "string"
+          },
+          {
+            "name": "pubertal_other_assay_assoc",
+            "datatype": "string"
+          },
+          {
+            "name": "iv_bicheml_pbpk_molecular_data",
+            "datatype": "string"
+          },
+          {
+            "name": "notes",
+            "datatype": "string"
+          },
+          {
+            "name": "considered_for_ref_chemical",
+            "datatype": "string"
+          },
+          {
+            "name": "secondary_reason_for_exclusion",
+            "datatype": "string"
+          },
+          {
+            "name": "androgenic_call",
+            "datatype": "string"
+          },
+          {
+            "name": "antiandrogenic_call",
+            "datatype": "string"
+          },
+          {
+            "name": "hershberger_total_activity",
+            "datatype": "string"
+          },
+          {
+            "name": "hb_systemic_tox_flag",
+            "datatype": "string"
+          },
+          {
+            "name": "systemic_toxicity_note",
+            "datatype": "string"
+          },
+          {
+            "name": "citation_w_addnl_in_vivo_data",
+            "datatype": "string"
+          },
+          {
+            "name": "citation_model",
+            "datatype": "string"
+          },
+          {
+            "name": "exposure_duration",
+            "datatype": "string"
+          },
+          {
+            "name": "dosing_route2",
+            "datatype": "string"
+          },
+          {
+            "name": "in_vivo_noel_antiandrogenic",
+            "datatype": "string"
+          },
+          {
+            "name": "in_vivo_loel_antiandrogenic",
+            "datatype": "string"
+          },
+          {
+            "name": "other_in_vivo_effects_cited",
+            "datatype": "string"
+          },
+          {
+            "name": "comment_on_study_cited",
+            "datatype": "string"
+          },
+          {
+            "name": "hb_versus_in_vivo_response",
+            "datatype": "string"
+          },
+          {
+            "name": "edsp_tier_1_ar_binding",
+            "datatype": "string"
+          },
+          {
+            "name": "edsp_ar_binding_comment",
+            "datatype": "string"
+          },
+          {
+            "name": "dsstox_gsid_number",
+            "datatype": "string"
+          },
+          {
+            "name": "toxcast_androgen_receptor_data",
+            "datatype": "string"
+          },
+          {
+            "name": "toxcast_data",
+            "datatype": "string"
+          },
+          {
+            "name": "ar_aucagonist",
+            "datatype": "string"
+          },
+          {
+            "name": "max_auc_score",
+            "datatype": "string"
+          },
+          {
+            "name": "antagonist_confirmation_flag",
+            "datatype": "string"
+          },
+          {
+            "name": "antagonist_confirmation_score",
+            "datatype": "string"
+          },
+          {
+            "name": "androgen_receptor_model_call",
+            "datatype": "string"
+          },
+          {
+            "name": "citations_5ar_citationfreq",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/trf.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "chemical_name",
+            "datatype": "string"
+          },
+          {
+            "name": "male_rat_chronic_loe",
+            "datatype": "string"
+          },
+          {
+            "name": "female_rat_chronic_loe",
+            "datatype": "string"
+          },
+          {
+            "name": "male_mouse_chronic_loe",
+            "datatype": "string"
+          },
+          {
+            "name": "female_mouse_chronic_loe",
+            "datatype": "string"
+          },
+          {
+            "name": "male_hamster_chronic_loe",
+            "datatype": "string"
+          },
+          {
+            "name": "female_hamster_chronic_loe",
+            "datatype": "string"
+          },
+          {
+            "name": "male_fish_chronic_loe",
+            "datatype": "string"
+          },
+          {
+            "name": "female_fish_chronic_loe",
+            "datatype": "string"
+          },
+          {
+            "name": "multiple_loe_conclusion_t_f",
+            "datatype": "string"
+          },
+          {
+            "name": "ames_conclusion",
+            "datatype": "string"
+          },
+          {
+            "name": "male_rat_micronucleus",
+            "datatype": "string"
+          },
+          {
+            "name": "female_rat_micronucleus",
+            "datatype": "string"
+          },
+          {
+            "name": "male_mouse_micronucleus",
+            "datatype": "string"
+          },
+          {
+            "name": "female_mouse_micronucleus",
+            "datatype": "string"
+          },
+          {
+            "name": "in_vitro_mn_conclusion",
+            "datatype": "string"
+          },
+          {
+            "name": "male_rat_comet",
+            "datatype": "string"
+          },
+          {
+            "name": "female_rat_comet",
+            "datatype": "string"
+          },
+          {
+            "name": "male_mouse_comet",
+            "datatype": "string"
+          },
+          {
+            "name": "female_mouse_comet",
+            "datatype": "string"
+          },
+          {
+            "name": "ntp_publication",
+            "datatype": "string"
+          },
+          {
+            "name": "dtxsid",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "ames_conclusion_url",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn_url",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/updated-1993-tlvs.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "id_num",
+            "datatype": "string"
+          },
+          {
+            "name": "chemicals",
+            "datatype": "string"
+          },
+          {
+            "name": "chemical_notes_synonyms",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "current_tlv_document_date",
+            "datatype": "string"
+          },
+          {
+            "name": "mouse_strain",
+            "datatype": "string"
+          },
+          {
+            "name": "exposure_details_ref_number",
+            "datatype": "string"
+          },
+          {
+            "name": "rd50",
+            "datatype": "string"
+          },
+          {
+            "name": "rd50_x_0_03",
+            "datatype": "string"
+          },
+          {
+            "name": "average_rd50_x_0_03",
+            "datatype": "string"
+          },
+          {
+            "name": "c19911992tlvtwatlvceilingref1",
+            "datatype": "string"
+          },
+          {
+            "name": "c2015_tlv_twa_tlv_ceilingstel",
+            "datatype": "string"
+          },
+          {
+            "name": "c2015_tlv_basis",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/ut2016.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "chemicalname",
+            "datatype": "string"
+          },
+          {
+            "name": "uterocall",
+            "datatype": "string"
+          },
+          {
+            "name": "uterouterinewgtpctctrl",
+            "datatype": "string"
+          },
+          {
+            "name": "uterouterinewgtfldctrl",
+            "datatype": "string"
+          },
+          {
+            "name": "species",
+            "datatype": "string"
+          },
+          {
+            "name": "strain",
+            "datatype": "string"
+          },
+          {
+            "name": "adminroute",
+            "datatype": "string"
+          },
+          {
+            "name": "uterouterinewgtrelpotpct",
+            "datatype": "string"
+          },
+          {
+            "name": "uterolelmgkgday",
+            "datatype": "string"
+          },
+          {
+            "name": "uterolelmgday",
+            "datatype": "string"
+          },
+          {
+            "name": "uterolelmg",
+            "datatype": "string"
+          },
+          {
+            "name": "dsstoxrecid",
+            "datatype": "string"
+          },
+          {
+            "name": "dsstoxsubid",
+            "datatype": "string"
+          },
+          {
+            "name": "dsstoxname",
+            "datatype": "string"
+          },
+          {
+            "name": "recordid",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/windyboydpub.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "name",
+            "datatype": "string"
+          },
+          {
+            "name": "c_elegans_mean_rspnse_0_5_mm",
+            "datatype": "string"
+          },
+          {
+            "name": "c_elegans_mean_rspnse_1_mm",
+            "datatype": "string"
+          },
+          {
+            "name": "c_elegans_mean_rspnse_5_mm",
+            "datatype": "string"
+          },
+          {
+            "name": "c_elegans_mean_rspnse_10_mm",
+            "datatype": "string"
+          },
+          {
+            "name": "c_elegans_mean_rspnse_50_mm",
+            "datatype": "string"
+          },
+          {
+            "name": "c_elegans_mean_rspnse_100_mm",
+            "datatype": "string"
+          },
+          {
+            "name": "c_elegans_mean_rspnse_200_mm",
+            "datatype": "string"
+          },
+          {
+            "name": "c_elegans_lec_by_size",
+            "datatype": "string"
+          },
+          {
+            "name": "c_elegans_est_top_asym_hl_fn",
+            "datatype": "string"
+          },
+          {
+            "name": "c_elegans_est_slope_hl_fn",
+            "datatype": "string"
+          },
+          {
+            "name": "c_elegans_ac50_hl_fn",
+            "datatype": "string"
+          },
+          {
+            "name": "c_elegans_est_bot_asym_hl_fn",
+            "datatype": "string"
+          },
+          {
+            "name": "zebrafish_lecs_min_18_endps",
+            "datatype": "string"
+          },
+          {
+            "name": "zebrafish_lecs_for_mortality",
+            "datatype": "string"
+          },
+          {
+            "name": "zebrafish_lecs_17_subltl_endp",
+            "datatype": "string"
+          },
+          {
+            "name": "zebrafish_tox_padilla_ph_i",
+            "datatype": "string"
+          },
+          {
+            "name": "zebrafish_ac10_padilla_ph_i",
+            "datatype": "string"
+          },
+          {
+            "name": "zebrafish_ac50_padilla_ph_i",
+            "datatype": "string"
+          },
+          {
+            "name": "casrn",
+            "datatype": "string"
+          },
+          {
+            "name": "chemical_id_number",
+            "datatype": "string"
+          }
+        ]
+      }
+    }
+  ]
+}
